@@ -13,7 +13,7 @@ from sqlalchemy import create_engine
 # fields you will need to edit before running this
 dir = "<Your Directory Path Here>"
 fileName = "combined_data.csv"
-fullFilePath = dir + fileName;
+fullFilePath = dir + fileName
 dbName = 'doh'
 tableName = 'TEDS_A_Numeric'
 userName = "<Your Username Here>"
