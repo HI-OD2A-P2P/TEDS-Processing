@@ -7,6 +7,7 @@ import pandas as pd
 #import csv
 import mysql.connector as msql
 from mysql.connector import Error
+import sqlalchemy as sa
 from sqlalchemy import create_engine
 #from sqlalchemy import create_engine, types
 
@@ -14,13 +15,13 @@ from sqlalchemy import create_engine
 dir = "<Your Directory Path Here>"
 fileName = "combined_data.csv"
 fullFilePath = dir + fileName
-dbName = 'doh'
-tableName = 'TEDS_A_Numeric'
-userName = "<Your Username Here>"
-password = "<Your Password Here>"
-engineType = "mssql+pymssql"
-#engineType = "mysql+pymysql"
-
+#db_driver = "mysql+pymysql"
+db_driver = "mssql+pymssql"
+db_host = "localhost"
+db_name = '<Your database name here>'
+db_table = '<Your table name here>'
+db_user = "<Your username Here>"
+db_pwd = "<Your Password Here>"
 
 # merges all .csv files found in the <dir> into one csv named <fileName>
 def combine_csv_files():
@@ -37,7 +38,7 @@ def combine_csv_files():
         #print(file_path)
         # do NOT change file_path to fullFilePath here as they refer to different files
         data = pd.read_csv(file_path)
-        combined_data = combined_data.append(data)
+        combined_data = pd.concat([combined_data, data])
     # Write the combined data to a new .csv file
     #output_file_path = os.path.join(dir, 'combined_data.csv')
     combined_data.to_csv(fullFilePath, index=False)
@@ -46,18 +47,27 @@ def combine_csv_files():
 def convert_to_db():
     try:
         # create the db connection
-        conn = create_engine(f'{engineType}://{userName}:{password}@localhost/{dbName}')
+        connection_url = sa.engine.URL.create(
+            drivername=db_driver,
+            username=db_user,
+            password=db_pwd,
+            host=db_host,
+            database=db_name)
+
+        print(connection_url)
+        #conn = create_engine(f'{db_driver}://{db_user}:{db_pwd}@{db_host}/{db_name}')
+        conn = create_engine(connection_url)
+        print("Connected successfully")
 
         # read the data from the csv file
         df = pd.read_csv(fullFilePath, sep=',', quotechar='\'', encoding='utf8') 
         
         # add data to the table
-        df.to_sql(tableName, con=conn, index=False, if_exists='append')
+        df.to_sql(db_table, con=conn, index=False, if_exists='append')
         # inserted 1,416,357 rows with 62 columns
     except Error as e:
-        print("Error while connecting to MySQL", e)
+        print("Error while connecting", e)
 
 # uncomment one or both of these to make something happen
 #combine_csv_files()
 #convert_to_db()
-
