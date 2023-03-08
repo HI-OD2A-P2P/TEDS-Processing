@@ -9,10 +9,11 @@ import mysql.connector as msql
 from mysql.connector import Error
 import sqlalchemy as sa
 from sqlalchemy import create_engine
+#from sqlalchemy import text
 #from sqlalchemy import create_engine, types
 
 # fields you will need to edit before running this
-dir = "<Your Directory Path Here>"
+#dir = "<Your Directory Path Here>"
 fileName = "combined_data.csv"
 fullFilePath = dir + fileName
 #db_driver = "mysql+pymysql"
@@ -20,11 +21,13 @@ db_driver = "mssql+pymssql"
 db_host = "localhost"
 db_name = '<Your database name here>'
 db_table = '<Your table name here>'
-db_user = "<Your username Here>"
+db_user = "<Your Username Here>"
 db_pwd = "<Your Password Here>"
 
 # merges all .csv files found in the <dir> into one csv named <fileName>
+# merges all .csv files found in the <dir> into one csv named <fileName>
 def combine_csv_files():
+    print("Running combine_csv_files")
     # Get a list of all files in the directory
     all_files = os.listdir(dir)
     #print(all_files)
@@ -38,13 +41,20 @@ def combine_csv_files():
         #print(file_path)
         # do NOT change file_path to fullFilePath here as they refer to different files
         data = pd.read_csv(file_path)
-        combined_data = pd.concat([combined_data, data])
+        
+        # strip out Hawaii as the end result was just too big
+        data_hawaii = data[data['STFIPS'] == 15]
+        combined_data = pd.concat([combined_data, data_hawaii])
+
+        #combined_data = pd.concat([combined_data, data])
+        #combined_data = combined_data.append(data)
+
     # Write the combined data to a new .csv file
-    #output_file_path = os.path.join(dir, 'combined_data.csv')
     combined_data.to_csv(fullFilePath, index=False)
 
 # reads in <filename> and appends the data to <tableName>
 def convert_to_db():
+    print("Running convert_to_db")
     try:
         # create the db connection
         connection_url = sa.engine.URL.create(
@@ -55,15 +65,20 @@ def convert_to_db():
             database=db_name)
 
         print(connection_url)
-        #conn = create_engine(f'{db_driver}://{db_user}:{db_pwd}@{db_host}/{db_name}')
-        conn = create_engine(connection_url)
-        print("Connected successfully")
+        engine = create_engine(connection_url)
 
-        # read the data from the csv file
+        # read the data from the csv file, yes, I could have just made a bunch
+        # of dicts and used convertersdict, but the python stuff to myssql is flaky as it is
         df = pd.read_csv(fullFilePath, sep=',', quotechar='\'', encoding='utf8') 
         
         # add data to the table
-        df.to_sql(db_table, con=conn, index=False, if_exists='append')
+        df.to_sql(db_table, con=engine, index=False, if_exists='append')
+
+        # used this to make sure connection was good, uncomment import text to work
+        #with engine.connect() as conn:
+        #    query = "select count(*) from dbo.TEDS_XWALK_AGE"
+        #    result = conn.execute(text(query))
+
         # inserted 1,416,357 rows with 62 columns
     except Error as e:
         print("Error while connecting", e)
