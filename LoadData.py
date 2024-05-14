@@ -2,6 +2,17 @@
 # 1.) Combine all csv files in a given directory into a single csv file.
 # 2.) Load all the data in the given csv file into a database table
 # uncomment the appropriate method call at the bottom to get the desired behavior
+#
+# May need to do the following before running the script
+# pip3 install pandas
+# pip3 install mysql.connector
+# pip3 install sqlalchemy
+#
+# To run:
+# 1.) Edit the 'dir', 'db_host', 'db_name', 'db_table', 'db_user', and 'db_pwd' variables as appropriate.
+# 2.) comment or uncomment the 'combine_csv_files()' and/or 'convert_to_db()' lines at the bottom as appropriate.
+# 3.) > /usr/local/bin/python3 /Users/jgeis/Work/DOH/TEDS-Processing/LoadData.py
+#
 import os
 import pandas as pd
 #import csv
@@ -13,12 +24,12 @@ from sqlalchemy import create_engine
 #from sqlalchemy import create_engine, types
 
 # fields you will need to edit before running this
-#dir = "<Your Directory Path Here>"
+dir = "<Your Directory Path Here>"
 fileName = "combined_data.csv"
 fullFilePath = dir + fileName
 #db_driver = "mysql+pymysql"
 db_driver = "mssql+pymssql"
-db_host = "localhost"
+db_host = '<Your database host here>'
 db_name = '<Your database name here>'
 db_table = '<Your table name here>'
 db_user = "<Your Username Here>"

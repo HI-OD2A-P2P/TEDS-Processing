@@ -1,0 +1,4 @@
+csv_files/
+*.bak
+.DS_Store
+notes.txt
