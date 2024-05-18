@@ -22,28 +22,16 @@ import sqlalchemy as sa
 from sqlalchemy import create_engine
 
 # fields you will need to edit before running this
-#dir = "<Your Directory Path Here>"
-dir = "/Users/jgeis/Work/DOH/TEDS-Processing/TEDS-D/csv_files/"
+dir = "<Your Directory Path Here>"
 fileName = "combined_data.csv"
 fullFilePath = dir + fileName
-db_driver = "mysql+pymysql"
-#db_driver = "mssql+pymssql"
-#db_host = '<Your database host here>'
-#db_host = "amhd-sql-data.database.usgovcloudapi.net"
-db_host = "localhost"
-#db_name = '<Your database name here>'
-#db_name = "DOH_AMHD_NO_PII"
-db_name = "doh"
-#db_table = '<Your table name here>'
-#db_table = 'dbo.TEDS_ALL_NUMERIC'
-#db_table = 'TEDS_A_Numeric'
-db_table = 'TEDS_D'
-#db_user = "<Your Username Here>"
-#db_user = "JenniferGeis"
-db_user = "jgeis"
-#db_pwd = "<Your Password Here>"
-#db_pwd = "doh_AMHD@2022!"
-db_pwd = "ehuKanoa"
+#db_driver = "mysql+pymysql"
+db_driver = "mssql+pymssql"
+db_host = '<Your database host here>'
+db_name = '<Your database name here>'
+db_table = '<Your table name here>'
+db_user = "<Your Username Here>"
+db_pwd = "<Your Password Here>"
 
 # merges all .csv files found in the <dir> into one csv named <fileName>
 # merges all .csv files found in the <dir> into one csv named <fileName>
@@ -80,7 +68,7 @@ def combine_csv_files():
 
         data = pd.DataFrame()
         # the formats between years change, so some have text some are numeric, handle both.
-        if (file_path.endswith("2021.csv")):
+        if ("2021" in file_path):
             print("2021")
             # reading tedsd_puf_2021.csv fails unless encoding='latin-1'
             data = pd.read_csv(file_path, low_memory=False, encoding='latin-1')
@@ -91,8 +79,8 @@ def combine_csv_files():
             data_hawaii.rename(columns={"CBSA2020": "CBSA"})
 
             combined_data = pd.concat([combined_data, data_hawaii])
-        elif (file_path.endswith("2015.csv") 
-              or file_path.endswith("2016.csv")):
+        elif ("2015" in file_path
+              or "2016" in file_path):
             print("2015 or 2016")
             # this works for non-2021, but not 2021
             data = pd.read_csv(file_path, encoding='latin-1')
@@ -102,10 +90,10 @@ def combine_csv_files():
             # not needed as we use DISYR instead
             data_hawaii = data_hawaii.drop(columns=['YEAR'])        
             combined_data = pd.concat([combined_data, data_hawaii]).fillna("")
-        elif (file_path.endswith("2017.csv") 
-              or file_path.endswith("2018.csv") 
-              or file_path.endswith("2019.csv") 
-              or file_path.endswith("2020.csv")):
+        elif ("2017" in file_path
+              or "2018" in file_path
+              or "2019" in file_path
+              or "2020" in file_path): 
             print("2017, 2018, 2019, or 2020")
             # this works for non-2021, but not 2021
             data = pd.read_csv(file_path, encoding='latin-1')
@@ -117,36 +105,18 @@ def combine_csv_files():
      
             combined_data = pd.concat([combined_data, data_hawaii]).fillna("")         
         
-        elif (file_path.endswith("2014.csv")) :
+        elif ("2014" in file_path) :
             print("2006_2014")
             # this works for non-2021, but not 2021
             data = pd.read_csv(file_path, encoding='latin-1')
 
             # strip out everything but Hawaii as the end result was just too big
             data_hawaii = data[data['STFIPS'] == 15]
-            # normalize column names
+            # normalize column names    
             data_hawaii.rename(columns={"SERVSETD": "SERVICES"})
-
-            #data_hawaii["ARRESTS_D"] = ""
-            #data_hawaii["DETNLF_D"] = ""  
-            #data_hawaii["EMPLOY_D"] = ""  
-            #data_hawaii["FREQ_ATND_SELF_HELP"] = ""  
-            #data_hawaii["FREQ_ATND_SELF_HELP_D"] = ""  
-            #data_hawaii["FREQ1_D"] = ""  
-            #data_hawaii["FREQ2_D"] = ""  
-            #data_hawaii["FREQ3_D"] = ""  
-            #data_hawaii["LIVARAG_D"] = ""  
-            #data_hawaii["SERVICES_D"] = ""  
-            #data_hawaii["SUB1_D"] = ""  
-            #data_hawaii["SUB2_D"] = ""  
-            #data_hawaii["SUB3_D"] = ""  
-            #data_hawaii["YEAR"] = ""  
             combined_data = pd.concat([combined_data, data_hawaii]).fillna("")
 
     # TODO: some of the data has a space before the value, need to strip off whitespace
-
-    # getting pandas.errors.ParserError: Error tokenizing data. C error: Expected 82 fields in line 16532, saw 90
-    # get first line of each year, put in ../temp.csv and see differences.
 
     # Write the combined data to a new .csv file
     combined_data.to_csv(fullFilePath, index=False)
@@ -168,18 +138,13 @@ def convert_to_db():
 
         # read the data from the csv file, yes, I could have just made a bunch
         # of dicts and used convertersdict, but the python stuff to myssql is flaky as it is
-        df = pd.read_csv(fullFilePath, sep=',', quotechar='\"', encoding='utf8') 
+        df = pd.read_csv(fullFilePath, low_memory=False, sep=',', quotechar='\"', encoding='utf8') 
         
         # add data to the table
-        df.to_sql(db_table, con=engine, index=False, if_exists='append',low_memory=False)
-
-        # used this to make sure connection was good, uncomment import text to work
-        #with engine.connect() as conn:
-        #    query = "select count(*) from dbo.TEDS_XWALK_AGE"
-        #    result = conn.execute(text(query))
+        df.to_sql(db_table, con=engine, index=False, if_exists='append')
 
         # inserted 1,416,357 rows with 62 columns (TEDS_A).  Don't recall if this was just Hawaii or all states.
-        # inserted 126,129 rows with 81 columns (TEDS_D).  Just Hawaii.
+        # inserted 131,305 rows with 78 columns (TEDS_D).  Just Hawaii.
     except Error as e:
         print("Error while connecting", e)
 

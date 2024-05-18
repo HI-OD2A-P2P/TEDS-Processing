@@ -23,9 +23,7 @@
 -- don't have crosswalk for these, maybe in earlier or later crosswalks?
 -- CBSA
 -- PMSA
--- SERVSETD
 -- NUMSUBS
--- YEAR     (2015 & 2016) 
 
 drop table if exists TEDS_D2_PART_1;
 drop table if exists TEDS_D2_PART_2;
@@ -36,12 +34,9 @@ create table TEDS_D2_PART_1
 select
   TEDS_D.CASEID,
   TEDS_D.DISYR, 
-  TEDS_D.CBSA2010,
   TEDS_D.CBSA,
   TEDS_D.PMSA,
-  TEDS_D.SERVSETD,
   TEDS_D.NUMSUBS,
-  TEDS_D.YEAR,
   TEDS_XWALK_STFIPS.value as STFIPS,
   TEDS_XWALK_EDUC.value as EDUC,
   TEDS_XWALK_MARSTAT.value as MARSTAT,
@@ -113,8 +108,9 @@ from
   LEFT JOIN TEDS_XWALK_FRSTUSE1 ON TEDS_D.FRSTUSE1 = TEDS_XWALK_FRSTUSE1.id
   LEFT JOIN TEDS_XWALK_FRSTUSE2 ON TEDS_D.FRSTUSE2 = TEDS_XWALK_FRSTUSE2.id
   LEFT JOIN TEDS_XWALK_FRSTUSE3 ON TEDS_D.FRSTUSE3 = TEDS_XWALK_FRSTUSE3.id
-  LEFT JOIN TEDS_XWALK_HLTHINS ON TEDS_D.HLTHINS = TEDS_XWALK_HLTHINS.id;
--- made a table with 126,129 records, which is exact # of rows in the original TEDS_D table
+  LEFT JOIN TEDS_XWALK_HLTHINS ON TEDS_D.HLTHINS = TEDS_XWALK_HLTHINS.id
+WHERE TEDS_D.DISYR != '2021';
+-- made a table with 131,305 records, which is exact # of rows in the original TEDS_D table
 
 -- Had to do this in 2 parts and them merge because MySQL can only handle 61 joins.
 create table TEDS_D2_PART_2
@@ -198,20 +194,18 @@ from
   LEFT JOIN TEDS_XWALK_SUB1_D ON TEDS_D.SUB1_D = TEDS_XWALK_SUB1_D.id
   LEFT JOIN TEDS_XWALK_SUB2_D ON TEDS_D.SUB2_D = TEDS_XWALK_SUB2_D.id
   LEFT JOIN TEDS_XWALK_SUB3_D ON TEDS_D.SUB3_D = TEDS_XWALK_SUB3_D.id
-  LEFT JOIN TEDS_XWALK_REASON ON TEDS_D.REASON = TEDS_XWALK_REASON.id;
--- made a table with 126,129 records, which is exact # of rows in the original TEDS_D table
+  LEFT JOIN TEDS_XWALK_REASON ON TEDS_D.REASON = TEDS_XWALK_REASON.id
+WHERE TEDS_D.DISYR != '2021';
+-- made a table with 131,305 records, which is exact # of rows in the original TEDS_D table
 
 -- This is the merge of the 2 above tables.  Had to handle in 2 parts because MySQL can only handle 61 joins.
 create table TEDS_D2
 SELECT
   TEDS_D2_PART_1.CASEID,
   TEDS_D2_PART_1.DISYR, 
-  TEDS_D2_PART_1.CBSA2010,
   TEDS_D2_PART_1.CBSA,
   TEDS_D2_PART_1.PMSA,
-  TEDS_D2_PART_1.SERVSETD,
   TEDS_D2_PART_1.NUMSUBS,
-  TEDS_D2_PART_1.YEAR,
   TEDS_D2_PART_1.STFIPS,
   TEDS_D2_PART_1.EDUC,
   TEDS_D2_PART_1.MARSTAT,
@@ -288,9 +282,92 @@ SELECT
 FROM
     TEDS_D2_PART_1
     INNER JOIN TEDS_D2_PART_2
-      ON TEDS_D2_PART_1.CASEID = TEDS_D2_PART_2.CASEID;
--- made a table with 126,129 records, which is exact # of rows in the original TEDS_D table
+      ON TEDS_D2_PART_1.CASEID = TEDS_D2_PART_2.CASEID
+UNION
+SELECT
+  TEDS_D.CASEID,
+  TEDS_D.DISYR, 
+  TEDS_D.CBSA,
+  TEDS_D.PMSA,
+  TEDS_D.NUMSUBS,
+  TEDS_D.STFIPS,
+  TEDS_D.EDUC,
+  TEDS_D.MARSTAT,
+  TEDS_D.SERVICES,
+  TEDS_D.DETCRIM,
+  TEDS_D.NOPRIOR,
+  TEDS_D.PSOURCE, 
+  TEDS_D.ARRESTS,
+  TEDS_D.EMPLOY,
+  TEDS_D.METHUSE,
+  TEDS_D.PSYPROB,
+  TEDS_D.PREG,
+  TEDS_D.GENDER,
+  TEDS_D.VET,
+  TEDS_D.LIVARAG,
+  TEDS_D.DAYWAIT,
+  TEDS_D.DSMCRIT,
+  TEDS_D.AGE,
+  TEDS_D.RACE,
+  TEDS_D.ETHNIC,
+  TEDS_D.DETNLF,
+  TEDS_D.PRIMINC,
+  TEDS_D.SUB1,
+  TEDS_D.SUB2,
+  TEDS_D.SUB3,
+  TEDS_D.ROUTE1,
+  TEDS_D.ROUTE2,
+  TEDS_D.ROUTE3,
+  TEDS_D.FREQ1,
+  TEDS_D.FREQ2,
+  TEDS_D.FREQ3,
+  TEDS_D.FRSTUSE1,
+  TEDS_D.FRSTUSE2,
+  TEDS_D.FRSTUSE3,
+  TEDS_D.HLTHINS,
+  TEDS_D.PRIMPAY,
+  TEDS_D.FREQ_ATND_SELF_HELP,
+  TEDS_D.ALCFLG,
+  TEDS_D.COKEFLG,
+  TEDS_D.MARFLG,
+  TEDS_D.HERFLG,
+  TEDS_D.METHFLG,
+  TEDS_D.OPSYNFLG,
+  TEDS_D.PCPFLG,
+  TEDS_D.HALLFLG,
+  TEDS_D.MTHAMFLG,
+  TEDS_D.AMPHFLG,
+  TEDS_D.STIMFLG,
+  TEDS_D.BENZFLG,
+  TEDS_D.TRNQFLG,
+  TEDS_D.BARBFLG,
+  TEDS_D.SEDHPFLG,
+  TEDS_D.INHFLG,
+  TEDS_D.OTCFLG,
+  TEDS_D.OTHERFLG,
+  TEDS_D.DIVISION,
+  TEDS_D.REGION,
+  TEDS_D.IDU,
+  TEDS_D.ALCDRUG,
+  TEDS_D.ARRESTS_D,
+  TEDS_D.DETNLF_D,
+  TEDS_D.EMPLOY_D,
+  TEDS_D.FREQ1_D,
+  TEDS_D.FREQ2_D,
+  TEDS_D.FREQ3_D,
+  TEDS_D.FREQ_ATND_SELF_HELP_D,
+  TEDS_D.LIVARAG_D,
+  TEDS_D.LOS,
+  TEDS_D.SERVICES_D,
+  TEDS_D.SUB1_D,
+  TEDS_D.SUB2_D,
+  TEDS_D.SUB3_D,
+  TEDS_D.REASON
+FROM
+    TEDS_D
+WHERE DISYR = '2021';
+-- made a table with 131,305 records, which is exact # of rows in the original TEDS_D table
 
 -- don't need these anymore
-drop table if exists TEDS_D2_PART_1;
-drop table if exists TEDS_D2_PART_2;
+-- drop table if exists TEDS_D2_PART_1;
+-- drop table if exists TEDS_D2_PART_2;
