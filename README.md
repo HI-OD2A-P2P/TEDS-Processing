@@ -71,4 +71,4 @@ with the numeric codes converted to human readable format:
 
 5.) Create a new table that has all the codes converted to human readable format:
  - Open the TEDS_conversion.sql or TEDS_DOH_conversion.sql file as appropriate.  (The DOH version eliminates all states except Hawaii and changes the column names to DOH's format)
- - Run the query
+ - Run the query:  'mysql -u jgeis -p doh < TEDS_conversion.sql'
