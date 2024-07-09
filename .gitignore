@@ -2,3 +2,7 @@ csv_files/
 *.bak
 .DS_Store
 notes.txt
+TEDS-A/credentials_local.json
+TEDS-A/credentials_remote.json
+TEDS-D/credentials_local.json
+TEDS-D/credentials_remote.json
