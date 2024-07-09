@@ -7,35 +7,37 @@
 # pip3 install pandas
 # pip3 install mysql.connector
 # pip3 install sqlalchemy
+# pip3 install pymysql
 #
 # To run:
-# 1.) Edit the 'dir', 'db_host', 'db_name', 'db_table', 'db_user', and 'db_pwd' variables as appropriate.
-# 2.) comment or uncomment the 'combine_csv_files()' and/or 'convert_to_db()' lines at the bottom as appropriate.
-# 3.) > /usr/local/bin/python3 /Users/jgeis/Work/DOH/TEDS-Processing/TEDS-A/LoadData.py
+# 1.) Copy the ../credentials_example.json file into this directory and rename it either credentials_local.json
+# or credentials_remote.json, depending on what's appropriate for your environment.
+# 2.) In the new credentials file, edit the values as appropriate.
+# 3.) Comment/uncomment the "credentials_file_path" variable below to point to the correct credentials file.
+# 4.) Set the "test_mode" variable below to True or False depending on what you want. If test_mode is on, 
+# no files or tables will be generated or modified, also more debugging statements are printed out.
+# 5.) comment or uncomment the 'combine_csv_files()' and/or 'convert_to_db()' lines at the bottom as appropriate.
+# 6.) > /usr/local/bin/python3 /Users/jgeis/Work/DOH/TEDS-Processing/TEDS-A/LoadData_TEDS_A.py
 #
 # Note that the final combined_data.csv file will be significantly smaller than the 
 # input files because all states other than Hawaii are stripped out.
 #
 import os
 import pandas as pd
-#import csv
 import mysql.connector as msql
 from mysql.connector import Error
 import sqlalchemy as sa
 from sqlalchemy import create_engine, inspect
 import json
 
-#from sqlalchemy import text
-#from sqlalchemy import create_engine, types
-
 current_file_directory = os.path.dirname(os.path.abspath(__file__))
 
 # note: when changing to reading values from credential file, may need to do something about the quotes.  Not sure yet.
 credentials_file_path = current_file_directory + '/credentials_local.json'
-#credentials_file_path = 'credentials_remote.json'
+#credentials_file_path = current_file_directory + '/credentials_remote.json'
 print(f"credentials_file_path: {credentials_file_path}")
 
-# if test_mode is true, don't actually write out any files or make and database changes
+# if test_mode is true, it doesn't write out any files or make any database changes.
 #test_mode = True
 test_mode = False
 
