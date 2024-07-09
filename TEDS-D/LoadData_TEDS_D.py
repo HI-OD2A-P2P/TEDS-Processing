@@ -10,40 +10,74 @@
 # pip3 install pymysql
 #
 # To run:
-# 1.) Edit the 'dir', 'db_host', 'db_name', 'db_table', 'db_user', and 'db_pwd' variables as appropriate.
-# 2.) comment or uncomment the 'combine_csv_files()' and/or 'convert_to_db()' lines at the bottom as appropriate.
-# 3.) > /usr/local/bin/python3 /Users/jgeis/Work/DOH/TEDS-Processing/LoadData.py
+# 1.) Copy the ../credentials_example.json file into this directory and rename it either credentials_local.json
+# or credentials_remote.json, depending on what's appropriate for your environment.
+# 2.) In the new credentials file, edit the values as appropriate.
+# 3.) Comment/uncomment the "credentials_file_path" variable below to point to the correct credentials file.
+# 4.) Set the "test_mode" variable below to True or False depending on what you want. If test_mode is on, 
+# no files or tables will be generated or modified, also more debugging statements are printed out.
+# 5.) comment or uncomment the 'combine_csv_files()' and/or 'convert_to_db()' lines at the bottom as appropriate.
+# 6.) > /usr/local/bin/python3 /Users/jgeis/Work/DOH/TEDS-Processing/TEDS-D/LoadData_TEDS_D.py
+#
+# Note that the final combined_data.csv file will be significantly smaller than the 
+# input files because all states other than Hawaii are stripped out.
 #
 import os
 import pandas as pd
 import mysql.connector as msql
 from mysql.connector import Error
 import sqlalchemy as sa
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, inspect
 import json
 
-# fields you will need to edit before running this
-dir = "<Your Directory Path Here>"
-fileName = "combined_data.csv"
-fullFilePath = dir + fileName
-#db_driver = "mysql+pymysql"
-db_driver = "mssql+pymssql"
-db_host = '<Your database host here>'
-db_name = '<Your database name here>'
-db_table = '<Your table name here>'
-db_user = "<Your Username Here>"
-db_pwd = "<Your Password Here>"
+current_file_directory = os.path.dirname(os.path.abspath(__file__))
 
-# merges all .csv files found in the <dir> into one csv named <fileName>
+# note: when changing to reading values from credential file, may need to do something about the quotes.  Not sure yet.
+credentials_file_path = current_file_directory + '/credentials_local.json'
+#credentials_file_path = current_file_directory + '/credentials_remote.json'
+print(f"credentials_file_path: {credentials_file_path}")
+
+# if test_mode is true, it doesn't write out any files or make any database changes.
+#test_mode = True
+test_mode = False
+
+# Read the JSON file
+with open(credentials_file_path, 'r') as file:
+    data = json.load(file)
+
+# Extract values to variables
+dir = data["dir"]
+file_name = data["file_name"]
+db_driver = data["db_driver"]
+db_host = data["db_host"]
+db_name = data["db_name"]
+db_table = data["db_table"]
+db_user = data["db_user"]
+db_pwd = data["db_pwd"]
+full_file_path = dir + file_name
+
+# Print the variables to verify
+if test_mode:
+    print(f"dir: {dir}")
+    print(f"file_name: {file_name}")
+    print(f"db_driver: {db_driver}")
+    print(f"db_host: {db_host}")
+    print(f"db_name: {db_name}")
+    print(f"db_table: {db_table}")
+    print(f"db_user: {db_user}")
+    print(f"db_pwd: {db_pwd}")
+
 # merges all .csv files found in the <dir> into one csv named <fileName>
 def combine_csv_files():
     print("Running combine_csv_files")
 
     # Check if the file exists
-    if os.path.exists(fullFilePath):
+    if os.path.exists(full_file_path):
+        print(f"The file {full_file_path} already exists. Skipping the combination process.")
+        return
         # If the file exists, delete it
-        os.remove(fullFilePath)
-        print("Pre-existing output file deleted")
+        #os.remove(full_file_path)
+        #print("Pre-existing output file deleted")
 
     # Get a list of all files in the directory
     all_files = os.listdir(dir)
@@ -120,7 +154,10 @@ def combine_csv_files():
     # TODO: some of the data has a space before the value, need to strip off whitespace
 
     # Write the combined data to a new .csv file
-    combined_data.to_csv(fullFilePath, index=False)
+    if not test_mode:
+        combined_data.to_csv(full_file_path, index=False)
+    else:
+        print("Test mode is on, combined data not saved.")
 
 # reads in <filename> and appends the data to <tableName>
 def convert_to_db():
@@ -139,10 +176,13 @@ def convert_to_db():
 
         # read the data from the csv file, yes, I could have just made a bunch
         # of dicts and used convertersdict, but the python stuff to myssql is flaky as it is
-        df = pd.read_csv(fullFilePath, low_memory=False, sep=',', quotechar='\"', encoding='utf8') 
+        df = pd.read_csv(full_file_path, low_memory=False, sep=',', quotechar='\"', encoding='utf8') 
         
         # add data to the table
-        df.to_sql(db_table, con=engine, index=False, if_exists='append')
+        if not test_mode:
+            df.to_sql(db_table, con=engine, index=False, if_exists='append')
+        else:
+            print("Test mode is on, combined data not saved.")
 
         # inserted 1,416,357 rows with 62 columns (TEDS_A).  Don't recall if this was just Hawaii or all states.
         # inserted 131,305 rows with 78 columns (TEDS_D).  Just Hawaii.
