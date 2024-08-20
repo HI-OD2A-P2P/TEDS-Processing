@@ -14,8 +14,7 @@
 -- LOS: Length of stay in treatment (days)
 CREATE TABLE dbo.TEDS_XWALK_LOS (
   id int NOT NULL PRIMARY KEY,
-  value varchar(20) NOT NULL
-  PRIMARY KEY (id)
+  value varchar(25) NOT NULL
 );
 
 insert into dbo.TEDS_XWALK_LOS (id, value) values (1,	"1 day");
@@ -59,8 +58,7 @@ insert into dbo.TEDS_XWALK_LOS (id, value) values (37,	"Greater than 365 days");
 -- SERVICES_D: Type of treatment service/setting at discharge
 CREATE TABLE TEDS_XWALK_SERVICES_D (
   id int NOT NULL PRIMARY KEY,
-  value varchar(20) NOT NULL
-  PRIMARY KEY (id)
+  value varchar(50) NOT NULL
 );
 
 insert into dbo.TEDS_XWALK_SERVICES_D (id, value) values (1,	"Detox, 24-hour, hospital inpatient");
@@ -75,36 +73,33 @@ insert into dbo.TEDS_XWALK_SERVICES_D (id, value) values (8,	"Ambulatory, detoxi
 -- REASON: Reason for discharge
 CREATE TABLE TEDS_XWALK_REASON (
   id int NOT NULL PRIMARY KEY,
-  value varchar(20) NOT NULL
-  PRIMARY KEY (id)
+  value varchar(55) NOT NULL
 );
 
-insert into dbo.TEDS_XWALK_REASON (id, value) values (1,	" Treatment completed");
-insert into dbo.TEDS_XWALK_REASON (id, value) values (2,	" Dropped out of treatment");
-insert into dbo.TEDS_XWALK_REASON (id, value) values (3,	" Terminated by facility ");
-insert into dbo.TEDS_XWALK_REASON (id, value) values (4,	" Transferred to another treatment program or facility");
-insert into dbo.TEDS_XWALK_REASON (id, value) values (5,	" Incarcerated");
-insert into dbo.TEDS_XWALK_REASON (id, value) values (6,	" Death");
-insert into dbo.TEDS_XWALK_REASON (id, value) values (7,	" Other");
+insert into dbo.TEDS_XWALK_REASON (id, value) values (1, "Treatment completed");
+insert into dbo.TEDS_XWALK_REASON (id, value) values (2, "Dropped out of treatment");
+insert into dbo.TEDS_XWALK_REASON (id, value) values (3, "Terminated by facility ");
+insert into dbo.TEDS_XWALK_REASON (id, value) values (4, "Transferred to another treatment program or facility");
+insert into dbo.TEDS_XWALK_REASON (id, value) values (5, "Incarcerated");
+insert into dbo.TEDS_XWALK_REASON (id, value) values (6, "Death");
+insert into dbo.TEDS_XWALK_REASON (id, value) values (7, "Other");
 
 -- EMPLOY_D: Employment status at discharge
 CREATE TABLE TEDS_XWALK_EMPLOY_D (
   id int NOT NULL PRIMARY KEY,
-  value varchar(20) NOT NULL
-  PRIMARY KEY (id)
+  value varchar(40) NOT NULL
 );
 
-insert into dbo.TEDS_XWALK_EMPLOY_D (id, value) values (1,	" Full-time");
-insert into dbo.TEDS_XWALK_EMPLOY_D (id, value) values (2,	" Part-time");
-insert into dbo.TEDS_XWALK_EMPLOY_D (id, value) values (3,	" Unemployed"); 
-insert into dbo.TEDS_XWALK_EMPLOY_D (id, value) values (4,	" Not in labor force");
-insert into dbo.TEDS_XWALK_EMPLOY_D (id, value) values (-9,	" Missing/unknown/not collected/invalid");
+insert into dbo.TEDS_XWALK_EMPLOY_D (id, value) values (1, "Full-time");
+insert into dbo.TEDS_XWALK_EMPLOY_D (id, value) values (2, "Part-time");
+insert into dbo.TEDS_XWALK_EMPLOY_D (id, value) values (3, "Unemployed"); 
+insert into dbo.TEDS_XWALK_EMPLOY_D (id, value) values (4, "Not in labor force");
+insert into dbo.TEDS_XWALK_EMPLOY_D (id, value) values (-9, "Missing/unknown/not collected/invalid");
 
 -- LIVARAG_D: Living arrangements at discharge
 CREATE TABLE TEDS_XWALK_LIVARAG_D (
   id int NOT NULL PRIMARY KEY,
-  value varchar(20) NOT NULL
-  PRIMARY KEY (id)
+  value varchar(40) NOT NULL
 );
 
 insert into dbo.TEDS_XWALK_LIVARAG_D (id, value) values (1, "Homeless");
@@ -115,21 +110,19 @@ insert into dbo.TEDS_XWALK_LIVARAG_D (id, value) values (-9, "Missing/unknown/no
 -- ARRESTS_D: Arrests in past 30 days prior to discharge
 CREATE TABLE TEDS_XWALK_ARRESTS_D (
   id int NOT NULL PRIMARY KEY,
-  value varchar(20) NOT NULL
-  PRIMARY KEY (id)
+  value varchar(40) NOT NULL
 );
 
 insert into dbo.TEDS_XWALK_ARRESTS_D (id, value) values (1,	"12-14 years");
 insert into dbo.TEDS_XWALK_ARRESTS_D (id, value) values (0,	"None");
 insert into dbo.TEDS_XWALK_ARRESTS_D (id, value) values (1,	"Once");
 insert into dbo.TEDS_XWALK_ARRESTS_D (id, value) values (2,	"Two or more times"); 
-insert into dbo.TEDS_XWALK_ARRESTS_D (id, value) values (-9,	"Missing/unknown/not collected/invalid");
+insert into dbo.TEDS_XWALK_ARRESTS_D (id, value) values (-9, "Missing/unknown/not collected/invalid");
 
 -- DETNLF_D: Detailed not in labor force category at discharge
 CREATE TABLE TEDS_XWALK_DETNLF_D (
   id int NOT NULL PRIMARY KEY,
-  value varchar(20) NOT NULL
-  PRIMARY KEY (id)
+  value varchar(40) NOT NULL
 );
 
 insert into dbo.TEDS_XWALK_DETNLF_D (id, value) values (1, "Homemaker");
@@ -142,8 +135,7 @@ insert into dbo.TEDS_XWALK_DETNLF_D (id, value) values (-9, "Missing/unknown/not
 -- SUB1_D: Substance use at discharge (primary)
 CREATE TABLE TEDS_XWALK_SUB1_D (
   id int NOT NULL PRIMARY KEY,
-  value varchar(20) NOT NULL
-  PRIMARY KEY (id)
+  value varchar(40) NOT NULL
 );
 
 insert into dbo.TEDS_XWALK_SUB1_D (id, value) values (1, "None");
@@ -165,13 +157,12 @@ insert into dbo.TEDS_XWALK_SUB1_D (id, value) values (16, "Other sedatives or hy
 insert into dbo.TEDS_XWALK_SUB1_D (id, value) values (17, "Inhalants");
 insert into dbo.TEDS_XWALK_SUB1_D (id, value) values (18, "Over-the-counter medications");
 insert into dbo.TEDS_XWALK_SUB1_D (id, value) values (19, "Other drugs");
-insert into dbo.TEDS_XWALK_SUB1_D (id, value) values (-9, "Missing/unknown/not collected/invalid"); (id, value) values (1,	"12-14 years");
+insert into dbo.TEDS_XWALK_SUB1_D (id, value) values (-9, "Missing/unknown/not collected/invalid");
 
 -- SUB2_D: Substance use at discharge (secondary)
 CREATE TABLE TEDS_XWALK_SUB2_D (
   id int NOT NULL PRIMARY KEY,
-  value varchar(20) NOT NULL
-  PRIMARY KEY (id)
+  value varchar(40) NOT NULL
 );
 
 insert into dbo.TEDS_XWALK_SUB2_D (id, value) values (1, "None");
@@ -193,13 +184,13 @@ insert into dbo.TEDS_XWALK_SUB2_D (id, value) values (16, "Other sedatives or hy
 insert into dbo.TEDS_XWALK_SUB2_D (id, value) values (17, "Inhalants");
 insert into dbo.TEDS_XWALK_SUB2_D (id, value) values (18, "Over-the-counter medications");
 insert into dbo.TEDS_XWALK_SUB2_D (id, value) values (19, "Other drugs");
-insert into dbo.TEDS_XWALK_SUB2_D (id, value) values (-9, "Missing/unknown/not collected/invalid"); (id, value) values (1,	"12-14 years"); (id, value) values (1,	"12-14 years");
+insert into dbo.TEDS_XWALK_SUB2_D (id, value) values (-9, "Missing/unknown/not collected/invalid");
 
 -- SUB3_D: Substance use at discharge (tertiary)
 CREATE TABLE TEDS_XWALK_SUB3_D (
   id int NOT NULL PRIMARY KEY,
-  value varchar(20) NOT NULL
-  PRIMARY KEY (id)
+  value varchar(40) NOT NULL
+
 );
 
 insert into dbo.TEDS_XWALK_SUB3_D (id, value) values (1, "None");
@@ -221,25 +212,23 @@ insert into dbo.TEDS_XWALK_SUB3_D (id, value) values (16, "Other sedatives or hy
 insert into dbo.TEDS_XWALK_SUB3_D (id, value) values (17, "Inhalants");
 insert into dbo.TEDS_XWALK_SUB3_D (id, value) values (18, "Over-the-counter medications");
 insert into dbo.TEDS_XWALK_SUB3_D (id, value) values (19, "Other drugs");
-insert into dbo.TEDS_XWALK_SUB3_D (id, value) values (-9, "Missing/unknown/not collected/invalid"); (id, value) values (1,	"12-14 years"); (id, value) values (1,	"12-14 years");
+insert into dbo.TEDS_XWALK_SUB3_D (id, value) values (-9, "Missing/unknown/not collected/invalid"); 
 
 -- FREQ1_D: Frequency of use at discharge (primary)
 CREATE TABLE TEDS_XWALK_FREQ1_D (
   id int NOT NULL PRIMARY KEY,
-  value varchar(20) NOT NULL
-  PRIMARY KEY (id)
+  value varchar(40) NOT NULL
 );
 
 insert into dbo.TEDS_XWALK_FREQ1_D (id, value) values (1, "No use in the past month");
 insert into dbo.TEDS_XWALK_FREQ1_D (id, value) values (2, "Some use");
 insert into dbo.TEDS_XWALK_FREQ1_D (id, value) values (3, "Daily use");
-insert into dbo.TEDS_XWALK_FREQ1_D (id, value) values (-9, "Missing/unknown/not collected/invalid"); (id, value) values (1,	"12-14 years");
+insert into dbo.TEDS_XWALK_FREQ1_D (id, value) values (-9, "Missing/unknown/not collected/invalid"); 
 
 -- FREQ1_D: Frequency of use at discharge (secondary)
 CREATE TABLE TEDS_XWALK_FREQ2_D (
   id int NOT NULL PRIMARY KEY,
-  value varchar(20) NOT NULL
-  PRIMARY KEY (id)
+  value varchar(40) NOT NULL
 );
 
 insert into dbo.TEDS_XWALK_FREQ2_D (id, value) values (1, "No use in the past month");
@@ -250,8 +239,7 @@ insert into dbo.TEDS_XWALK_FREQ2_D (id, value) values (-9, "Missing/unknown/not 
 -- FREQ3_D: Frequency of use at discharge (tertiary)
 CREATE TABLE TEDS_XWALK_FREQ3_D (
   id int NOT NULL PRIMARY KEY,
-  value varchar(20) NOT NULL
-  PRIMARY KEY (id)
+  value varchar(40) NOT NULL
 );
 
 insert into dbo.TEDS_XWALK_FREQ3_D (id, value) values (1, "No use in the past month");
@@ -262,8 +250,7 @@ insert into dbo.TEDS_XWALK_FREQ3_D (id, value) values (-9, "Missing/unknown/not 
 -- FREQ_ATND_SELF_HELP_D: Attendance at substance use self-help groups in past 30 days prior to discharge
 CREATE TABLE TEDS_XWALK_FREQ_ATND_SELF_HELP_D (
   id int NOT NULL PRIMARY KEY,
-  value varchar(20) NOT NULL
-  PRIMARY KEY (id)
+  value varchar(40) NOT NULL
 );
 
 insert into dbo.TEDS_XWALK_FREQ_ATND_SELF_HELP_D (id, value) values (1, "No attendance");
