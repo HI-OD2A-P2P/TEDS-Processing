@@ -113,7 +113,6 @@ CREATE TABLE dbo.TEDS_XWALK_ARRESTS_D (
   value varchar(40) NOT NULL
 );
 
-insert into dbo.TEDS_XWALK_ARRESTS_D (id, value) values (1,	'12-14 years');
 insert into dbo.TEDS_XWALK_ARRESTS_D (id, value) values (0,	'None');
 insert into dbo.TEDS_XWALK_ARRESTS_D (id, value) values (1,	'Once');
 insert into dbo.TEDS_XWALK_ARRESTS_D (id, value) values (2,	'Two or more times'); 
