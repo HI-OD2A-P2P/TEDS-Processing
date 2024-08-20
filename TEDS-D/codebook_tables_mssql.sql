@@ -56,7 +56,7 @@ insert into dbo.TEDS_XWALK_LOS (id, value) values (36,	'181-365 days');
 insert into dbo.TEDS_XWALK_LOS (id, value) values (37,	'Greater than 365 days');
 
 -- SERVICES_D: Type of treatment service/setting at discharge
-CREATE TABLE TEDS_XWALK_SERVICES_D (
+CREATE TABLE dbo.TEDS_XWALK_SERVICES_D (
   id int NOT NULL PRIMARY KEY,
   value varchar(50) NOT NULL
 );
@@ -71,7 +71,7 @@ insert into dbo.TEDS_XWALK_SERVICES_D (id, value) values (7,	'Ambulatory, non-in
 insert into dbo.TEDS_XWALK_SERVICES_D (id, value) values (8,	'Ambulatory, detoxification');
 
 -- REASON: Reason for discharge
-CREATE TABLE TEDS_XWALK_REASON (
+CREATE TABLE dbo.TEDS_XWALK_REASON (
   id int NOT NULL PRIMARY KEY,
   value varchar(55) NOT NULL
 );
@@ -85,7 +85,7 @@ insert into dbo.TEDS_XWALK_REASON (id, value) values (6, 'Death');
 insert into dbo.TEDS_XWALK_REASON (id, value) values (7, 'Other');
 
 -- EMPLOY_D: Employment status at discharge
-CREATE TABLE TEDS_XWALK_EMPLOY_D (
+CREATE TABLE dbo.TEDS_XWALK_EMPLOY_D (
   id int NOT NULL PRIMARY KEY,
   value varchar(40) NOT NULL
 );
@@ -97,7 +97,7 @@ insert into dbo.TEDS_XWALK_EMPLOY_D (id, value) values (4, 'Not in labor force')
 insert into dbo.TEDS_XWALK_EMPLOY_D (id, value) values (-9, 'Missing/unknown/not collected/invalid');
 
 -- LIVARAG_D: Living arrangements at discharge
-CREATE TABLE TEDS_XWALK_LIVARAG_D (
+CREATE TABLE dbo.TEDS_XWALK_LIVARAG_D (
   id int NOT NULL PRIMARY KEY,
   value varchar(40) NOT NULL
 );
@@ -108,7 +108,7 @@ insert into dbo.TEDS_XWALK_LIVARAG_D (id, value) values (3, 'Independent living'
 insert into dbo.TEDS_XWALK_LIVARAG_D (id, value) values (-9, 'Missing/unknown/not collected/invalid');
 
 -- ARRESTS_D: Arrests in past 30 days prior to discharge
-CREATE TABLE TEDS_XWALK_ARRESTS_D (
+CREATE TABLE dbo.TEDS_XWALK_ARRESTS_D (
   id int NOT NULL PRIMARY KEY,
   value varchar(40) NOT NULL
 );
@@ -120,7 +120,7 @@ insert into dbo.TEDS_XWALK_ARRESTS_D (id, value) values (2,	'Two or more times')
 insert into dbo.TEDS_XWALK_ARRESTS_D (id, value) values (-9, 'Missing/unknown/not collected/invalid');
 
 -- DETNLF_D: Detailed not in labor force category at discharge
-CREATE TABLE TEDS_XWALK_DETNLF_D (
+CREATE TABLE dbo.TEDS_XWALK_DETNLF_D (
   id int NOT NULL PRIMARY KEY,
   value varchar(40) NOT NULL
 );
@@ -133,7 +133,7 @@ insert into dbo.TEDS_XWALK_DETNLF_D (id, value) values (5, 'Other');
 insert into dbo.TEDS_XWALK_DETNLF_D (id, value) values (-9, 'Missing/unknown/not collected/invalid');
 
 -- SUB1_D: Substance use at discharge (primary)
-CREATE TABLE TEDS_XWALK_SUB1_D (
+CREATE TABLE dbo.TEDS_XWALK_SUB1_D (
   id int NOT NULL PRIMARY KEY,
   value varchar(40) NOT NULL
 );
@@ -160,7 +160,7 @@ insert into dbo.TEDS_XWALK_SUB1_D (id, value) values (19, 'Other drugs');
 insert into dbo.TEDS_XWALK_SUB1_D (id, value) values (-9, 'Missing/unknown/not collected/invalid');
 
 -- SUB2_D: Substance use at discharge (secondary)
-CREATE TABLE TEDS_XWALK_SUB2_D (
+CREATE TABLE dbo.TEDS_XWALK_SUB2_D (
   id int NOT NULL PRIMARY KEY,
   value varchar(40) NOT NULL
 );
@@ -187,7 +187,7 @@ insert into dbo.TEDS_XWALK_SUB2_D (id, value) values (19, 'Other drugs');
 insert into dbo.TEDS_XWALK_SUB2_D (id, value) values (-9, 'Missing/unknown/not collected/invalid');
 
 -- SUB3_D: Substance use at discharge (tertiary)
-CREATE TABLE TEDS_XWALK_SUB3_D (
+CREATE TABLE dbo.TEDS_XWALK_SUB3_D (
   id int NOT NULL PRIMARY KEY,
   value varchar(40) NOT NULL
 
@@ -215,7 +215,7 @@ insert into dbo.TEDS_XWALK_SUB3_D (id, value) values (19, 'Other drugs');
 insert into dbo.TEDS_XWALK_SUB3_D (id, value) values (-9, 'Missing/unknown/not collected/invalid'); 
 
 -- FREQ1_D: Frequency of use at discharge (primary)
-CREATE TABLE TEDS_XWALK_FREQ1_D (
+CREATE TABLE dbo.TEDS_XWALK_FREQ1_D (
   id int NOT NULL PRIMARY KEY,
   value varchar(40) NOT NULL
 );
@@ -226,7 +226,7 @@ insert into dbo.TEDS_XWALK_FREQ1_D (id, value) values (3, 'Daily use');
 insert into dbo.TEDS_XWALK_FREQ1_D (id, value) values (-9, 'Missing/unknown/not collected/invalid'); 
 
 -- FREQ1_D: Frequency of use at discharge (secondary)
-CREATE TABLE TEDS_XWALK_FREQ2_D (
+CREATE TABLE dbo.TEDS_XWALK_FREQ2_D (
   id int NOT NULL PRIMARY KEY,
   value varchar(40) NOT NULL
 );
@@ -237,7 +237,7 @@ insert into dbo.TEDS_XWALK_FREQ2_D (id, value) values (3, 'Daily use');
 insert into dbo.TEDS_XWALK_FREQ2_D (id, value) values (-9, 'Missing/unknown/not collected/invalid');
 
 -- FREQ3_D: Frequency of use at discharge (tertiary)
-CREATE TABLE TEDS_XWALK_FREQ3_D (
+CREATE TABLE dbo.TEDS_XWALK_FREQ3_D (
   id int NOT NULL PRIMARY KEY,
   value varchar(40) NOT NULL
 );
@@ -248,7 +248,7 @@ insert into dbo.TEDS_XWALK_FREQ3_D (id, value) values (3, 'Daily use');
 insert into dbo.TEDS_XWALK_FREQ3_D (id, value) values (-9, 'Missing/unknown/not collected/invalid');
 
 -- FREQ_ATND_SELF_HELP_D: Attendance at substance use self-help groups in past 30 days prior to discharge
-CREATE TABLE TEDS_XWALK_FREQ_ATND_SELF_HELP_D (
+CREATE TABLE dbo.TEDS_XWALK_FREQ_ATND_SELF_HELP_D (
   id int NOT NULL PRIMARY KEY,
   value varchar(40) NOT NULL
 );
