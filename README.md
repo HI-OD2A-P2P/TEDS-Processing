@@ -11,7 +11,7 @@ with the numeric codes converted to human readable format:
 - [SAMHSA TEDS A 2015-2019 data](https://www.datafiles.samhsa.gov/sites/default/files/field-uploads-protected/studies/TEDS-A-2015-2019/TEDS-A-2015-2019-datasets/TEDS-A-2015-2019-DS0001/TEDS-A-2015-2019-DS0001-bundles-with-study-info/TEDS-A-2015-2019-DS0001-bndl-data-csv.zip)
 - [SAMHSA TEDS A 2020 data](https://www.datafiles.samhsa.gov/sites/default/files/field-uploads-protected/studies/TEDS-A-2020/TEDS-A-2020-datasets/TEDS-A-2020-DS0001/TEDS-A-2020-DS0001-bundles-with-study-info/TEDS-A-2020-DS0001-bndl-data-csv_v1.zip)
 - [SAMHSA TEDS A 2021 data](https://www.datafiles.samhsa.gov/sites/default/files/field-uploads-protected/studies/TEDS-A-2021/TEDS-A-2021-datasets/TEDS-A-2021-DS0001/TEDS-A-2021-DS0001-bundles-with-study-info/TEDS-A-2021-DS0001-bndl-data-csv_v1.zip)
-- 2021 was the last year available as of May 13, 2024, if there are any subsequent years added, get those and then add their links here.
+- 2021 was the last year available as of Aug 20, 2024, if there are any subsequent years added, get those and then add their links here.
 
 2.) Merge the above csv files into one file:
  - Open the LoadData_TEDS_A.py file
@@ -43,15 +43,15 @@ with the numeric codes converted to human readable format:
  
 ## TEDS-D
 1.) Download and unzip (the following download links are found at [SAMHSA TEDS](https://www.datafiles.samhsa.gov/dataset/teds-d-2021-ds0001-teds-d-2021-ds0001))
-- [SAMHSA TEDS D 2006-2014 data](https://www.datafiles.samhsa.gov/dataset/treatment-episode-data-set-discharges-2006-2014-teds-d-2006-2014-ds0001))
-- [SAMHSA TEDS D 2015 data](https://www.datafiles.samhsa.gov/dataset/teds-d-2015-ds0001-teds-d-2015-ds0001))
-- [SAMHSA TEDS D 2016 data](https://www.datafiles.samhsa.gov/dataset/teds-d-2016-ds0001-teds-d-2016-ds0001))
-- [SAMHSA TEDS D 2017 data](https://www.datafiles.samhsa.gov/dataset/teds-d-2017-ds0001-teds-d-2017-ds0001))
-- [SAMHSA TEDS D 2018 data](https://www.datafiles.samhsa.gov/dataset/teds-d-2018-ds0001-teds-d-2018-ds0001))
-- [SAMHSA TEDS D 2019 data](https://www.datafiles.samhsa.gov/dataset/teds-d-2019-ds0001-teds-d-2019-ds0001))
-- [SAMHSA TEDS D 2020 data](https://www.datafiles.samhsa.gov/dataset/teds-d-2020-ds0001-teds-d-2020-ds0001))
-- [SAMHSA TEDS D 2021 data](https://www.datafiles.samhsa.gov/dataset/teds-d-2021-ds0001-teds-d-2021-ds0001))
-- 2021 was the last year available as of May 13, 2024, if there are any subsequent years added, get those and then add their links here.
+- [SAMHSA TEDS D 2006-2014 data](https://www.datafiles.samhsa.gov/sites/default/files/field-uploads-protected/studies/TEDS-D-2006-2014/TEDS-D-2006-2014-datasets/TEDS-D-2006-2014-DS0001/TEDS-D-2006-2014-DS0001-bundles-with-study-info/TEDS-D-2006-2014-DS0001-bndl-data-tsv.zip))
+- [SAMHSA TEDS D 2015 data](https://www.datafiles.samhsa.gov/sites/default/files/field-uploads-protected/studies/TEDS-D-2015/TEDS-D-2015-datasets/TEDS-D-2015-DS0001/TEDS-D-2015-DS0001-bundles-with-study-info/TEDS-D-2015-DS0001-bndl-data-tsv.zip))
+- [SAMHSA TEDS D 2016 data](https://www.datafiles.samhsa.gov/sites/default/files/field-uploads-protected/studies/TEDS-D-2016/TEDS-D-2016-datasets/TEDS-D-2016-DS0001/TEDS-D-2016-DS0001-bundles-with-study-info/TEDS-D-2016-DS0001-bndl-data-tsv.zip))
+- [SAMHSA TEDS D 2017 data](https://www.datafiles.samhsa.gov/sites/default/files/field-uploads-protected/studies/TEDS-D-2017/TEDS-D-2017-datasets/TEDS-D-2017-DS0001/TEDS-D-2017-DS0001-bundles-with-study-info/TEDS-D-2017-DS0001-bndl-data-tsv.zip))
+- [SAMHSA TEDS D 2018 data](https://www.datafiles.samhsa.gov/sites/default/files/field-uploads-protected/studies/TEDS-D-2018/TEDS-D-2018-datasets/TEDS-D-2018-DS0001/TEDS-D-2018-DS0001-bundles-with-study-info/TEDS-D-2018-DS0001-bndl-data-tsv.zip))
+- [SAMHSA TEDS D 2019 data](https://www.datafiles.samhsa.gov/sites/default/files/field-uploads-protected/studies/TEDS-D-2019/TEDS-D-2019-datasets/TEDS-D-2019-DS0001/TEDS-D-2019-DS0001-bundles-with-study-info/TEDS-D-2019-DS0001-bndl-data-tsv_V1.zip))
+- [SAMHSA TEDS D 2020 data](https://www.datafiles.samhsa.gov/sites/default/files/field-uploads-protected/studies/TEDS-D-2020/TEDS-D-2020-datasets/TEDS-D-2020-DS0001/TEDS-D-2020-DS0001-bundles-with-study-info/TEDS-D-2020-DS0001-bndl-data-csv_v1.zip))
+- [SAMHSA TEDS D 2021 data](https://www.datafiles.samhsa.gov/sites/default/files/field-uploads-protected/studies/TEDS-D-2021/TEDS-D-2021-datasets/TEDS-D-2021-DS0001/TEDS-D-2021-DS0001-bundles-with-study-info/TEDS-D-2021-DS0001-bndl-data-csv_v1.zip))
+- 2021 was the last year available as of Aug 20, 2024, if there are any subsequent years added, get those and then add their links here.
 - The site says TEDS-D data collection began in 2000, but I only found downloads starting from 2006.
 - Formats of the downloaded files change between the following years
 -- 2014 & 2015
