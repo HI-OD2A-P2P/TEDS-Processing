@@ -15,7 +15,7 @@
 -- LOS: Length of stay in treatment (days)
 CREATE TABLE `TEDS_XWALK_LOS` (
   `id` int NOT NULL,
-  `value` varchar(20) NOT NULL,
+  `value` varchar(25) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 
@@ -60,7 +60,7 @@ insert into TEDS_XWALK_LOS (id, value) values (37,	"Greater than 365 days");
 -- SERVICES_D: Type of treatment service/setting at discharge
 CREATE TABLE `TEDS_XWALK_SERVICES_D` (
   `id` int NOT NULL,
-  `value` varchar(20) NOT NULL,
+  `value` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 
@@ -76,7 +76,7 @@ insert into TEDS_XWALK_SERVICES_D (id, value) values (8,	"Ambulatory, detoxifica
 -- REASON: Reason for discharge
 CREATE TABLE `TEDS_XWALK_REASON` (
   `id` int NOT NULL,
-  `value` varchar(20) NOT NULL,
+  `value` varchar(55) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 
@@ -91,7 +91,7 @@ insert into TEDS_XWALK_REASON (id, value) values (7,	" Other");
 -- EMPLOY_D: Employment status at discharge
 CREATE TABLE `TEDS_XWALK_EMPLOY_D` (
   `id` int NOT NULL,
-  `value` varchar(20) NOT NULL,
+  `value` varchar(40) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 
@@ -104,7 +104,7 @@ insert into TEDS_XWALK_EMPLOY_D (id, value) values (-9,	" Missing/unknown/not co
 -- LIVARAG_D: Living arrangements at discharge
 CREATE TABLE `TEDS_XWALK_LIVARAG_D` (
   `id` int NOT NULL,
-  `value` varchar(20) NOT NULL,
+  `value` varchar(40) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 
@@ -116,7 +116,7 @@ insert into TEDS_XWALK_LIVARAG_D (id, value) values (-9, "Missing/unknown/not co
 -- ARRESTS_D: Arrests in past 30 days prior to discharge
 CREATE TABLE `TEDS_XWALK_ARRESTS_D` (
   `id` int NOT NULL,
-  `value` varchar(20) NOT NULL,
+  `value` varchar(40) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 
@@ -129,7 +129,7 @@ insert into TEDS_XWALK_ARRESTS_D (id, value) values (-9,	"Missing/unknown/not co
 -- DETNLF_D: Detailed not in labor force category at discharge
 CREATE TABLE `TEDS_XWALK_DETNLF_D` (
   `id` int NOT NULL,
-  `value` varchar(20) NOT NULL,
+  `value` varchar(40) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 
@@ -143,7 +143,7 @@ insert into TEDS_XWALK_DETNLF_D (id, value) values (-9, "Missing/unknown/not col
 -- SUB1_D: Substance use at discharge (primary)
 CREATE TABLE `TEDS_XWALK_SUB1_D` (
   `id` int NOT NULL,
-  `value` varchar(20) NOT NULL,
+  `value` varchar(40) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 
@@ -166,12 +166,12 @@ insert into TEDS_XWALK_SUB1_D (id, value) values (16, "Other sedatives or hypnot
 insert into TEDS_XWALK_SUB1_D (id, value) values (17, "Inhalants");
 insert into TEDS_XWALK_SUB1_D (id, value) values (18, "Over-the-counter medications");
 insert into TEDS_XWALK_SUB1_D (id, value) values (19, "Other drugs");
-insert into TEDS_XWALK_SUB1_D (id, value) values (-9, "Missing/unknown/not collected/invalid"); (id, value) values (1,	"12-14 years");
+insert into TEDS_XWALK_SUB1_D (id, value) values (-9, "Missing/unknown/not collected/invalid"); 
 
 -- SUB2_D: Substance use at discharge (secondary)
 CREATE TABLE `TEDS_XWALK_SUB2_D` (
   `id` int NOT NULL,
-  `value` varchar(20) NOT NULL,
+  `value` varchar(40) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 
@@ -194,12 +194,12 @@ insert into TEDS_XWALK_SUB2_D (id, value) values (16, "Other sedatives or hypnot
 insert into TEDS_XWALK_SUB2_D (id, value) values (17, "Inhalants");
 insert into TEDS_XWALK_SUB2_D (id, value) values (18, "Over-the-counter medications");
 insert into TEDS_XWALK_SUB2_D (id, value) values (19, "Other drugs");
-insert into TEDS_XWALK_SUB2_D (id, value) values (-9, "Missing/unknown/not collected/invalid"); (id, value) values (1,	"12-14 years"); (id, value) values (1,	"12-14 years");
+insert into TEDS_XWALK_SUB2_D (id, value) values (-9, "Missing/unknown/not collected/invalid"); 
 
 -- SUB3_D: Substance use at discharge (tertiary)
 CREATE TABLE `TEDS_XWALK_SUB3_D` (
   `id` int NOT NULL,
-  `value` varchar(20) NOT NULL,
+  `value` varchar(40) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 
@@ -222,24 +222,24 @@ insert into TEDS_XWALK_SUB3_D (id, value) values (16, "Other sedatives or hypnot
 insert into TEDS_XWALK_SUB3_D (id, value) values (17, "Inhalants");
 insert into TEDS_XWALK_SUB3_D (id, value) values (18, "Over-the-counter medications");
 insert into TEDS_XWALK_SUB3_D (id, value) values (19, "Other drugs");
-insert into TEDS_XWALK_SUB3_D (id, value) values (-9, "Missing/unknown/not collected/invalid"); (id, value) values (1,	"12-14 years"); (id, value) values (1,	"12-14 years");
+insert into TEDS_XWALK_SUB3_D (id, value) values (-9, "Missing/unknown/not collected/invalid"); 
 
 -- FREQ1_D: Frequency of use at discharge (primary)
 CREATE TABLE `TEDS_XWALK_FREQ1_D` (
   `id` int NOT NULL,
-  `value` varchar(20) NOT NULL,
+  `value` varchar(40) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 
 insert into TEDS_XWALK_FREQ1_D (id, value) values (1, "No use in the past month");
 insert into TEDS_XWALK_FREQ1_D (id, value) values (2, "Some use");
 insert into TEDS_XWALK_FREQ1_D (id, value) values (3, "Daily use");
-insert into TEDS_XWALK_FREQ1_D (id, value) values (-9, "Missing/unknown/not collected/invalid"); (id, value) values (1,	"12-14 years");
+insert into TEDS_XWALK_FREQ1_D (id, value) values (-9, "Missing/unknown/not collected/invalid");
 
 -- FREQ1_D: Frequency of use at discharge (secondary)
 CREATE TABLE `TEDS_XWALK_FREQ2_D` (
   `id` int NOT NULL,
-  `value` varchar(20) NOT NULL,
+  `value` varchar(40) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 
@@ -251,7 +251,7 @@ insert into TEDS_XWALK_FREQ2_D (id, value) values (-9, "Missing/unknown/not coll
 -- FREQ3_D: Frequency of use at discharge (tertiary)
 CREATE TABLE `TEDS_XWALK_FREQ3_D` (
   `id` int NOT NULL,
-  `value` varchar(20) NOT NULL,
+  `value` varchar(40) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 
@@ -263,7 +263,7 @@ insert into TEDS_XWALK_FREQ3_D (id, value) values (-9, "Missing/unknown/not coll
 -- FREQ_ATND_SELF_HELP_D: Attendance at substance use self-help groups in past 30 days prior to discharge
 CREATE TABLE `TEDS_XWALK_FREQ_ATND_SELF_HELP_D` (
   `id` int NOT NULL,
-  `value` varchar(20) NOT NULL,
+  `value` varchar(40) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 

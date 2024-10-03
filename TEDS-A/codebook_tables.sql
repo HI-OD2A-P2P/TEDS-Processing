@@ -819,7 +819,7 @@ insert into TEDS_XWALK_HLTHINS (id, value) values (-9, "Missing/unknown/not coll
 
 CREATE TABLE `TEDS_XWALK_PRIMPAY` (
   `id` int NOT NULL,
-  `value` varchar(75) NOT NULL,
+  `value` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 
