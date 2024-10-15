@@ -6,16 +6,15 @@ import os
 import pdfplumber
 import re
 import pandas as pd
-from itertools import groupby
-
+#from itertools import groupby
 
 folder_path = "/Users/jgeis/Work/DOH/TEDS-Processing/TEDS-D/codebooks/"
-        #col_types = {,"DAYWAIT":"string","SERVICES_D":"string","REASON":"string","EMPLOY_D":"string","LIVARAG_D":"string","ARRESTS_D":"string","DSMCRIT":"string","AGE":"string","RACE":"string","ETHNIC":"string","DETNLF":"string","DETNLF_D":"string","PRIMINC":"string","SUB1":"string","SUB2":"string","SUB3":"string","SUB1_D":"string","SUB2_D":"string","SUB3_D":"string","ROUTE1":"string","ROUTE2":"string","ROUTE3":"string","FREQ1":"string","FREQ2":"string","FREQ3":"string","FREQ1_D":"string","FREQ2_D":"string","FREQ3_D":"string","FRSTUSE1":"string","FRSTUSE2":"string","FRSTUSE3":"string","HLTHINS":"string","PRIMPAY":"string","FREQ_ATND_SELF_HELP":"string","FREQ_ATND_SELF_HELP_D":"string","ALCFLG":"string","COKEFLG":"string","MARFLG":"string","HERFLG":"string","METHFLG":"string","OPSYNFLG":"string","PCPFLG":"string","HALLFLG":"string","MTHAMFLG":"string","AMPHFLG":"string","STIMFLG":"string","BENZFLG":"string","TRNQFLG":"string","BARBFLG":"string","SEDHPFLG":"string","INHFLG":"string","OTCFLG":"string","OTHERFLG":"string","DIVISION":"string","REGION":"string","IDU":"string","ALCDRUG":"string","CBSA":"string","PMSA":"string","SERVSETD":"string","NUMSUBS":"string","YEAR":"string"}
 
 # List of section headers to include
 target_headers = [
     "CBSA",
-    "CBSA",
+    "CBSA2010",
+    "CBSA2020",
     "DISYR",
     "AGE",
     "GENDER",
@@ -35,7 +34,6 @@ target_headers = [
     "ARRESTS",
     "ARRESTS_D",
     "STFIPS",
-    "CBSA2020",
     "REGION",
     "DIVISION",
     "SERVICES",
@@ -43,15 +41,10 @@ target_headers = [
     "SERVSETD",
     "METHUSE",
     "DAYWAIT",
-    "DAYWAIT",
     "REASON",
     "LOS",
-    "LOS",
-    "PSOURCE",
     "PSOURCE",
     "DETCRIM",
-    "DETCRIM",
-    "NOPRIOR",
     "NOPRIOR",
     "SUB1",
     "SUB1_D",
@@ -71,6 +64,7 @@ target_headers = [
     "FREQ3",
     "FREQ3_D",
     "FRSTUSE3",
+    "NUMSUBS",
     "IDU"
     "ALCFLG",
     "COKEFLG",
@@ -96,8 +90,7 @@ target_headers = [
     "HLTHINS",
     "PRIMPAY",
     "FREQ_ATND_SELF_HELP",
-    "FREQ_ATND_SELF_HELP_D",
-    "NUMSUBS"
+    "FREQ_ATND_SELF_HELP_D"
 ]
 
 # Function to remove consecutive duplicate characters
@@ -128,6 +121,7 @@ def get_text_before_colon(s):
 
 # Function to extract headers and tables from the PDF
 def extract_sections_and_values(pdf_path):
+    filename = os.path.splitext(os.path.basename(pdf_path))[0]  # Extract filename without extension
     sections = {}
     current_section = None
 
@@ -136,6 +130,7 @@ def extract_sections_and_values(pdf_path):
         for page in pdf.pages:
             text = page.extract_text()
             lines = text.split("\n")
+            # kick out at appendices as we don't want that to be processed.
             if (len(lines) == 2 and lines[0] == "APPENDICES"):
                 print("reached appendices")
                 return sections
@@ -163,9 +158,9 @@ def extract_sections_and_values(pdf_path):
                     match = re.match(r"(-?\d+)\s+(.+?)(?=\s+\d|\s+%)", line)
                     if match:
                         value = match.group(1)
-                        label = match.group(2)
+                        label = match.group(2).capitalize()
                         print("    match: ", value, ", ", label, "\n")
-                        sections[current_section].append({'value': value, 'label': label})
+                        sections[current_section].append({'value': value, filename: label})
 
     return sections
 
@@ -198,8 +193,9 @@ def process_pdf(pdf_path):
 """
 Processes all PDFs in a directory and saves results to individual CSV files.
 """
-"""
+
 # Main execution
+"""
 def main():
   directory = "/Users/jgeis/Work/DOH/TEDS-Processing/TEDS-D/codebooks"  # Replace with the actual directory path
   for filename in os.listdir(directory):
@@ -212,10 +208,121 @@ if __name__ == "__main__":
   print("All PDFs processed!")
 """
 
+""" def merge_csv_files(directory):
+    # Get list of CSV files in the directory
+    csv_files = [f for f in os.listdir(directory) if f.endswith('.csv')]
+    
+    # Initialize an empty list to hold dataframes for merging
+    data_frames = []
+
+    for file in csv_files:
+        # Read each CSV file into a dataframe
+        df = pd.read_csv(os.path.join(directory, file), header=None, names=["value", "label", "section"])
+        
+        # Reformat dataframe: group by section and value
+        df = df.groupby(["section", "value"])["label"].apply(list).reset_index()
+        
+        # Create a new column name from the file name (without .csv extension)
+        file_column_name = file.replace('.csv', '_label')  # Adding '_label' to clarify purpose
+        
+        # Convert the labels to strings and join them into a single string
+        df[file_column_name] = df['label'].apply(lambda x: ', '.join(str(item) for item in x if pd.notnull(item)))
+        print(df)
+        # Drop the original label column
+        df.drop(columns=['label'], inplace=True)
+
+        # Append dataframe to the list
+        data_frames.append(df)
+    
+    # Merge all dataframes on section and value
+    merged_df = data_frames[0]
+    for df in data_frames[1:]:
+        merged_df = pd.merge(merged_df, df, on=["section", "value"], how="outer")
+        
+    # Save the merged dataframe to a new CSV file
+    merged_df.to_csv(os.path.join(directory, 'merged_output.csv'), index=False) """
+"""
+def merge_csv_files(directory):
+    # Initialize a list to hold dataframes
+    dataframes = []
+
+    # Loop through each CSV file in the directory
+    for filename in os.listdir(directory):
+        print(filename)
+        if filename.endswith('.csv'):
+            # Read the CSV file
+            file_path = os.path.join(directory, filename)
+            df = pd.read_csv(file_path)
+            print(df)
+
+            # Ensure that 'value' and 'section' are treated as strings to avoid type issues
+            df['value'] = df['value'].astype(str)
+            df['section'] = df['section'].astype(str)
+
+            # Add the unique column name to the dataframe (assumes the unique column is the first one in the CSV)
+            unique_column_name = df.columns[2]  # Adjust index if needed for unique column
+            print(unique_column_name)
+            dataframes.append(df)
+
+    # Merge all dataframes together using concat, keeping all columns
+    merged_output = pd.concat(dataframes, axis=0, ignore_index=True)
+
+    # Save the merged dataframe to a new CSV
+    merged_output.to_csv(f'{folder_path}merged_output.csv', index=False)
+"""
+
+def merge_csv_files(directory):
+    # Get list of CSV files in the directory
+    csv_files = [f for f in os.listdir(directory) if f.endswith('.csv')]
+    
+    # Initialize an empty list to hold dataframes for merging
+    data_frames = []
+
+    for file in csv_files:
+        if (file != "merged_output.csv"):
+            print(file)
+            # Read each CSV file into a dataframe
+            # Assuming the unique column is the first one, and using None for header to treat all columns as data
+            df = pd.read_csv(os.path.join(directory, file), header=None)
+            
+            # Assuming the structure is value, section, unique_column_name
+            # You can specify the names here according to your file structure
+            df.columns = ["value", "unique_label", "section"]
+            
+            # Reformat dataframe: group by section and value
+            # Use the unique label for grouping
+            df_grouped = df.groupby(["section", "value"])["unique_label"].apply(list).reset_index()
+            
+            # Create a new column name from the file name (without .csv extension)
+            #file_column_name = file.replace('.csv', '_label')  # Adding '_label' to clarify purpose
+            
+            # Convert the labels to strings and join them into a single string
+            df_grouped[file] = df_grouped['unique_label'].apply(lambda x: ', '.join(str(item) for item in x if pd.notnull(item)))
+            
+            # Drop the original unique_label column
+            df_grouped.drop(columns=['unique_label'], inplace=True)
+
+            # Append dataframe to the list
+            data_frames.append(df_grouped)
+    
+    # Merge all dataframes on section and value
+    merged_df = data_frames[0]
+    for df in data_frames[1:]:
+        merged_df = pd.merge(merged_df, df, on=["section", "value"], how="outer")
+        
+    # Save the merged dataframe to a new CSV file
+    merged_df.to_csv(os.path.join(directory, 'merged_output.csv'), index=False)
+
+
+# TODO: 
+# - make all values output as camel case or lower case with just the first letter capitalized
+# - Age is not processing correctly, some have "years old" some don't, also, some just give a single number, not a range
+
+#merge_csv_files(folder_path)
 
 
 # Main execution
-pdf_path = f"{folder_path}TEDS-D-2006-2014-DS0001-info-codebook.pdf"
+pdf_path = f"{folder_path}TEDS-D-2019-DS0001-info-codebook_V1.pdf"
 process_pdf(pdf_path)
 
 """ output_csv = 'extracted_codebook_filtered.csv'
