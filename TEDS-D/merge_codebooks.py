@@ -66,9 +66,10 @@ for file in csv_files:
             merged_df, df, 
             on=['code', 'Value'], how='outer'
         )
-    # Sort columns
-    desired_order = ['code', 'Value', '2006_2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022']
-    merged_df = merged_df[desired_order]
+
+# Sort columns
+desired_order = ['code', 'Value', '2006_2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022']
+merged_df = merged_df[desired_order]
 
 # Save the merged DataFrame to a new CSV file
 output_file = os.path.join(directory, "merged_codes_result.csv")
