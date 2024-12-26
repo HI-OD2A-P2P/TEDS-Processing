@@ -111,20 +111,31 @@ def combine_csv_files():
             # strip out everything but Hawaii as the end result was just too big
             data_hawaii = data[data['STFIPS'] == 'Hawaii']
             # normalize column names
-            data_hawaii.rename(columns={"CBSA2020": "CBSA"})
+            data_hawaii = data_hawaii.rename(columns={"CBSA2020": "CBSA"})
+            print("inserting rows: ", len(data_hawaii))
 
-            combined_data = pd.concat([combined_data, data_hawaii])
+            combined_data = pd.concat([combined_data, data_hawaii], axis="rows")
         elif ("2015" in file_path
               or "2016" in file_path):
             print("2015 or 2016")
+            # 2016 is not appearing in the end result, 8776 rows
+
             # this works for non-2021, but not 2021
             data = pd.read_csv(file_path, encoding='latin-1')
 
             # strip out everything but Hawaii as the end result was just too big
             data_hawaii = data[data['STFIPS'] == 15]
             # not needed as we use DISYR instead
-            data_hawaii = data_hawaii.drop(columns=['YEAR'])        
-            combined_data = pd.concat([combined_data, data_hawaii]).fillna("")
+            data_hawaii = data_hawaii.drop(columns=['YEAR'])
+            data_hawaii = data_hawaii.drop(columns=['NUMSUBS'])
+
+            print("inserting rows: ", len(data_hawaii))
+            #if ("2016" in file_path):
+            #    print(data_hawaii)
+            #print("combined_data: ", len(combined_data), "data_hawaii: ", len(data_hawaii))
+            combined_data = pd.concat([combined_data, data_hawaii], axis="rows").fillna("")
+            #print("combined_data: ", len(combined_data), "data_hawaii: ", len(data_hawaii))
+
         elif ("2017" in file_path
               or "2018" in file_path
               or "2019" in file_path
@@ -136,10 +147,20 @@ def combine_csv_files():
             # strip out everything but Hawaii as the end result was just too big
             data_hawaii = data[data['STFIPS'] == 15] 
             # normalize column names
-            data_hawaii.rename(columns={"CBSA2010": "CBSA"})
-     
-            combined_data = pd.concat([combined_data, data_hawaii]).fillna("")         
-        
+            data_hawaii = data_hawaii.rename(columns={"CBSA2010": "CBSA"})
+            print("inserting rows: ", len(data_hawaii))
+            combined_data = pd.concat([combined_data, data_hawaii], axis="rows").fillna("")         
+        elif ("2022" in file_path): 
+            print("2022")
+            data = pd.read_csv(file_path, encoding='latin-1')
+
+            # strip out everything but Hawaii as the end result was just too big
+            data_hawaii = data[data['STFIPS'] == 15] 
+            # normalize column names
+            data_hawaii = data_hawaii.rename(columns={"CBSA2020": "CBSA"})
+            print("inserting rows: ", len(data_hawaii))
+            combined_data = pd.concat([combined_data, data_hawaii], axis="rows").fillna("")         
+
         elif ("2014" in file_path) :
             print("2006_2014")
             # this works for non-2021, but not 2021
@@ -148,13 +169,18 @@ def combine_csv_files():
             # strip out everything but Hawaii as the end result was just too big
             data_hawaii = data[data['STFIPS'] == 15]
             # normalize column names    
-            data_hawaii.rename(columns={"SERVSETD": "SERVICES"})
-            combined_data = pd.concat([combined_data, data_hawaii]).fillna("")
+            data_hawaii = data_hawaii.rename(columns={"SERVSETD": "SERVICES"})
+            data_hawaii = data_hawaii.drop(columns=['NUMSUBS'])
+            data_hawaii = data_hawaii.drop(columns=['PMSA'])
+            print("inserting rows: ", len(data_hawaii))
+
+            combined_data = pd.concat([combined_data, data_hawaii], axis="rows").fillna("")
 
     # TODO: some of the data has a space before the value, need to strip off whitespace
 
     # Write the combined data to a new .csv file
     if not test_mode:
+        print("inserting total rows: ", len(combined_data))
         combined_data.to_csv(full_file_path, index=False)
     else:
         print("Test mode is on, combined data not saved.")
@@ -190,5 +216,6 @@ def convert_to_db():
         print("Error while connecting", e)
 
 # uncomment one or both of these to make something happen
-#combine_csv_files()
-convert_to_db()
+combine_csv_files()
+#convert_to_db()
+# 136,287
