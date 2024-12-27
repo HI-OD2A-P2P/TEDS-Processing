@@ -81,6 +81,7 @@ def read_page(page_num):
         end = end.start()
     entries = text[start:end]
     entries = entries.replace('\n•\n', '-')
+    entries = entries.replace('\n-\n9', '\n-9') # fix the - and 9 being on separate lines problem
     entries = entries.replace('\n-\n', '\n')
     entries = entries.strip()
     entries = entries.split('\n')
