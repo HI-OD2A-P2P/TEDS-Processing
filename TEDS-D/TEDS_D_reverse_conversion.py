@@ -99,5 +99,5 @@ def generate_mysql_updates(csv_file):
 
 # Replace 'your_file.csv' with the path to your CSV file
 folder_path = "/Users/jgeis/Work/DOH/TEDS-Processing/TEDS-D/codebooks/"
-csv_file = f"{folder_path}merged_codes_result.csv"
+csv_file = f"{folder_path}merged_codes_result_2021.csv"
 generate_mysql_updates(csv_file)

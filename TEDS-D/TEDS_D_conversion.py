@@ -45,7 +45,9 @@ def generate_mysql_updates(csv_file):
             code = row['code']
             field = row['Value']
             
-                        # Skip if the field starts with 'CBSA'
+            if len(field) == 0 or field == '':
+                continue
+            # Skip if the field starts with 'CBSA'
             if code.startswith('CBSA') or code == 'DISYR' or code == 'CASEID' or code == 'PMSA' or code == 'NUMSUBS':
                 continue
 
@@ -53,32 +55,33 @@ def generate_mysql_updates(csv_file):
             for year in ['2015','2016','2017', '2018', '2019', '2020', '2021', '2022']:
                 # Get the value for the current year
                 year_value = row[year]
-                
+
                 # Generate the MySQL UPDATE command
                 update_command = f"""
                     update 
-                        TEDS_D as T
+                        dbo.TEDS_D
                     set 
-                        T.{code} = '{year_value}'
+                        {code} = '{year_value}'
                     where  
-                        T.{code} = {field}
-                        and T.DISYR = {year};
+                        {code} = '{field}'
+                        and DISYR = {year};
                     """
                 # Print the generated command
                 print(update_command)
 
 
             # Process the 2006-2014 column
-            range_value = row['2006-2014']
+            range_value = row['2006_2014']
             # Generate the MySQL UPDATE command for the range of years
+
             update_command_range = f"""
                 update 
-                    TEDS_D as T
+                    dbo.TEDS_D
                 set 
-                    T.{code} = '{range_value}'
+                    {code} = '{range_value}'
                 where  
-                    T.{code} = {field}
-                    and T.DISYR between 2006 and 2014;
+                    {code} = '{field}'
+                    and DISYR between 2006 and 2014;
                 """
             # Print the generated command for the range
             print(update_command_range)
@@ -86,5 +89,5 @@ def generate_mysql_updates(csv_file):
 
 # Replace 'your_file.csv' with the path to your CSV file
 folder_path = "/Users/jgeis/Work/DOH/TEDS-Processing/TEDS-D/codebooks/"
-csv_file = 'merged_codes_result.csv'
+csv_file = f"{folder_path}merged_codes_result.csv"
 generate_mysql_updates(csv_file)
