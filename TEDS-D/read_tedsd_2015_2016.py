@@ -36,18 +36,38 @@ def read_pdf(filename):
     dfs = []
     for page in range(npages):
         result = read_page(page)
+        #print("result: ", result)
         if result:
             (code, label), df = result
             code = code.strip().replace('\n', ' ')
             label = label.strip().replace('\n', ' ')
             if code == "`  SERVICES_D":  # the PDF has a typo, get rid of it
                 code = "SERVICES_D"
+            if code == "ETHNICITY":  # for 2016, 2015 is already fixed below
+                code = "ETHNIC"
             if df is not None:
                 df['code'] = code
                 df['full_label'] = label
                 dfs.append(df)
+                #print("df1: ", dfs)
             else:
+                #print("df from dict: ", pd.DataFrame.from_dict({'code': [code], 'full_label': [label]}))
                 dfs.append(pd.DataFrame.from_dict({'code': [code], 'full_label': [label]}))
+    
+    # the page that had this data was completely absent in the text output, so I made it manually
+    # only want this to run once per year, so make sure we check the year in the filename
+    if ("2015" in filename):
+        data = [{'code': 'IDU', 'full_label': 'CURRENT IV DRUG USE REPORTED AT ADMISSION', 'Value': '0', 'Label':'IDU NOT REPORTED'},
+                {'code': 'IDU', 'full_label': 'CURRENT IV DRUG USE REPORTED AT ADMISSION', 'Value': '1', 'Label':'IDU REPORTED'},
+                {'code': 'IDU', 'full_label': 'CURRENT IV DRUG USE REPORTED AT ADMISSION', 'Value': '-9', 'Label':'NO SUBSTANCES REPORTED'}]
+        dfs.append(pd.DataFrame(data))
+    if ("2016" in filename):
+        data = [{'code': 'IDU', 'full_label': 'CURRENT IV DRUG USE REPORTED AT ADMISSION', 'Value': '0', 'Label':'IDU NOT REPORTED'},
+                {'code': 'IDU', 'full_label': 'CURRENT IV DRUG USE REPORTED AT ADMISSION', 'Value': '1', 'Label':'IDU REPORTED'},
+                {'code': 'IDU', 'full_label': 'CURRENT IV DRUG USE REPORTED AT ADMISSION', 'Value': '-9', 'Label':'NO SUBSTANCES REPORTED'}]
+        dfs.append(pd.DataFrame(data))
+
+    #print("dfs3: ", dfs)
     pd.concat(dfs).to_csv(filename[:-4] + '_codes.csv')
 
 def read_page(page_num):
@@ -64,10 +84,19 @@ def read_page(page_num):
         return None
     header_text = text[:first_lowercase-1]
     
+    #print("header_text1: ", header_text)
+    # When I print out pageObj.extractText(), it's missing the "ETHNIC: " part of the 
+    # "ETHNIC: HISPANIC OR LATINO ORIGIN (ETHNICITY)" header, so it isn't registering.
+    # this is a hack to catch it.
+    if header_text.startswith("HISPANIC"):
+        header_text = "ETHNIC: HISPANIC OR LATINO ORIGIN (ETHNICITY)"
+    #print("header_text2: ", header_text)
+
     if ':' not in header_text or len(header_text) > 200:
         return None
     header_text = header_text.replace('\n', '')
     print("header_text: ", header_text)
+
 
     text = text.replace('\n \n', '\n')
     start = re.search(table_start, text)
@@ -123,10 +152,12 @@ def read_page(page_num):
             if '%' in entries[r+3]:
                 r += 4
                 
+    #print("entries: ", entries)
 
     n_entries = len(entries)
     n_rows = n_entries / 4
     entries_grid = np.reshape(entries, (int(n_rows), 4))
+    #print("entries_grid: ", entries_grid)
     df = pd.DataFrame(entries_grid,
                   columns=['Value', 'Label', 'Frequency', 'Percent'])
     return header_text.split(':'), df
