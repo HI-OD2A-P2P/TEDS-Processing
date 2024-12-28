@@ -17,7 +17,7 @@
 # 4.) Set the "test_mode" variable below to True or False depending on what you want. If test_mode is on, 
 # no files or tables will be generated or modified, also more debugging statements are printed out.
 # 5.) comment or uncomment the 'combine_csv_files()' and/or 'convert_to_db()' lines at the bottom as appropriate.
-# 6.) > /usr/local/bin/python3 /Users/jgeis/Work/DOH/TEDS-Processing/TEDS-D/LoadData_TEDS_D.py
+# 6.) /usr/local/bin/python3 /Users/jgeis/Work/DOH/TEDS-Processing/TEDS-D/LoadData_TEDS_D.py
 #
 # Note that the final combined_data.csv file will be significantly smaller than the 
 # input files because all states other than Hawaii are stripped out.
@@ -110,6 +110,7 @@ def combine_csv_files():
 
             # strip out everything but Hawaii as the end result was just too big
             data_hawaii = data[data['STFIPS'] == 'Hawaii']
+
             # normalize column names
             data_hawaii = data_hawaii.rename(columns={"CBSA2020": "CBSA"})
             print("inserting rows: ", len(data_hawaii))
@@ -118,8 +119,6 @@ def combine_csv_files():
         elif ("2015" in file_path
               or "2016" in file_path):
             print("2015 or 2016")
-            # 2016 is not appearing in the end result, 8776 rows
-
             # this works for non-2021, but not 2021
             data = pd.read_csv(file_path, encoding='latin-1')
 
@@ -127,7 +126,7 @@ def combine_csv_files():
             data_hawaii = data[data['STFIPS'] == 15]
             # not needed as we use DISYR instead
             data_hawaii = data_hawaii.drop(columns=['YEAR'])
-            data_hawaii = data_hawaii.drop(columns=['NUMSUBS'])
+            #data_hawaii = data_hawaii.drop(columns=['NUMSUBS'])
 
             print("inserting rows: ", len(data_hawaii))
             #if ("2016" in file_path):
@@ -170,8 +169,8 @@ def combine_csv_files():
             data_hawaii = data[data['STFIPS'] == 15]
             # normalize column names    
             data_hawaii = data_hawaii.rename(columns={"SERVSETD": "SERVICES"})
-            data_hawaii = data_hawaii.drop(columns=['NUMSUBS'])
-            data_hawaii = data_hawaii.drop(columns=['PMSA'])
+            #data_hawaii = data_hawaii.drop(columns=['NUMSUBS'])
+            #data_hawaii = data_hawaii.drop(columns=['PMSA'])
             print("inserting rows: ", len(data_hawaii))
 
             combined_data = pd.concat([combined_data, data_hawaii], axis="rows").fillna("")
