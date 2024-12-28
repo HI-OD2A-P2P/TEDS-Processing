@@ -54,9 +54,17 @@ for file in csv_files:
     df = df.rename(columns={'TEDS-D-2021-DS0001-info-codebook_codes': '2021'})
     df = df.rename(columns={'TEDS-D-2022-DS0001-info-codebook_v1_codes': '2022'})
 
-    # Rename columns based on file names (simplified)
-    #year = file_name.split("-")[1]  # Extract year from filename
-    #df = df.rename(columns={file_name: year})
+    # values to be stripped out, we aren't using them in our dataset (already stripped everything that's not stfips=15, Hawaii)
+    df = df[df['code'] != 'PMSA']
+    #df = df[df['code'] != 'CBSA']
+    df = df[df['code'] != 'CBSA2010']
+    df = df[df['code'] != 'CBSA2020']
+    #df = df[df['code'] != 'STFIPS']
+    df = df[df['code'] != '2021']
+    df = df[df['code'] != '2022']
+    df = df[df['code'] != 'D']
+    #df = df[df['code'] != 'DIVISION']
+    #df = df[df['code'] != 'REGION']
 
     # Merge with the main DataFrame
     if merged_df.empty:
