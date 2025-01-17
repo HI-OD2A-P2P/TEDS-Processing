@@ -128,10 +128,10 @@ scarce disk space.
     * Run the "convert_to_db" method to read the csv and put it all into a mysql table.
  - MSSQL Version: Unfortunately, I never got the code to run, the driver that writes out to the database was giving an error that basically said "hey, the issue isn't me" and I was unable to find a solution in the time given.  Instead, we just did a direct import of the csv file from step 2 into the database.  The process for that is as follows:
       * If using a local machine to a VM, to copy the csv file over: go into finder, and do a copy on the csv file, then go to finder in the VM and do a paste.
-      * Open MySQLWorkbench      
+      * Open MS SQL Management Studio      
       * double click on the database to show the popup menu
       * select 'Tasks'
-      * select 'Import Data'
+      * select 'Import Data', do NOT select "Import flat file", it will fail
       * click the 'Next' button
       * for data source, select 'flat file source'
       * click the 'Browse' button
@@ -142,18 +142,6 @@ scarce disk space.
       * for destination, select 'Microsoft OLE DB Provider for SQL Server' (make sure you don't select 'Microsoft OLE DB Driver for SQL Server')
       * enter the server name
       * select 'Use SQL Server Authentication' and provide the username and password
-
-~~4.) Create the crosswalk tables if they don't already exist (note, this may not be necessary anymore, use the TEDS_D_conversion.py instead):
- - Open the codebook_tables.sql file (these values were derived from the values listed in the [Codebook.pdf](https://www.datafiles.samhsa.gov/sites/default/files/field-uploads-protected/studies/TEDS-D-2006-2014/TEDS-D-2006-2014-datasets/TEDS-D-2006-2014-DS0001/TEDS-D-2006-2014-DS0001-info/TEDS-D-2006-2014-DS0001-info-codebook.pdf) file found on the [SAMHSA TEDS D](https://www.datafiles.samhsa.gov/dataset/teds-d-2021-ds0001-teds-d-2021-ds0001) site)
- - Run the create/insert statements:  
- 'mysql -u jgeis -p doh < codebook_tables_mysql.sql'
- 
- 5.) Create a new table that has all the codes converted to human readable format:
- - Open the TEDS_conversion.sql or TEDS_DOH_conversion.sql file as appropriate.  (The DOH version eliminates all states except Hawaii and changes the column names to DOH's format)
- - Run one of the following queries:  
-      * mysql -u jgeis -p doh < TEDS_conversion.sql 
-      * mysql -u jgeis -p doh < TEDS_DOH_conversion.sql 
- ~~
 
 4.) No longer using crosswalk tables as that wasn't accounting for all the differences between years.  Instead, using code found 
 at https://github.com/kabellhart/teds-processing/blob/main/README.md to create a csv of all the human readable translations of
@@ -168,19 +156,69 @@ the codes for each year. To do this, for each of the following python files (rea
 5.) Merge all the csv results from the previous step into once csv file (merged_codes_result.csv):
 - /usr/local/bin/python3 /Users/jgeis/Work/DOH/TEDS-Processing/TEDS-D/merge_codebooks.py
 
-6.) Use the merged_codes_results.csv file to translate all the numbers in the database to human readable text.
+6.) For DOH only: Run TEDS_D_reverse_conversion.py to convert 2021 to codes instead of human readable.  Other folks 
+won't need to do this, but text gets mangles when I move it over to DOH, so I need to convert everything to codes,
+move it to DOH, and then run the script to convert everything to human readable once it's already in the database.
+- /usr/local/bin/python3 /Users/jgeis/Work/DOH/TEDS-Processing/TEDS-D/TEDS_D_reverse_conversion.py > reverse_output.sql
+- mysql -u jgeis -p doh < reverse_output.sql
 
-TODO:
-- Parse all the Codebooks from each year
-- Merge all the results into one file, to be like teds_d_harmonization.csv, but includes all the years
-- Run year_differences.py against the new TEDS_D (omit 2021)
-- Compare the differences between years against the new harmonization.csv file
-- Notate all the manual changes that need to be made
-- Instead of running the TEDS_conversion.sql stuff, use TEDS_D_conversion.py to convert everything to text as it will handle each year independently.
-Note. For the DOH part, do this up there _after_ moving the new TEDS_D table, the text version gets mangled upon import.
-- Figure out how to convert 2021 to codes before moving to DOH
-- Run year_differences.py again and ponder the results
-- Add my contact info to readme in case anyone wants to contact me.
+7.) Mssql/DOH only: Copy still-encoded data up to DOH and import into MSSQL.  We have to import it to 
+mssql still encoded because the text version gets mangled upon import.
+- Export local TEDS_D database to csv via MySQLWorkbench (make sure to select ',' as the delimiter and get rid of the " around strings setting)
+- Copy the resulting csv file, go to finder on remote machine and paste it there.
+- Follow the process listed in step 3 above to import the data to mssql
+- Run the following commands there:
+-- ALTER TABLE dbo.TEDS_D ALTER COLUMN ROUTE3 VARCHAR(80); 
+-- ALTER TABLE dbo.TEDS_D ALTER COLUMN ROUTE2 VARCHAR(80); 
+-- ALTER TABLE dbo.TEDS_D ALTER COLUMN ROUTE1 VARCHAR(80); 
+-- ALTER TABLE dbo.TEDS_D ALTER COLUMN REASON VARCHAR(70); 
+-- ALTER TABLE dbo.TEDS_D ALTER COLUMN PRIMPAY VARCHAR(100); 
+-- ALTER TABLE dbo.TEDS_D ALTER COLUMN EDUC VARCHAR(90); 
+-- ALTER TABLE dbo.TEDS_D ALTER COLUMN DSMCRIT VARCHAR(80); 
+
+8.) MySQL/Local only: Use the merged_codes_results.csv file to translate all the numbers in the database to human readable text.  
+- /usr/local/bin/python3 /Users/jgeis/Work/DOH/TEDS-Processing/TEDS-D/TEDS_D_conversion.py > output.sql
+- mysql -u jgeis -p doh < output.sql
+
+9.) Mssql/DOH only: Use the merged_codes_results.csv file to translate all the numbers in the database to human readable text. 
+- /usr/local/bin/python3 /Users/jgeis/Work/DOH/TEDS-Processing/TEDS-D/TEDS_D_conversion.py > output.sql
+- Copy output.sql up to DOH server.
+- Open output.sql in MSSQL and execute it.  Takes about 30 minutes.
+
+10.) Update the column names by running the commands in either ModifyColumnNamesMssql.sql or ModifyColumnNamesMysql.sql, depending on which db you are on.
+
+11.) Make age ranges match as best as I can:
+update dbo.TEDS_D set AgeAtAdmission = '12-14 Years Old' where AgeAtAdmission = '12-14' or AgeAtAdmission = '12-14 Years';
+update dbo.TEDS_D set AgeAtAdmission = '15-17 Years Old' where AgeAtAdmission = '15-17' or AgeAtAdmission = '15-17 Years';
+update dbo.TEDS_D set AgeAtAdmission = '18-20 Years Old' where AgeAtAdmission = '18-20' or AgeAtAdmission = '18-20 Years';
+update dbo.TEDS_D set AgeAtAdmission = '21-24 Years Old' where AgeAtAdmission = '21-24' or AgeAtAdmission = '21-24 Years';
+update dbo.TEDS_D set AgeAtAdmission = '25-29 Years Old' where AgeAtAdmission = '25-29' or AgeAtAdmission = '25-29 Years';
+update dbo.TEDS_D set AgeAtAdmission = '30-34 Years Old' where AgeAtAdmission = '30-34' or AgeAtAdmission = '30-34 Years';
+update dbo.TEDS_D set AgeAtAdmission = '35-39 Years Old' where AgeAtAdmission = '35-39' or AgeAtAdmission = '35-39 Years';
+update dbo.TEDS_D set AgeAtAdmission = '40-44 Years Old' where AgeAtAdmission = '40-44' or AgeAtAdmission = '40-44 Years';
+update dbo.TEDS_D set AgeAtAdmission = '45-49 Years Old' where AgeAtAdmission = '45-49' or AgeAtAdmission = '45-49 Years';
+update dbo.TEDS_D set AgeAtAdmission = '50-54 Years Old' where AgeAtAdmission = '50-54' or AgeAtAdmission = '50-54 Years';
+update dbo.TEDS_D set AgeAtAdmission = '55-64 Years Old' where AgeAtAdmission = '55-64' or AgeAtAdmission = '55-64 Years';
+update dbo.TEDS_D set AgeAtAdmission = '65 Years And Older' where AgeAtAdmission = '65 And Older';
+
+12.) Mssql/DOH only: This is for UH PowerBI stuff only, doesn't pertain to anyone else who might happen to use this.
+CREATE VIEW dbo.teds_d_data_view AS
+select distinct
+Caseid,
+AgeAtAdmission,
+YearOfDischarge,
+Gender,
+SubstanceUsePrimary,
+SubstanceUseSecondary,
+SubstanceUseTertiary,
+CASE
+WHEN SubstanceUsePrimary = 'None' Then 0
+WHEN SubstanceUseSecondary = 'None' THEN 1
+WHEN SubstanceUseTertiary = 'None' THEN 2
+Else 3
+END as num_substances
+from dbo.TEDS_D;
+
 
 
 
@@ -190,64 +228,6 @@ Note. For the DOH part, do this up there _after_ moving the new TEDS_D table, th
 * Even when parsed, there are errors, so how to find them in a massive sea of data?  A. year_differences.py
 * 2021 has no codes, instead only text
 * 
-
-
-
-
-------
-# Differences between years, TEDS-D
-## 2006-2014 (no changes)
-## 2015
-    * AGE: Added a "1" and moved all the categories to one number less than what they were, then made 11 = "55-64" and "12" = "65 and older"
-    * PREG: All male respondents were recoded to missing for this variable due to the item being not applicable. 
-    * DSMCRIT: Got rid of 20 "Other Condition"
-The TEDS report tables contain several variables created by combining or recoding original variables submitted by states. The following notes describe how these variables are created or recoded. 
-Create a new variable that combines race and ethnicity: 
-● If race is 5 White and ethnicity is 4 not of Hispanic or Latino origin or -9 missing/unknown/not collected/invalid, then change new variable to 1 non-Hispanic White; 
-● if race is 4 Black or African American and ethnicity is 4 not of Hispanic or Latino origin or -9 missing/unknown/not collected/invalid, then change new variable to 2 non-Hispanic Black; 
-● if ethnicity is 1, 2, 3, or 5 Hispanic or Latino origin and race is 4 Black, 5 White, 7 other single race, or -9 missing/unknown/not collected/invalid, then change new variable to 3 Hispanic; 
-● if race is 1 Alaska Native, Aleut, Eskimo, 2 American Indian/Alaskan Native, 3 Asian or Pacific Islander, 6 Asian, or 9 Native Hawaiian or Other Pacific Islander and ethnicity is 4 not of Hispanic or Latino origin, then change new variable to 4 other; 
-● if race is 7 other single race, or 8 two or more races and ethnicity is 4 not of Hispanic or Latino origin, then change new variable to 4 other; 
-● if race is 1 Alaskan Native, Aleut, Eskimo, 2 American Indian/Alaskan Native, 3 Asian or Pacific Islander, 6 Asian, 8 two or more races, or 9 Native Hawaiian or Other Pacific Islander and ethnicity is 4 not of Hispanic or Latino origin, then change new variable to 4 other. 
-Recoding for primary substance use at admission: 
-● If primary substance use at admission is 2 alcohol, then change primary substance use to 1 alcohol; 
-● if primary substance use at admission is 5 heroin, 6 non-prescription methadone, or 7 other opiates, then change primary substance use to 2 opiates; 
-● if primary substance use at admission is 4 marijuana/hashish, then change primary substance use to 3 marijuana/hashish; 
-● if primary substance use at admission is 3 cocaine/crack, then change primary substance use to 4 cocaine; 
-● if primary substance use at admission is 10 methamphetamine, or 11 other amphetamines, or 12 other stimulants, then change primary substance use to 5 stimulants; 
-● else if primary substance use at admission assumes any other value, then change primary substance use to -9 none/other/unknown. 
-Recoding for primary substance use at discharge, as well as recoding for secondary and tertiary substance use at admission and discharge, follow the same logic as above.
-Recoding service type at discharge: 
-● If service type at discharge is 7 non-intensive outpatient, then service type is 10 outpatient; 
-● if service type at discharge is 6 intensive outpatient, then service type is 11 intensive outpatient; 
-● if service type at discharge is 4 short-term residential, then service type is 20 short-term residential; 
-● if service type at discharge is 5 long-term residential, then service type is 21 long-term residential; 
-● if service type at discharge is 3 hospital residential, then service type is 22 hospital residential; 
-● if service type at discharge is 1 hospital detoxification, 2 free-standing detoxification, or 8 detoxification, then service type is 30 detoxification; 
-● if service type at discharge is 6 intensive outpatient or 7 non-intensive outpatient and medicationassisted therapy is planned, then new service type is 40 outpatient medication-assisted opioid therapy; 
-● if service type at discharge is 1 hospital detoxification, 2 free-standing detoxification, or 8 detoxification and medication-assisted therapy is planned, then new service type is 41 medicationassisted opioid detoxification; 
-● else new service type is other.
-## 2016: no changes from 2015
-## 2017: 
-
-## 2022:
-2022: https://www.samhsa.gov/data/system/files/media-puf-file/TEDS-D-2022-DS0001-info-codebook_v1.pdf 
-Recoding for primary substance use at admission: 
-• If primary substance use at admission is 2 alcohol, then change primary substance use to 1 alcohol; 
-• if primary substance use at admission is 5 heroin, 6 non-prescription methadone, or 7 other opiates, then change primary substance use to 2 opiates; 
-• if primary substance use at admission is 4 marijuana/hashish, then change primary substance use to 3 marijuana/hashish; 
-• if primary substance use at admission is 3 cocaine/crack, then change primary substance use to 4 cocaine; 
-• if primary substance use at admission is 10 methamphetamine/speed, or 11 other amphetamines, or 12 other stimulants, then change primary substance use to 5 stimulants; 
-• else if primary substance use at admission assumes any other value, then change primary substance use to -9 none/other/unknown. Recoding for primary substance use at discharge, as well as recoding for secondary and tertiary substance use at admission and discharge, follow the same logic as above. Recoding service type at discharge: 
-• If service type at discharge is 7 non-intensive outpatient, then service type is 10 outpatient; 
-• if service type at discharge is 6 intensive outpatient, then service type is 11 intensive outpatient; 
-• if service type at discharge is 4 short-term residential, then service type is 20 short-term residential; 
-• if service type at discharge is 5 long-term residential, then service type is 21 long-term residential; 
-• if service type at discharge is 3 hospital residential, then service type is 22 hospital residential; 
-• if service type at discharge is 1 hospital detoxification, 2 free-standing detoxification, or 8 detoxification, then service type is 30 detoxification; 
-• if service type at discharge is 6 intensive outpatient or 7 non-intensive outpatient and medication-assisted therapy is planned, then new service type is 40 outpatient medicationassisted opioid therapy; C-1 
-• if service type at discharge is 1 hospital detoxification, 2 free-standing detoxification, or 8 detoxification and medication-assisted therapy is planned, then new service type is 41 medication-assisted opioid detoxification; 
-• else new service type is other.
 
 [Codebooks and Data](https://www.samhsa.gov/data/data-we-collect/teds/datafiles)
 - [SAMHSA TEDS D 2006-2014 codebook](https://www.samhsa.gov/data/system/files/media-puf-file/TEDS-D-2006-2014-DS0001-info-codebook.pdf)
