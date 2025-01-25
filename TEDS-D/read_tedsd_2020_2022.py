@@ -18,6 +18,7 @@ import re
 import pandas as pd
 import fitz  # PyMuPDF
 
+# edit the folder and input files at the end for the appropriate TEDS_A/D as this works for both.
 
 # /opt/anaconda3/bin/python3 /Users/jgeis/Work/DOH/TEDS-Processing/TEDS-D/read_tedsd_2020_2022.py
 
@@ -199,6 +200,10 @@ def read_page(pdf_document, page_num):
     return header_text.split(': '), df
 
 folder_path = "/Users/jgeis/Work/DOH/TEDS-Processing/TEDS-D/codebooks/"
+#folder_path = "/Users/jgeis/Work/DOH/TEDS-Processing/TEDS-A/codebooks/"
+read_pdf(f"{folder_path}TEDS-A-2000-2021-DS0001-info-codebook.pdf")
+#read_pdf(f"{folder_path}TEDS-A-2022-DS0001-info-codebook_v1.pdf")
+
 read_pdf(f"{folder_path}TEDS-D-2020-DS0001-info-codebook.pdf")
 read_pdf(f"{folder_path}TEDS-D-2021-DS0001-info-codebook.pdf")
 read_pdf(f"{folder_path}TEDS-D-2022-DS0001-info-codebook_v1.pdf")

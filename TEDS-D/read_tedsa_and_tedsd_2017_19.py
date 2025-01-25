@@ -93,8 +93,6 @@ def read_page(page_num):
     return header_text.split(': '), df
 
 folder_path = "/Users/jgeis/Work/DOH/TEDS-Processing/TEDS-D/codebooks/"
-#read_pdf(f"{folder_path}TEDS-A-2000-2019-DS0001-info-codebook_v1.pdf")
-
 read_pdf(f"{folder_path}TEDS-D-2019-DS0001-info-codebook_V1.pdf")
 read_pdf(f"{folder_path}TEDS-D-2018-DS0001-info-codebook.pdf")
 read_pdf(f"{folder_path}TEDS-D-2017-DS0001-info-codebook.pdf")

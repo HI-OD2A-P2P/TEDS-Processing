@@ -8,6 +8,7 @@ import glob
 
 # Define the directory containing the CSV files
 directory = "/Users/jgeis/Work/DOH/TEDS-Processing/TEDS-D/codebooks/"
+#directory = "/Users/jgeis/Work/DOH/TEDS-Processing/TEDS-A/codebooks/"
 
 
 # Find all CSV files matching the pattern
@@ -53,6 +54,8 @@ for file in csv_files:
     df = df.rename(columns={'TEDS-D-2020-DS0001-info-codebook_codes': '2020'})
     df = df.rename(columns={'TEDS-D-2021-DS0001-info-codebook_codes': '2021'})
     df = df.rename(columns={'TEDS-D-2022-DS0001-info-codebook_v1_codes': '2022'})
+    #df = df.rename(columns={'TEDS-A-2022-DS0001-info-codebook_v1_codes': '2022'})
+    #df = df.rename(columns={'TEDS-A-2000-2021-DS0001-info-codebook_codes': '2000-2021'})
 
     # values to be stripped out, we aren't using them in our dataset (already stripped everything that's not stfips=15, Hawaii)
     df = df[df['code'] != 'PMSA']
@@ -77,6 +80,8 @@ for file in csv_files:
 
 # Sort columns
 desired_order = ['code', 'Value', '2006_2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022']
+#desired_order = ['code', 'Value', '2000_2021', '2022']
+
 merged_df = merged_df[desired_order]
 
 # Save the merged DataFrame to a new CSV file
