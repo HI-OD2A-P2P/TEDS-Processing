@@ -5,7 +5,10 @@ TEDS-A/credentials_local.json
 TEDS-A/credentials_remote.json
 TEDS-D/credentials_local.json
 TEDS-D/credentials_remote.json
-TEDS-D/codebooks
+TEDS-A/csv_files
 TEDS-D/csv_files
-*.csv
+TEDS-A/codebooks/TEDS-A*
+TEDS-D/codebooks/TEDS-D*
 *.pdf
+old/
+output.sql

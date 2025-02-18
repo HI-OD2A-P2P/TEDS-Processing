@@ -1,0 +1,680 @@
+code,Value,2006_2014,2015,2016,2017,2018,2019,2020,2021,2022
+AGE,1,,12-14,12-14,12-14 Years,12-14 Years,12-14 Years,12-14 Years Old,12-14 Years Old,12-14 Years Old
+AGE,10,45-49,50-54,50-54,50-54 Years,50-54 Years,50-54 Years,50-54 Years Old,50-54 Years Old,50-54 Years Old
+AGE,11,50-54,55-64,55-64,55-64 Years,55-64 Years,55-64 Years,55-64 Years Old,55-64 Years Old,55-64 Years Old
+AGE,12,55 And Over,65 And Older,65 And Older,65 Years And Older,65 Years And Older,65 Years And Older,65 Years And Older,65 Years And Older,65 Years And Older
+AGE,2,12-14,15-17,15-17,15-17 Years,15-17 Years,15-17 Years,15-17 Years Old,15-17 Years Old,15-17 Years Old
+AGE,3,15-17,18-20,18-20,18-20 Years,18-20 Years,18-20 Years,18-20 Years Old,18-20 Years Old,18-20 Years Old
+AGE,4,18-20,21-24,21-24,21-24 Years,21-24 Years,21-24 Years,21-24 Years Old,21-24 Years Old,21-24 Years Old
+AGE,5,21-24,25-29,25-29,25-29 Years,25-29 Years,25-29 Years,25-29 Years Old,25-29 Years Old,25-29 Years Old
+AGE,6,25-29,30-34,30-34,30-34 Years,30-34 Years,30-34 Years,30-34 Years Old,30-34 Years Old,30-34 Years Old
+AGE,7,30-34,35-39,35-39,35-39 Years,35-39 Years,35-39 Years,35-39 Years Old,35-39 Years Old,35-39 Years Old
+AGE,8,35-39,40-44,40-44,40-44 Years,40-44 Years,40-44 Years,40-44 Years Old,40-44 Years Old,40-44 Years Old
+AGE,9,40-44,45-49,45-49,45-49 Years,45-49 Years,45-49 Years,45-49 Years Old,45-49 Years Old,45-49 Years Old
+ALCDRUG,0,None,None,None,,,,,,
+ALCDRUG,1,Alcohol Only,Alcohol Only,Alcohol Only,Alcohol Only,Alcohol Only,Alcohol Only,Alcohol Only,Alcohol Only,Alcohol Only
+ALCDRUG,2,Other Drugs Only,Other Drugs Only,Other Drugs Only,Other Drugs Only,Other Drugs Only,Other Drugs Only,Other Drugs Only,Other Drugs Only,Other Drugs Only
+ALCDRUG,3,Alcohol And Other Drugs,Alcohol And Other Drugs,Alcohol And Other Drugs,Alcohol And Other Drugs,Alcohol And Other Drugs,Alcohol And Other Drugs,Alcohol And Other Drugs,Alcohol And Other Drugs,Alcohol And Other Drugs
+ALCFLG,0,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported
+ALCFLG,1,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported
+AMPHFLG,0,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported
+AMPHFLG,1,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported
+ARRESTS,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+ARRESTS,0,None,None,None,,,,,,
+ARRESTS,1,Once,Once,Once,Once,Once,Once,Once,Once,Once
+ARRESTS,2,2 Or More Times,Two Or More Times,Two Or More Times,Two Or More Times,Two Or More Times,Two Or More Times,Two Or More Times,Two Or More Times,Two Or More Times
+ARRESTS_D,-9,,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+ARRESTS_D,0,,None,None,,,,,,
+ARRESTS_D,1,,Once,Once,Once,Once,Once,Once,Once,Once
+ARRESTS_D,2,,Two Or More Times,Two Or More Times,Two Or More Times,Two Or More Times,Two Or More Times,Two Or More Times,Two Or More Times,Two Or More Times
+BARBFLG,0,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported
+BARBFLG,1,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported
+BENZFLG,0,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported
+BENZFLG,1,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported
+CASEID,,,,,,,,,,
+CBSA,-9,,Undesignated Area/Missing/Unknown/Not Collected/Invalid,Undesignated Area/Missing/Unknown/Not Collected/Invalid,,,,,,
+CBSA,10180,,"Abilene, Tx Metro","Abilene, Tx Metro",,,,,,
+CBSA,10380,,"Aguadillaisabelasan Sebastian, Pr Metro","Aguadillaisabelasan Sebastian, Pr Metro",,,,,,
+CBSA,10420,,"Akron, Oh Metro","Akron, Oh Metro",,,,,,
+CBSA,10500,,"Albany, Ga Metro",,,,,,,
+CBSA,10580,,"Albanyschenectadytroy, Ny Metro","Albanyschenectadytroy, Ny Metro",,,,,,
+CBSA,10740,,"Albuquerque, Nm Metro","Albuquerque, Nm Metro",,,,,,
+CBSA,10780,,"Alexandria, La Metro","Alexandria, La Metro",,,,,,
+CBSA,10900,,"Allentownbethlehemeaston, Panj Metro","Allentownbethlehemeaston, Panj Metro",,,,,,
+CBSA,11020,,"Altoona, Pa Metro","Altoona, Pa Metro",,,,,,
+CBSA,11100,,"Amarillo, Tx Metro","Amarillo, Tx Metro",,,,,,
+CBSA,11260,,"Anchorage, Ak Metro","Anchorage, Ak Metro",,,,,,
+CBSA,11460,,"Ann Arbor, Mi Metro",,,,,,,
+CBSA,11640,,"Arecibo, Pr Metro","Arecibo, Pr Metro",,,,,,
+CBSA,11700,,"Asheville, Nc Metro","Asheville, Nc Metro",,,,,,
+CBSA,11780,,"Ashtabula, Oh Micro","Ashtabula, Oh Micro",,,,,,
+CBSA,12060,,"Atlantasandy Springsmarietta, Ga Metro",,,,,,,
+CBSA,12100,,"Atlantic City, Nj Metro","Atlantic City, Nj Metro",,,,,,
+CBSA,12260,,"Augustarichmond County, Gasc Metro","Augustarichmond County, Gasc Metro",,,,,,
+CBSA,12300,,"Augustawaterville, Me Micro","Augustawaterville, Me Micro",,,,,,
+CBSA,12420,,"Austinround Rock, Tx Metro","Austinround Rock, Tx Metro",,,,,,
+CBSA,12540,,"Bakersfield, Ca Metro","Bakersfield, Ca Metro",,,,,,
+CBSA,12580,,"Baltimoretowson, Md Metro",,,,,,,
+CBSA,12620,,"Bangor, Me Metro","Bangor, Me Metro",,,,,,
+CBSA,12700,,"Barnstable Town, Ma Metro","Barnstable Town, Ma Metro",,,,,,
+CBSA,12940,,"Baton Rouge, La Metro","Baton Rouge, La Metro",,,,,,
+CBSA,12980,,"Battle Creek, Mi Metro",,,,,,,
+CBSA,13020,,"Bay City, Mi Metro",,,,,,,
+CBSA,13140,,"Beaumontport Arthur, Tx Metro","Beaumontport Arthur, Tx Metro",,,,,,
+CBSA,13380,,"Bellingham, Wa Metro","Bellingham, Wa Metro",,,,,,
+CBSA,13740,,"Billings, Mt Metro","Billings, Mt Metro",,,,,,
+CBSA,13780,,"Binghamton, Ny Metro","Binghamton, Ny Metro",,,,,,
+CBSA,13820,,"Birminghamhoover, Al Metro","Birminghamhoover, Al Metro",,,,,,
+CBSA,X,,Other Fips 2000 Cbsa Codes Not Printed Here,Other Fips 2000 Cbsa Codes Not Printed Here,,,,,,
+CBSA,,,,,,,,,,
+COKEFLG,0,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported
+COKEFLG,1,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported
+DAYWAIT,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+DAYWAIT,0,0,0,0,0,0,0,0,0,0
+DAYWAIT,1,1,1-7,1-7,1-7,1-7,1-7,1-7,1-7,1-7
+DAYWAIT,10,10,,,,,,,,
+DAYWAIT,11,11,,,,,,,,
+DAYWAIT,12,12,,,,,,,,
+DAYWAIT,13,13,,,,,,,,
+DAYWAIT,14,14,,,,,,,,
+DAYWAIT,15,15,,,,,,,,
+DAYWAIT,16,16,,,,,,,,
+DAYWAIT,17,17,,,,,,,,
+DAYWAIT,18,18,,,,,,,,
+DAYWAIT,19,19,,,,,,,,
+DAYWAIT,2,2,8-14,8-14,8-14,8-14,8-14,8-14,8-14,8-14
+DAYWAIT,20,20,,,,,,,,
+DAYWAIT,21,21,,,,,,,,
+DAYWAIT,22,22,,,,,,,,
+DAYWAIT,23,23,,,,,,,,
+DAYWAIT,24,24,,,,,,,,
+DAYWAIT,25,25,,,,,,,,
+DAYWAIT,26,26,,,,,,,,
+DAYWAIT,27,27,,,,,,,,
+DAYWAIT,28,28,,,,,,,,
+DAYWAIT,29,29,,,,,,,,
+DAYWAIT,3,3,15-30,15-30,15-30,15-30,15-30,15-30,15-30,15-30
+DAYWAIT,30,30,,,,,,,,
+DAYWAIT,31,31,,,,,,,,
+DAYWAIT,32,32,,,,,,,,
+DAYWAIT,33,33,,,,,,,,
+DAYWAIT,34,34,,,,,,,,
+DAYWAIT,35,35,,,,,,,,
+DAYWAIT,36,36,,,,,,,,
+DAYWAIT,37,37,,,,,,,,
+DAYWAIT,38,38,,,,,,,,
+DAYWAIT,39,39,,,,,,,,
+DAYWAIT,4,4,31 And More,31 And More,31 Or More,31 Or More,31 Or More,31 Or More,31 Or More,31 Or More
+DAYWAIT,40,40,,,,,,,,
+DAYWAIT,41,41,,,,,,,,
+DAYWAIT,42,42,,,,,,,,
+DAYWAIT,43,43,,,,,,,,
+DAYWAIT,44,44,,,,,,,,
+DAYWAIT,45,45,,,,,,,,
+DAYWAIT,46,46,,,,,,,,
+DAYWAIT,47,47,,,,,,,,
+DAYWAIT,48,48,,,,,,,,
+DAYWAIT,49,49,,,,,,,,
+DAYWAIT,5,5,,,,,,,,
+DAYWAIT,6,6,,,,,,,,
+DAYWAIT,7,7,,,,,,,,
+DAYWAIT,8,8,,,,,,,,
+DAYWAIT,9,9,,,,,,,,
+DAYWAIT,X,Other Daywait Categories Not Printed Here,,,,,,,,
+DETCRIM,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+DETCRIM,1,"State/Federal Court, Other Court",State/Federal Court,State/Federal Court,State/Federal Court,State/Federal Court,State/Federal Court,State/Federal Court,State/Federal Court,State/Federal Court
+DETCRIM,2,,Formal Adjudication Process,Formal Adjudication Process,Formal Adjudication Process,Formal Adjudication Process,Formal Adjudication Process,Formal Adjudication Process,Formal Adjudication Process,Formal Adjudication Process
+DETCRIM,3,Probation/Parole,Probation/Parole,Probation/Parole,Probation/Parole,Probation/Parole,Probation/Parole,Probation/Parole,Probation/Parole,Probation/Parole
+DETCRIM,4,,Other Recognized Legal Entity,Other Recognized Legal Entity,Other Recognized Legal Entity,Other Recognized Legal Entity,Other Recognized Legal Entity,Other Recognized Legal Entity,Other Recognized Legal Entity,Other Recognized Legal Entity
+DETCRIM,5,Diversionary Program,Diversionary Program,Diversionary Program,Diversionary Program,Diversionary Program,Diversionary Program,Diversionary Program,Diversionary Program,Diversionary Program
+DETCRIM,6,Prison,Prison,Prison,Prison,Prison,Prison,Prison,Prison,Prison
+DETCRIM,7,Dui/Dwi,Dui/Dwi,Dui/Dwi,Dui/Dwi,Dui/Dwi,Dui/Dwi,Dui/Dwi,Dui/Dwi,Dui/Dwi
+DETCRIM,8,"Other Recognized Legal Entity, Other",Other,Other,Other,Other,Other,Other,Other,Other
+DETNLF,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+DETNLF,1,Homemaker,Homemaker,Homemaker,Homemaker,Homemaker,Homemaker,Homemaker,Homemaker,Homemaker
+DETNLF,2,Student,Student,Student,Student,Student,Student,Student,Student,Student
+DETNLF,3,"Retired, Disabled","Retired, Disabled","Retired, Disabled","Retired, Disabled","Retired, Disabled","Retired, Disabled","Retired, Disabled","Retired, Disabled","Retired, Disabled"
+DETNLF,4,,Resident Of Institution,Resident Of Institution,Resident Of Institution,Resident Of Institution,Resident Of Institution,Resident Of Institution,Resident Of Institution,Resident Of Institution
+DETNLF,5,Resident Of Institution,Other,Other,Other,Other,Other,Other,Other,Other
+DETNLF,6,Other,,,,,,,,
+DETNLF_D,-9,,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+DETNLF_D,1,,Homemaker,Homemaker,Homemaker,Homemaker,Homemaker,Homemaker,Homemaker,Homemaker
+DETNLF_D,2,,Student,Student,Student,Student,Student,Student,Student,Student
+DETNLF_D,3,,"Retired, Disabled","Retired, Disabled","Retired, Disabled","Retired, Disabled","Retired, Disabled","Retired, Disabled","Retired, Disabled","Retired, Disabled"
+DETNLF_D,4,,Resident Of Institution,Resident Of Institution,Resident Of Institution,Resident Of Institution,Resident Of Institution,Resident Of Institution,Resident Of Institution,Resident Of Institution
+DETNLF_D,5,,Other,Other,Other,Other,Other,Other,Other,Other
+DISYR,2006,2006,,,,,,,,
+DISYR,2007,2007,,,,,,,,
+DISYR,2008,2008,,,,,,,,
+DISYR,2009,2009,,,,,,,,
+DISYR,2010,2010,,,,,,,,
+DISYR,2011,2011,,,,,,,,
+DISYR,2012,2012,,,,,,,,
+DISYR,2013,2013,,,,,,,,
+DISYR,2014,2014,,,,,,,,
+DISYR,2015,,2015,,,,,,,
+DISYR,2016,,,2016,,,,,,
+DISYR,2017,,,,2017,,,,,
+DISYR,2018,,,,,2018,,,,
+DISYR,2019,,,,,,2019,,,
+DISYR,2020,,,,,,,2020,,
+DISYR,2021,,,,,,,,2021,
+DISYR,2022,,,,,,,,,2022
+DIVISION,0,Us Jurisdiction/Territory,Us Jurisdiction/Territory,Us Jurisdiction/Territory,U.S. Territories,U.S. Territories,U.S. Territories,U.S. Territories,U.S. Territories,U.S. Territories
+DIVISION,1,New England,New England,New England,New England,New England,New England,New England,New England,New England
+DIVISION,2,Mid-Atlantic,Midatlantic,Midatlantic,Middle Atlantic,Middle Atlantic,Middle Atlantic,Middle Atlantic,Middle Atlantic,Middle Atlantic
+DIVISION,3,East North Central,East North Central,East North Central,East North Central,East North Central,East North Central,East North Central,East North Central,East North Central
+DIVISION,4,West North Central,West North Central,West North Central,West North Central,West North Central,West North Central,West North Central,West North Central,West North Central
+DIVISION,5,South Atlantic,South Atlantic,South Atlantic,South Atlantic,South Atlantic,South Atlantic,South Atlantic,South Atlantic,South Atlantic
+DIVISION,6,East South Central,East South Central,East South Central,East South Central,East South Central,East South Central,East South Central,East South Central,East South Central
+DIVISION,7,West South Central,West South Central,West South Central,West South Central,West South Central,West South Central,West South Central,West South Central,West South Central
+DIVISION,8,Mountain,Mountain,Mountain,Mountain,Mountain,Mountain,Mountain,Mountain,Mountain
+DIVISION,9,Pacific,Pacific,Pacific,Pacific,Pacific,Pacific,Pacific,Pacific,Pacific
+DSMCRIT,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid/Noor Deferred Diagnosis,Missing/Unknown/Not Collected/Invalid/No Or Deferred Diagnosis,Missing/Unknown/Not Collected/Invalid/No Or Deferred Diagnosis,Missing/Unknown/Not Collected/Invalid/No Or Deferred Diagnosis,Missing/Unknown/Not Collected/Invalid/No Or Deferred Diagnosis,Missing/Unknown/Not Collected/Invalid/No Or Deferred Diagnosis,Missing/Unknown/Not Collected/Invalid/No Or Deferred Diagnosis,Missing/Unknown/Not Collected/Invalid/No Or Deferred Diagnosis
+DSMCRIT,1,Alcohol-Induced Disorder,Alcoholinduced Disorder,Alcoholinduced Disorder,Alcohol-Induced Disorder,Alcohol-Induced Disorder,Alcohol-Induced Disorder,Alcohol-Induced Disorder,Alcohol-Induced Disorder,Alcohol-Induced Disorder
+DSMCRIT,10,Cannabis Abuse,Cannabis Abuse,Cannabis Abuse,Cannabis Abuse,Cannabis Abuse,Cannabis Abuse,Cannabis Abuse,Cannabis Abuse,Cannabis Abuse
+DSMCRIT,11,Other Substance Abuse,Other Substance Abuse,Other Substance Abuse,Other Substance Abuse,Other Substance Abuse,Other Substance Abuse,Other Substance Abuse,Other Substance Abuse,Other Substance Abuse
+DSMCRIT,12,Opioid Abuse,Opioid Abuse,Opioid Abuse,Opioid Abuse,Opioid Abuse,Opioid Abuse,Opioid Abuse,Opioid Abuse,Opioid Abuse
+DSMCRIT,13,Cocaine Abuse,Cocaine Abuse,Cocaine Abuse,Cocaine Abuse,Cocaine Abuse,Cocaine Abuse,Cocaine Abuse,Cocaine Abuse,Cocaine Abuse
+DSMCRIT,14,Anxiety Disorders,Anxiety Disorders,Anxiety Disorders,Anxiety Disorders,Anxiety Disorders,Anxiety Disorders,Anxiety Disorders,Anxiety Disorders,Anxiety Disorders
+DSMCRIT,15,Depressive Disorders,Depressive Disorders,Depressive Disorders,Depressive Disorders,Depressive Disorders,Depressive Disorders,Depressive Disorders,Depressive Disorders,Depressive Disorders
+DSMCRIT,16,Schizophrenia/Other Psychotic Disorders,Schizophrenia/Other Psychotic Disorders,Schizophrenia/Other Psychotic Disorders,Schizophrenia/Other Psychotic Disorders,Schizophrenia/Other Psychotic Disorders,Schizophrenia/Other Psychotic Disorders,Schizophrenia/Other Psychotic Disorders,Schizophrenia/Other Psychotic Disorders,Schizophrenia/Other Psychotic Disorders
+DSMCRIT,17,Bipolar Disorders,Bipolar Disorders,Bipolar Disorders,Bipolar Disorders,Bipolar Disorders,Bipolar Disorders,Bipolar Disorders,Bipolar Disorders,Bipolar Disorders
+DSMCRIT,18,Attention Deficit/Disruptive Behavior Disorders,Attention Deficit/Disruptive Behavior Disorders,Attention Deficit/Disruptive Behavior Disorders,Attention Deficit/Disruptive Behavior Disorders,Attention Deficit/Disruptive Behavior Disorders,Attention Deficit/Disruptive Behavior Disorders,Attention Deficit/Disruptive Behavior Disorders,Attention Deficit/Disruptive Behavior Disorders,Attention Deficit/Disruptive Behavior Disorders
+DSMCRIT,19,Other Mental Health Condition,Other Mental Health Condition,Other Mental Health Condition,Other Mental Health Condition,Other Mental Health Condition,Other Mental Health Condition,Other Mental Health Condition,Other Mental Health Condition,Other Mental Health Condition
+DSMCRIT,2,Substance-Induced Disorder,Substanceinduced Disorder,Substanceinduced Disorder,Substance-Induced Disorder,Substance-Induced Disorder,Substance-Induced Disorder,Substance-Induced Disorder,Substance-Induced Disorder,Substance-Induced Disorder
+DSMCRIT,20,Other Condition,,,,,,,,
+DSMCRIT,3,Alcohol Intoxication,Alcohol Intoxication,Alcohol Intoxication,Alcohol Intoxication,Alcohol Intoxication,Alcohol Intoxication,Alcohol Intoxication,Alcohol Intoxication,Alcohol Intoxication
+DSMCRIT,4,Alcohol Dependence,Alcohol Dependence,Alcohol Dependence,Alcohol Dependence,Alcohol Dependence,Alcohol Dependence,Alcohol Dependence,Alcohol Dependence,Alcohol Dependence
+DSMCRIT,5,Opioid Dependence,Opioid Dependence,Opioid Dependence,Opioid Dependence,Opioid Dependence,Opioid Dependence,Opioid Dependence,Opioid Dependence,Opioid Dependence
+DSMCRIT,6,Cocaine Dependence,Cocaine Dependence,Cocaine Dependence,Cocaine Dependence,Cocaine Dependence,Cocaine Dependence,Cocaine Dependence,Cocaine Dependence,Cocaine Dependence
+DSMCRIT,7,Cannabis Dependence,Cannabis Dependence,Cannabis Dependence,Cannabis Dependence,Cannabis Dependence,Cannabis Dependence,Cannabis Dependence,Cannabis Dependence,Cannabis Dependence
+DSMCRIT,8,Other Substance Dependence,Other Substance Dependence,Other Substance Dependence,Other Substance Dependence,Other Substance Dependence,Other Substance Dependence,Other Substance Dependence,Other Substance Dependence,Other Substance Dependence
+DSMCRIT,9,Alcohol Abuse,Alcohol Abuse,Alcohol Abuse,Alcohol Abuse,Alcohol Abuse,Alcohol Abuse,Alcohol Abuse,Alcohol Abuse,Alcohol Abuse
+EDUC,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+EDUC,1,8 Years Or Less,8 Years Or Less,8 Years Or Less,8 Years Or Less,"Less Than One School Grade, No Schooling, Nursery School, Orkindergarten To Grade 8","Less Than One School Grade, No Schooling, Nursery School, Orkindergarten To Grade 8","Less Than One School Grade, No Schooling, Nursery School, Or Kindergarten To Grade 8","Less Than One School Grade, No Schooling, Nursery School, Or Kindergarten To Grade 8","Less Than One School Grade, No Schooling, Nursery School, Or Kindergarten To Grade 8"
+EDUC,2,9-11,9-11,9-11,9-11 Years,Grades 9 To 11,Grades 9 To 11,Grades 9 To 11,Grades 9 To 11,Grades 9 To 11
+EDUC,3,12,12 (Ged),12 (Ged),12 Years (Or Ged),Grade 12 (Or Ged),Grade 12 (Or Ged),Grade 12 (Or Ged),Grade 12 (Or Ged),Grade 12 (Or Ged)
+EDUC,4,13-15,13-15,13-15,13-15 Years,"1-3 Years Of College, University, Or Vocational School","1-3 Years Of College, University, Or Vocational School","1-3 Years Of College, University, Or Vocational School","1-3 Years Of College, University, Or Vocational School","1-3 Years Of College, University, Or Vocational School"
+EDUC,5,16 Or More,16 Or More,16 Or More,16 Years Or More,"4 Years Of College, University, Ba/Bs, Some Postgraduate Study, Or More","4 Years Of College, University, Ba/Bs, Some Postgraduate Study, Or More","4 Years Of College, University, Ba/Bs, Some Postgraduate Study, Or More","4 Years Of College, University, Ba/Bs, Some Postgraduate Study, Or More","4 Years Of College, University, Ba/Bs, Some Postgraduate Study, Or More"
+EMPLOY,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+EMPLOY,1,Full Time,Full Time,Full Time,Full-Time,Full-Time,Full-Time,Full-Time,Full-Time,Full-Time
+EMPLOY,2,Part Time,Part Time,Part Time,Part-Time,Part-Time,Part-Time,Part-Time,Part-Time,Part-Time
+EMPLOY,3,Unemployed,Unemployed,Unemployed,Unemployed,Unemployed,Unemployed,Unemployed,Unemployed,Unemployed
+EMPLOY,4,Not In Labor Force,Not In Labor Force,Not In Labor Force,Not In Labor Force,Not In Labor Force,Not In Labor Force,Not In Labor Force,Not In Labor Force,Not In Labor Force
+EMPLOY_D,-9,,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+EMPLOY_D,1,,Full Time,Full Time,Full-Time,Full-Time,Full-Time,Full-Time,Full-Time,Full-Time
+EMPLOY_D,2,,Part Time,Part Time,Part-Time,Part-Time,Part-Time,Part-Time,Part-Time,Part-Time
+EMPLOY_D,3,,Unemployed,Unemployed,Unemployed,Unemployed,Unemployed,Unemployed,Unemployed,Unemployed
+EMPLOY_D,4,,Not In Labor Force,Not In Labor Force,Not In Labor Force,Not In Labor Force,Not In Labor Force,Not In Labor Force,Not In Labor Force,Not In Labor Force
+ETHNIC,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+ETHNIC,1,Puerto Rican,Puerto Rican,Puerto Rican,Puerto Rican,Puerto Rican,Puerto Rican,Puerto Rican,Puerto Rican,Puerto Rican
+ETHNIC,2,Mexican,Mexican,Mexican,Mexican,Mexican,Mexican,Mexican,Mexican,Mexican
+ETHNIC,3,Cuban,Cuban Or Other Specific Hispanic,Cuban Or Other Specific Hispanic,Cuban Or Other Specific Hispanic,Cuban Or Other Specific Hispanic,Cuban Or Other Specific Hispanic,Cuban Or Other Specific Hispanic,Cuban Or Other Specific Hispanic,Cuban Or Other Specific Hispanic
+ETHNIC,4,Other Specific Hispanic,Not Of Hispanic Or Latino Origin,Not Of Hispanic Or Latino Origin,Not Of Hispanic Or Latino Origin,Not Of Hispanic Or Latino Origin,Not Of Hispanic Or Latino Origin,Not Of Hispanic Or Latino Origin,Not Of Hispanic Or Latino Origin,Not Of Hispanic Or Latino Origin
+ETHNIC,5,Not Of Hispanic Origin,"Hispanic Or Latino, Specific Origin Not Specified","Hispanic Or Latino, Specific Origin Not Specified","Hispanic Or Latino, Specific Origin Not Specified","Hispanic Or Latino, Specific Origin Not Specified","Hispanic Or Latino, Specific Origin Not Specified","Hispanic Or Latino, Specific Origin Not Specified","Hispanic Or Latino, Specific Origin Not Specified","Hispanic Or Latino, Specific Origin Not Specified"
+ETHNIC,6,"Hispanic, Specific Origin Not Specified",,,,,,,,
+FREQ1,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+FREQ1,1,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month
+FREQ1,2,1-3 Times In The Past Month,Someuse,Some Use,Some Use,Some Use,Some Use,Some Use,Some Use,Some Use
+FREQ1,3,1-2 Times In The Past Week,Daily Use,Daily Use,Daily Use,Daily Use,Daily Use,Daily Use,Daily Use,Daily Use
+FREQ1,4,3-6 Times In The Past Week,,,,,,,,
+FREQ1,5,Daily,,,,,,,,
+FREQ1_D,-9,,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+FREQ1_D,1,,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month
+FREQ1_D,2,,Some Use,Some Use,Some Use,Some Use,Some Use,Some Use,Some Use,Some Use
+FREQ1_D,3,,Daily Use,Daily Use,Daily Use,Daily Use,Daily Use,Daily Use,Daily Use,Daily Use
+FREQ2,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+FREQ2,1,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month
+FREQ2,2,1-3 Times In The Past Month,Some Use,Some Use,Some Use,Some Use,Some Use,Some Use,Some Use,Some Use
+FREQ2,3,1-2 Times In The Past Week,Daily Use,Daily Use,Daily Use,Daily Use,Daily Use,Daily Use,Daily Use,Daily Use
+FREQ2,4,3-6 Times In The Past Week,,,,,,,,
+FREQ2,5,Daily,,,,,,,,
+FREQ2_D,-9,,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+FREQ2_D,1,,Nouse In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month
+FREQ2_D,2,,Some Use,Some Use,Some Use,Some Use,Some Use,Some Use,Some Use,Some Use
+FREQ2_D,3,,Daily Use,Daily Use,Daily Use,Daily Use,Daily Use,Daily Use,Daily Use,Daily Use
+FREQ3,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+FREQ3,1,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month
+FREQ3,2,1-3 Times In The Past Month,Some Use,Some Use,Some Use,Some Use,Some Use,Some Use,Some Use,Some Use
+FREQ3,3,1-2 Times In The Past Week,Daily Use,Daily Use,Daily Use,Daily Use,Daily Use,Daily Use,Daily Use,Daily Use
+FREQ3,4,3-6 Times In The Past Week,,,,,,,,
+FREQ3,5,Daily,,,,,,,,
+FREQ3_D,-9,,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+FREQ3_D,1,,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month,No Use In The Past Month
+FREQ3_D,2,,Some Use,Some Use,Some Use,Some Use,Some Use,Some Use,Some Use,Some Use
+FREQ3_D,3,,Daily Use,Daily Use,Daily Use,Daily Use,Daily Use,Daily Use,Daily Use,Daily Use
+FREQ_ATND_SELF_HELP,-9,,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+FREQ_ATND_SELF_HELP,1,,No Attendance,No Attendance,No Attendance,No Attendance,No Attendance,No Attendance,No Attendance,No Attendance
+FREQ_ATND_SELF_HELP,2,,1-3 Times In The Past Month,1-3 Times In The Past Month,1-3 Times In The Past Month,1-3 Times In The Past Month,1-3 Times In The Past Month,1-3 Times In The Past Month,1-3 Times In The Past Month,1-3 Times In The Past Month
+FREQ_ATND_SELF_HELP,3,,4-7 Times In The Past Month,4-7 Times In The Past Month,4-7 Times In The Past Month,4-7 Times In The Past Month,4-7 Times In The Past Month,4-7 Times In The Past Month,4-7 Times In The Past Month,4-7 Times In The Past Month
+FREQ_ATND_SELF_HELP,4,,830 Times In The Past Month,8-30 Times In The Past Month,8-30 Times In The Past Month,8-30 Times In The Past Month,8-30 Times In The Past Month,8-30 Times In The Past Month,8-30 Times In The Past Month,8-30 Times In The Past Month
+FREQ_ATND_SELF_HELP,5,,"Some Attendance, Frequency Is Unknown","Some Attendance, Frequency Is Unknown","Some Attendance, Frequency Is Unknown","Some Attendance, Frequency Is Unknown","Some Attendance, Frequency Is Unknown","Some Attendance, Frequency Is Unknown","Some Attendance, Frequency Is Unknown","Some Attendance, Frequency Is Unknown"
+FREQ_ATND_SELF_HELP_D,-9,,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+FREQ_ATND_SELF_HELP_D,1,,No Attendance,No Attendance,No Attendance,No Attendance,No Attendance,No Attendance,No Attendance,No Attendance
+FREQ_ATND_SELF_HELP_D,2,,1-3 Times In The Past Month,1-3 Times In The Past Month,1-3 Times In The Past Month,1-3 Times In The Past Month,1-3 Times In The Past Month,1-3 Times In The Past Month,1-3 Times In The Past Month,1-3 Times In The Past Month
+FREQ_ATND_SELF_HELP_D,3,,4-7 Times In The Past Month,4-7 Times In The Past Month,4-7 Times In The Past Month,4-7 Times In The Past Month,4-7 Times In The Past Month,4-7 Times In The Past Month,4-7 Times In The Past Month,4-7 Times In The Past Month
+FREQ_ATND_SELF_HELP_D,4,,830 Times In The Past Month,8-30 Times In The Past Month,8-30 Times In The Past Month,8-30 Times In The Past Month,8-30 Times In The Past Month,8-30 Times In The Past Month,8-30 Times In The Past Month,8-30 Times In The Past Month
+FREQ_ATND_SELF_HELP_D,5,,"Some Attendance, Frequency Is Unknown","Some Attendance, Frequency Is Unknown","Some Attendance, Frequency Is Unknown","Some Attendance, Frequency Is Unknown","Some Attendance, Frequency Is Unknown","Some Attendance, Frequency Is Unknown","Some Attendance, Frequency Is Unknown","Some Attendance, Frequency Is Unknown"
+FRSTUSE1,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+FRSTUSE1,1,11 And Under,11 And Under,11 And Under,11 Years And Under,11 Years And Under,11 Years And Under,11 Years And Under,11 Years And Under,11 Years And Under
+FRSTUSE1,10,45 To 49 Years,,,,,,,,
+FRSTUSE1,11,50 To 54 Years,,,,,,,,
+FRSTUSE1,12,55 And Over,,,,,,,,
+FRSTUSE1,2,12 To 14 Years,12 To 14 Years,12 To 14 Years,12-14 Years,12-14 Years,12-14 Years,12-14 Years,12-14 Years,12-14 Years
+FRSTUSE1,3,15 To 17 Years,15 To 17 Years,15 To 17 Years,15-17 Years,15-17 Years,15-17 Years,15-17 Years,15-17 Years,15-17 Years
+FRSTUSE1,4,18 To 20 Years,18 To 20 Years,18 To 20 Years,18-20 Years,18-20 Years,18-20 Years,18-20 Years,18-20 Years,18-20 Years
+FRSTUSE1,5,21 To 24 Years,21 To 24 Years,21 To 24 Years,21-24 Years,21-24 Years,21-24 Years,21-24 Years,21-24 Years,21-24 Years
+FRSTUSE1,6,25 To 29 Years,25 To 29 Years,25 To 29 Years,25-29 Years,25-29 Years,25-29 Years,25-29 Years,25-29 Years,25-29 Years
+FRSTUSE1,7,30 To 34 Years,30 And Over,30 And Over,30 Years And Over,30 Years And Over,30 Years And Over,30 Years And Older,30 Years And Older,30 Years And Older
+FRSTUSE1,8,35 To 39 Years,,,,,,,,
+FRSTUSE1,9,40 To 44 Years,,,,,,,,
+FRSTUSE2,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+FRSTUSE2,1,11 And Under,11 And Under,11 And Under,11 Years And Under,11 Years And Under,11 Years And Under,11 Years And Under,11 Years And Under,11 Years And Under
+FRSTUSE2,10,45 To 49 Years,,,,,,,,
+FRSTUSE2,11,50 To 54 Years,,,,,,,,
+FRSTUSE2,12,55 And Over,,,,,,,,
+FRSTUSE2,2,12 To 14 Years,12 To 14 Years,12 To 14 Years,12-14 Years,12-14 Years,12-14 Years,12-14 Years,12-14 Years,12-14 Years
+FRSTUSE2,3,15 To 17 Years,15 To 17 Years,15 To 17 Years,15-17 Years,15-17 Years,15-17 Years,15-17 Years,15-17 Years,15-17 Years
+FRSTUSE2,4,18 To 20 Years,18 To 20 Years,18 To 20 Years,18-20 Years,18-20 Years,18-20 Years,18-20 Years,18-20 Years,18-20 Years
+FRSTUSE2,5,21 To 24 Years,21 To 24 Years,21 To 24 Years,21-24 Years,21-24 Years,21-24 Years,21-24 Years,21-24 Years,21-24 Years
+FRSTUSE2,6,25 To 29 Years,25 To 29 Years,25 To 29 Years,25-29 Years,25-29 Years,25-29 Years,25-29 Years,25-29 Years,25-29 Years
+FRSTUSE2,7,30 To 34 Years,30 And Over,30 And Over,30 Years And Over,30 Years And Over,30 Years And Over,30 Years And Older,30 Years And Older,30 Years And Older
+FRSTUSE2,8,35 To 39 Years,,,,,,,,
+FRSTUSE2,9,40 To 44 Years,,,,,,,,
+FRSTUSE3,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+FRSTUSE3,1,11 And Under,11 And Under,11 And Under,11 Years And Under,11 Years And Under,11 Years And Under,11 Years And Under,11 Years And Under,11 Years And Under
+FRSTUSE3,10,45 To 49 Years,,,,,,,,
+FRSTUSE3,11,50 To 54 Years,,,,,,,,
+FRSTUSE3,12,55 And Over,,,,,,,,
+FRSTUSE3,2,12 To 14 Years,12 To 14 Years,12To 14 Years,12-14 Years,12-14 Years,12-14 Years,12-14 Years,12-14 Years,12-14 Years
+FRSTUSE3,3,15 To 17 Years,15 To 17 Years,15 To 17 Years,15-17 Years,15-17 Years,15-17 Years,15-17 Years,15-17 Years,15-17 Years
+FRSTUSE3,4,18 To 20 Years,18 To 20 Years,18 To 20 Years,18-20 Years,18-20 Years,18-20 Years,18-20 Years,18-20 Years,18-20 Years
+FRSTUSE3,5,21 To 24 Years,21 To 24 Years,21 To 24 Years,21-24 Years,21-24 Years,21-24 Years,21-24 Years,21-24 Years,21-24 Years
+FRSTUSE3,6,25 To 29 Years,25 To 29 Years,25 To 29 Years,25-29 Years,25-29 Years,25-29 Years,25-29 Years,25-29 Years,25-29 Years
+FRSTUSE3,7,30 To 34 Years,30 And Over,30 And Over,30 Years And Over,30 Years And Over,30 Years And Over,30 Years And Older,30 Years And Older,30 Years And Older
+FRSTUSE3,8,35 To 39 Years,,,,,,,,
+FRSTUSE3,9,40 To 44 Years,,,,,,,,
+GENDER,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+GENDER,1,Male,Male,Male,Male,Male,Male,Male,Male,Male
+GENDER,2,Female,Female,Female,Female,Female,Female,Female,Female,Female
+HALLFLG,0,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported
+HALLFLG,1,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported
+HERFLG,0,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported
+HERFLG,1,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported
+HLTHINS,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+HLTHINS,1,"Private Insurance, Blue Cross/Blue Shield, Hmo","Private Insurance, Blue Cross/Blue Shield, Hmo","Private Insurance, Blue Cross/Blue Shield, Hmo","Private Insurance, Blue Cross/Blue Shield, Hmo","Private Insurance, Blue Cross/Blue Shield, Hmo","Private Insurance, Blue Cross/Blue Shield, Hmo","Private Insurance, Blue Cross/Blue Shield, Hmo","Private Insurance, Blue Cross/Blue Shield, Hmo","Private Insurance, Blue Cross/Blue Shield, Hmo"
+HLTHINS,2,Medicaid,Medicaid,Medicaid,Medicaid,Medicaid,Medicaid,Medicaid,Medicaid,Medicaid
+HLTHINS,3,"Medicare, Other (E.G. Tricare, Champus)","Medicare, Other (E.G. Tricare, Champus)","Medicare, Other (E.G. Tricare, Champus)","Medicare, Other (E.G. Tricare, Champus)","Medicare, Other (E.G. Tricare, Champus)","Medicare, Other (E.G. Tricare, Champus)","Medicare, Other (E.G. Tricare, Champus)","Medicare, Other (E.G. Tricare, Champus)","Medicare, Other (E.G. Tricare, Champus)"
+HLTHINS,4,None,None,None,,,,,,
+IDU,-8,No Substances Reported,,,,,,,,
+IDU,-9,,No Substances Reported,No Substances Reported,No Substances Reported,No Substances Reported,No Substances Reported,No Substances Reported,No Substances Reported,No Substances Reported
+IDU,0,,Idu Not Reported,Idu Not Reported,Idu Not Reported,Idu Not Reported,Idu Not Reported,Idu Not Reported,Idu Not Reported,Idu Not Reported
+IDU,1,Idu Reported,Idu Reported,Idu Reported,Idu Reported,Idu Reported,Idu Reported,Idu Reported,Idu Reported,Idu Reported
+INHFLG,0,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported
+INHFLG,1,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported
+LIVARAG,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+LIVARAG,1,Homeless,Homeless,Homeless,Homeless,Homeless,Homeless,Homeless,Homeless,Experiencing Homelessness
+LIVARAG,2,Dependent Living,Dependent Living,Dependent Living,Dependent Living,Dependent Living,Dependent Living,Dependent Living,Dependent Living,Dependent Living
+LIVARAG,3,Independent Living,Independent Living,Independent Living,Independent Living,Independent Living,Independent Living,Independent Living,Independent Living,Independent Living
+LIVARAG_D,-9,,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+LIVARAG_D,1,,Homeless,Homeless,Homeless,Homeless,Homeless,Homeless,Homeless,Experiencing Homelessness
+LIVARAG_D,2,,Dependent Living,Dependent Living,Dependent Living,Dependent Living,Dependent Living,Dependent Living,Dependent Living,Dependent Living
+LIVARAG_D,3,,Independent Living,Independent Living,Independent Living,Independent Living,Independent Living,Independent Living,Independent Living,Independent Living
+LOS,-9,,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,,,,,,
+LOS,1,1,1,1,1,1,1,1,1,1
+LOS,10,10,10,10,10,10,10,10,10,10
+LOS,11,11,11,11,11,11,11,11,11,11
+LOS,12,12,12,12,12,12,12,12,12,12
+LOS,13,13,13,13,13,13,13,13,13,13
+LOS,14,14,14,14,14,14,14,14,14,14
+LOS,15,15,15,15,15,15,15,15,15,15
+LOS,16,16,16,16,16,16,16,16,16,16
+LOS,17,17,17,17,17,17,17,17,17,17
+LOS,18,18,18,18,18,18,18,18,18,18
+LOS,19,19,19,19,19,19,19,19,19,19
+LOS,2,2,2,2,2,2,2,2,2,2
+LOS,20,20,20,20,20,20,20,20,20,20
+LOS,21,21,21,211,21,21,21,21,21,21
+LOS,22,22,22,22,22,22,22,22,22,22
+LOS,23,23,23,23,23,23,23,23,23,23
+LOS,24,24,24,24,24,24,24,24,24,24
+LOS,25,25,25,25,25,25,25,25,25,25
+LOS,26,26,26,26,26,26,26,26,26,26
+LOS,27,27,27,27,27,27,27,27,27,27
+LOS,28,28,28,28,28,28,28,28,28,28
+LOS,29,29,29,29,29,29,29,29,29,29
+LOS,3,3,3,3,3,3,3,3,3,3
+LOS,30,30,30,30,30,30,30,30,30,30
+LOS,31,31 To 45 Days,31 To 45 Days,31 To 45 Days,31 To 45 Days,31 To 45 Days,31 To 45 Days,31 To 45 Days,31 To 45 Days,31 To 45 Days
+LOS,32,46 To 60 Days,46 To 60 Days,46 To 60 Days,46 To 60 Days,46 To 60 Days,46 To 60 Days,46 To 60 Days,46 To 60 Days,46 To 60 Days
+LOS,33,61 To 90 Days,61 To 90 Days,61 To 90 Days,61 To 90 Days,61 To 90 Days,61 To 90 Days,61 To 90 Days,61 To 90 Days,61 To 90 Days
+LOS,34,91 To 120 Days,91 To 120 Days,91 To 120 Days,91 To 120 Days,91 To 120 Days,91 To 120 Days,91 To 120 Days,91 To 120 Days,91 To 120 Days
+LOS,35,121 To 180 Days,121 To 180 Days,121 To 180 Days,121 To 180 Days,121 To 180 Days,121 To 180 Days,121 To 180 Days,121 To 180 Days,121 To 180 Days
+LOS,36,181 To 365 Days,181 To 365 Days,181 To 365 Days,181 To 365 Days,181 To 365 Days,181 To 365 Days,181 To 365 Days,181 To 365 Days,181 To 365 Days
+LOS,37,More Than A Year,More Than A Year,More Than A Year,More Than A Year,More Than A Year,More Than A Year,More Than A Year,More Than A Year,More Than A Year
+LOS,4,4,4,4,4,4,4,4,4,4
+LOS,5,5,5,5,5,5,5,5,5,5
+LOS,6,6,6,6,6,6,6,6,6,6
+LOS,7,7,7,7,7,7,7,7,7,7
+LOS,8,8,8,8,8,8,8,8,8,8
+LOS,9,9,9,9,9,9,9,9,9,9
+MARFLG,0,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported
+MARFLG,1,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported
+MARSTAT,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+MARSTAT,1,Never Married,Never Married,Never Married,Never Married,Never Married,Never Married,Never Married,Never Married,Never Married
+MARSTAT,2,Now Married,Now Married,Now Married,Now Married,Now Married,Now Married,Now Married,Now Married,Now Married
+MARSTAT,3,Separated,Separated,Separated,Separated,Separated,Separated,Separated,Separated,Separated
+MARSTAT,4,"Divorced, Widowed","Divorced, Widowed","Divorced, Widowed","Divorced, Widowed","Divorced, Widowed","Divorced, Widowed","Divorced, Widowed","Divorced, Widowed","Divorced, Widowed"
+METHFLG,0,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported
+METHFLG,1,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported
+METHUSE,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+METHUSE,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+METHUSE,2,No,No,No,No,No,No,No,No,No
+MTHAMFLG,0,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported
+MTHAMFLG,1,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported
+NOPRIOR,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+NOPRIOR,0,No Prior Treatment Episode,No Prior Treatment Episode,No Prior Treatment Episode,No Prior Treatment Episodes,No Prior Treatment Episodes,No Prior Treatment Episodes,No Prior Treatment Episode,No Prior Treatment Episode,No Prior Treatment Episode
+NOPRIOR,1,1 Prior Treatment Episodes,One And More Prior Treatment Episodes,One And More Prior Treatment Episodes,One Or More Prior Treatment Episodes,One Or More Prior Treatment Episodes,One Or More Prior Treatment Episodes,One Or More Prior Treatment Episodes,One Or More Prior Treatment Episodes,One Or More Prior Treatment Episodes
+NOPRIOR,2,2 Prior Treatment Episodes,,,,,,,,
+NOPRIOR,3,3 Prior Treatment Episodes,,,,,,,,
+NOPRIOR,4,4 Prior Treatment Episodes,,,,,,,,
+NOPRIOR,5,5 Or More Prior Treatment Episodes,,,,,,,,
+NUMSUBS,0,0,0,0,,,,,,
+NUMSUBS,1,1,1,1,,,,,,
+NUMSUBS,2,2,2,2,,,,,,
+NUMSUBS,3,3,3,3,,,,,,
+OPSYNFLG,0,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported
+OPSYNFLG,1,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported
+OTCFLG,0,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported
+OTCFLG,1,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported
+OTHERFLG,0,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported
+OTHERFLG,1,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported
+PCPFLG,0,Substance Not Reported,Substance Not Reported,Substancenot Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported
+PCPFLG,1,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported
+PREG,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+PREG,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+PREG,2,No,No,No,No,No,No,No,No,No
+PRIMINC,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+PRIMINC,1,Wages/Salary,Wages/Salary,Wages/Salary,Wages/Salary,Wages/Salary,Wages/Salary,Wages/Salary,Wages/Salary,Wages/Salary
+PRIMINC,2,Public Assistance,Public Assistance,Public Assistance,Public Assistance,Public Assistance,Public Assistance,Public Assistance,Public Assistance,Public Assistance
+PRIMINC,20,Other,,,,,,,,
+PRIMINC,21,None,,,,,,,,
+PRIMINC,3,"Retirement/Pension, Disability","Retirement/Pension, Disability","Retirement/Pension, Disability","Retirement/Pension, Disability","Retirement/Pension, Disability","Retirement/Pension, Disability","Retirement/Pension, Disability","Retirement/Pension, Disability","Retirement/Pension, Disability"
+PRIMINC,4,,Other,Other,Other,Other,Other,Other,Other,Other
+PRIMINC,5,,None,None,,,,,,
+PRIMPAY,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+PRIMPAY,1,Self-Pay,Selfpay,Selfpay,Self-Pay,Self-Pay,Self-Pay,Self-Pay,Self-Pay,Self-Pay
+PRIMPAY,2,"Blue Cross/Blue Shield, Other Health Insurance Companies","Private Insurance (Blue Cross/Blue Shield, Other Health Insurance, Workers Compensation)","Private Insurance (Blue Cross/Blue Shield, Other Health Insurance, Workers Compensation)","Private Insurance (Blue Cross/Blue Shield, Other Health Insurance,Workers Compensation)","Private Insurance (Blue Cross/Blue Shield, Other Health Insurance,Workers Compensation)","Private Insurance (Blue Cross/Blue Shield, Other Health Insurance,Workers Compensation)","Private Insurance (Blue Cross/Blue Shield, Other Health Insurance,Workers Compensation)","Private Insurance (Blue Cross/Blue Shield, Other Health Insurance,Workers Compensation)","Private Insurance (Blue Cross/Blue Shield, Other Health Insurance,Workers Compensation)"
+PRIMPAY,3,"Medicare, Workers Compensation",Medicare,Medicare,Medicare,Medicare,Medicare,Medicare,Medicare,Medicare
+PRIMPAY,4,Medicaid,Medicaid,Medicaid,Medicaid,Medicaid,Medicaid,Medicaid,Medicaid,Medicaid
+PRIMPAY,5,Other Government Payments,Other Government Payments,Other Government Payments,Other Government Payments,Other Government Payments,Other Government Payments,Other Government Payments,Other Government Payments,Other Government Payments
+PRIMPAY,6,,"No Charge (Free, Charity, Special Research, Teaching)","No Charge (Free, Charity, Special Research, Teaching)","No Charge (Free, Charity, Special Research, Teaching)","No Charge (Free, Charity, Special Research, Teaching)","No Charge (Free, Charity, Special Research, Teaching)","No Charge (Free, Charity, Special Research, Teaching)","No Charge (Free, Charity, Special Research, Teaching)","No Charge (Free, Charity, Special Research, Teaching)"
+PRIMPAY,7,,Other,Other,Other,Other,Other,Other,Other,Other
+PRIMPAY,8,"No Charge (Free, Charity, Special Research, Teaching)",,,,,,,,
+PRIMPAY,9,Other,,,,,,,,
+PSOURCE,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+PSOURCE,1,Individual (Includes Self-Referral),Individual (Includes Selfreferral),Individual (Includes Selfreferral),Individual (Includes Self-Referral),Individual (Includes Self-Referral),Individual (Includes Self-Referral),Individual (Includes Self-Referral),Individual (Includes Self-Referral),Individual (Includes Self-Referral)
+PSOURCE,2,Alcohol/Drug Abuse Care Provider,Alcohol/Drug Use Care Provider,Alcohol/Drug Use Care Provider,Alcohol/Drug Use Care Provider,Alcohol/Drug Use Care Provider,Alcohol/Drug Use Care Provider,Alcohol/Drug Use Care Provider,Alcohol/Drug Use Care Provider,Alcohol/Drug Use Care Provider
+PSOURCE,3,Other Health Care Provider,Other Health Care Provider,Other Health Care Provider,Other Health Care Provider,Other Health Care Provider,Other Health Care Provider,Other Health Care Provider,Other Health Care Provider,Other Health Care Provider
+PSOURCE,4,School (Educational),School (Educational),School (Educational),School (Educational),School (Educational),School (Educational),School (Educational),School (Educational),School (Educational)
+PSOURCE,5,Employer/Eap,Employer/Eap,Employer/Eap,Employer/Eap,Employer/Eap,Employer/Eap,Employer/Eap,Employer/Eap,Employer/Eap
+PSOURCE,6,Other Community Referral,Other Community Referral,Other Community Referral,Other Community Referral,Other Community Referral,Other Community Referral,Other Community Referral,Other Community Referral,Other Community Referral
+PSOURCE,7,Court/Criminal Justice Referral / Dui / Dwi,Court/Criminal Justice Referral / Dui / Dwi,Court/Criminal Justice Referral / Dui / Dwi,Court/Criminal Justice Referral/Dui/Dwi,Court/Criminal Justice Referral/Dui/Dwi,Court/Criminal Justice Referral/Dui/Dwi,Court/Criminal Justice Referral/Dui/Dwi,Court/Criminal Justice Referral/Dui/Dwi,Court/Criminal Justice Referral/Dui/Dwi
+PSYPROB,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+PSYPROB,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+PSYPROB,2,No,No,No,No,No,No,No,No,No
+RACE,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+RACE,1,"Alaska Native (Aleut, Eskimo, Indian)","Alaska Native (Aleut, Eskimo, Indian)","Alaska Native (Aleut, Eskimo, Indian)","Alaska Native (Aleut, Eskimo, Indian)","Alaska Native (Aleut, Eskimo, Indian)","Alaska Native (Aleut, Eskimo, Indian)","Alaska Native (Aleut, Eskimo, Indian)","Alaska Native (Aleut, Eskimo, Indian)","Alaska Native (Aleut, Eskimo)"
+RACE,13,Asian,,,,,,,,
+RACE,2,American Indian (Other Than Alaska Native),American Indian (Other Than Alaska Native),American Indian (Other Than Alaska Native),American Indian (Other Than Alaska Native),American Indian (Other Than Alaska Native),American Indian (Other Than Alaska Native),American Indian (Other Than Alaska Native),American Indian (Other Than Alaska Native),American Indian (Other Than Alaska Native)
+RACE,20,Other Single Race,,,,,,,,
+RACE,21,Two Or More Races,,,,,,,,
+RACE,23,Native Hawaiian Or Other Pacific Islander,,,,,,,,
+RACE,3,Asian Or Pacific Islander,Asian Or Pacific Islander,Asian Or Pacific Islander,Asian Or Pacific Islander,Asian Or Pacific Islander,Asian Or Pacific Islander,Asian Or Pacific Islander,Asian Or Pacific Islander,Asian Or Pacific Islander
+RACE,4,Black Or African American,Black Or African American,Black Or African American,Black Or African American,Black Or African American,Black Or African American,Black Or African American,Black Or African American,Black Or African American
+RACE,5,White,White,White,White,White,White,White,White,White
+RACE,6,,Asian,Asian,Asian,Asian,Asian,Asian,Asian,Asian
+RACE,7,,Other Single Race,Other Single Race,Other Single Race,Other Single Race,Other Single Race,Other Single Race,Other Single Race,Other Single Race
+RACE,8,,Two Or More Races,Two Or More Races,Two Or More Races,Two Or More Races,Two Or More Races,Two Or More Races,Two Or More Races,Two Or More Races
+RACE,9,,Native Hawaiian Or Other Pacific Islander,Native Hawaiian Or Other Pacific Islander,Native Hawaiian Or Other Pacific Islander,Native Hawaiian Or Other Pacific Islander,Native Hawaiian Or Other Pacific Islander,Native Hawaiian Or Other Pacific Islander,Native Hawaiian Or Other Pacific Islander,Native Hawaiian Or Other Pacific Islander
+RACE,,,,,,,,,,
+REASON,-9,Missing/Unknown/Not Collected/Invalid,,,,,,,,
+REASON,1,Treatment Completed,Treatment Completed,Treatment Completed,Treatment Completed,Treatment Completed,Treatment Completed,Treatment Completed,Treatment Completed,Treatment Completed
+REASON,2,Left Against Professional Advice,Dropped Out Of Treatment,Dropped Out Of Treatment,Dropped Out Of Treatment,Dropped Out Of Treatment,Dropped Out Of Treatment,Dropped Out Of Treatment,Dropped Out Of Treatment,Dropped Out Of Treatment
+REASON,3,Terminated By Facility,Terminated By Facility,Terminated By Facility,Terminated By Facility,Terminated By Facility,Terminated By Facility,Terminated By Facility,Terminated By Facility,Terminated By Facility
+REASON,4,Transferred To Another Treatment Program Or Facility,Transferred To Another Treatment Program Or Facility,Transferred To Another Treatment Program Or Facility,Transferred To Another Treatment Program Or Facility,Transferred To Another Treatment Program Or Facility,Transferred To Another Treatment Program Or Facility,Transferred To Another Treatment Program Or Facility,Transferred To Another Treatment Program Or Facility,Transferred To Another Treatment Program Or Facility
+REASON,5,Incarcerated,Incarcerated,Incarcerated,Incarcerated,Incarcerated,Incarcerated,Incarcerated,Incarcerated,Incarcerated
+REASON,6,Death,Death,Death,Death,Death,Death,Death,Death,Death
+REASON,7,Other,Other,Other,Other,Other,Other,Other,Other,Other
+REGION,0,Us Jurisdiction/Territory,Us Jurisdiction/Territory,Us Jurisdiction/Territory,U.S. Territories,U.S. Territories,U.S. Territories,U.S. Territories,U.S. Territories,U.S. Territories
+REGION,1,Northeast,Northeast,Northeast,Northeast,Northeast,Northeast,Northeast,Northeast,Northeast
+REGION,2,Midwest,Midwest,Midwest,Midwest,Midwest,Midwest,Midwest,Midwest,Midwest
+REGION,3,South,South,South,South,South,South,South,South,South
+REGION,4,West,West,West,West,West,West,West,West,West
+ROUTE1,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+ROUTE1,1,Oral,Oral,Oral,Oral,Oral,Oral,Oral,Oral,Oral
+ROUTE1,2,Smoking,Smoking,Smoking,Smoking,Smoking,Smoking,Smoking,Smoking,Smoking
+ROUTE1,20,Other,,,,,,,,
+ROUTE1,3,Inhalation,Inhalation,Inhalation,Inhalation,Inhalation,Inhalation,Inhalation,Inhalation,Inhalation
+ROUTE1,4,Injection (Iv Or Intramuscular),Injection (Iv Or Intramuscular),Injection (Iv Or Intramuscular),Injection (Iv Or Intramuscular),"Injection (Intravenous, Intramuscular, Intradermal, Or Subcutaneous)","Injection (Intravenous, Intramuscular, Intradermal, Or Subcutaneous)","Injection (Intravenous, Intramuscular, Intradermal, Or Subcutaneous)","Injection (Intravenous, Intramuscular, Intradermal, Or Subcutaneous)","Injection (Intravenous, Intramuscular, Intradermal, Or Subcutaneous)"
+ROUTE1,5,,Other,Other,Other,Other,Other,Other,Other,Other
+ROUTE2,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+ROUTE2,1,Oral,Oral,Oral,Oral,Oral,Oral,Oral,Oral,Oral
+ROUTE2,2,Smoking,Smoking,Smoking,Smoking,Smoking,Smoking,Smoking,Smoking,Smoking
+ROUTE2,20,Other,,,,,,,,
+ROUTE2,3,Inhalation,Inhalation,Inhalation,Inhalation,Inhalation,Inhalation,Inhalation,Inhalation,Inhalation
+ROUTE2,4,Injection (Iv Or Intramuscular),Injection (Iv Or Intramuscular),Injection (Iv Or Intramuscular),Injection (Iv Or Intramuscular),"Injection (Intravenous, Intramuscular, Intradermal, Or Subcutaneous)","Injection (Intravenous, Intramuscular, Intradermal, Or Subcutaneous)","Injection (Intravenous, Intramuscular, Intradermal, Or Subcutaneous)","Injection (Intravenous, Intramuscular, Intradermal, Or Subcutaneous)","Injection (Intravenous, Intramuscular, Intradermal, Or Subcutaneous)"
+ROUTE2,5,,Other,Other,Other,Other,Other,Other,Other,Other
+ROUTE3,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+ROUTE3,1,Oral,Oral,Oral,Oral,Oral,Oral,Oral,Oral,Oral
+ROUTE3,2,Smoking,Smoking,Smoking,Smoking,Smoking,Smoking,Smoking,Smoking,Smoking
+ROUTE3,20,Other,,,,,,,,
+ROUTE3,3,Inhalation,Inhalation,Inhalation,Inhalation,Inhalation,Inhalation,Inhalation,Inhalation,Inhalation
+ROUTE3,4,Injection (Iv Or Intramuscular),Injection (Iv Or Intramuscular),Injection (Iv Or Intramuscular),Injection (Iv Or Intramuscular),"Injection (Intravenous, Intramuscular, Intradermal, Or Subcutaneous)","Injection (Intravenous, Intramuscular, Intradermal, Or Subcutaneous)","Injection (Intravenous, Intramuscular, Intradermal, Or Subcutaneous)","Injection (Intravenous, Intramuscular, Intradermal, Or Subcutaneous)","Injection (Intravenous, Intramuscular, Intradermal, Or Subcutaneous)"
+ROUTE3,5,,Other,Other,Other,Other,Other,Other,Other,Other
+SEDHPFLG,0,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported
+SEDHPFLG,1,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported
+SERVICES,1,,,,"Detox, 24-Hour, Hospital Inpatient","Detox, 24-Hour, Hospital Inpatient","Detox, 24-Hour, Hospital Inpatient","Detox, 24-Hour, Hospital Inpatient","Detox, 24-Hour, Hospital Inpatient","Detox, 24-Hour, Hospital Inpatient"
+SERVICES,2,,,,"Detox, 24-Hour, Free-Standing Residential","Detox, 24-Hour, Free-Standing Residential","Detox, 24-Hour, Free-Standing Residential","Detox, 24-Hour, Free-Standing Residential","Detox, 24-Hour, Free-Standing Residential","Detox, 24-Hour, Free-Standing Residential"
+SERVICES,3,,,,"Rehab/Residential, Hospital (Non-Detox)","Rehab/Residential, Hospital (Non-Detox)","Rehab/Residential, Hospital (Non-Detox)","Rehab/Residential, Hospital (Non-Detox)","Rehab/Residential, Hospital (Non-Detox)","Rehab/Residential, Hospital (Non-Detox)"
+SERVICES,4,,,,"Rehab/Residential, Short Term (30 Days Or Fewer)","Rehab/Residential, Short Term (30 Days Or Fewer)","Rehab/Residential, Short Term (30 Days Or Fewer)","Rehab/Residential, Short Term (30 Days Or Fewer)","Rehab/Residential, Short Term (30 Days Or Fewer)","Rehab/Residential, Short Term (30 Days Or Fewer)"
+SERVICES,5,,,,"Rehab/Residential, Long Term (More Than 30 Days)","Rehab/Residential, Long Term (More Than 30 Days)","Rehab/Residential, Long Term (More Than 30 Days)","Rehab/Residential, Long Term (More Than 30 Days)","Rehab/Residential, Long Term (More Than 30 Days)","Rehab/Residential, Long Term (More Than 30 Days)"
+SERVICES,6,,,,"Ambulatory, Intensive Outpatient","Ambulatory, Intensive Outpatient","Ambulatory, Intensive Outpatient","Ambulatory, Intensive Outpatient","Ambulatory, Intensive Outpatient","Ambulatory, Intensive Outpatient"
+SERVICES,7,,,,"Ambulatory, Non-Intensive Outpatient","Ambulatory, Non-Intensive Outpatient","Ambulatory, Non-Intensive Outpatient","Ambulatory, Non-Intensive Outpatient","Ambulatory, Non-Intensive Outpatient","Ambulatory, Non-Intensive Outpatient"
+SERVICES,8,,,,"Ambulatory, Detoxification","Ambulatory, Detoxification","Ambulatory, Detoxification","Ambulatory, Detoxification","Ambulatory, Detoxification","Ambulatory, Detoxification"
+SERVICES_D,-9,Missing/Unknown/Not Collected/Invalid,,,,,,,,
+SERVICES_D,1,"Detox, 24 Hr, Hospital Inpatient","Detox, 24 Hr, Hospital Inpatient","Detox, 24 Hr, Hospital Inpatient","Detox, 24-Hour, Hospital Inpatient","Detox, 24-Hour, Hospital Inpatient","Detox, 24-Hour, Hospital Inpatient","Detox, 24-Hour, Hospital Inpatient","Detox, 24-Hour, Hospital Inpatient","Detox, 24-Hour, Hospital Inpatient"
+SERVICES_D,2,"Detox, 24 Hr, Free-Standing Residential","Detox, 24 Hr, Freestanding Residential","Detox, 24 Hr, Freestanding Residential","Detox, 24-Hour, Free-Standing Residential","Detox, 24-Hour, Free-Standing Residential","Detox, 24-Hour, Free-Standing Residential","Detox, 24-Hour, Free-Standing Residential","Detox, 24-Hour, Free-Standing Residential","Detox, 24-Hour, Free-Standing Residential"
+SERVICES_D,3,"Rehab/Res, Hospital (Non-Detox)","Rehab/Res, Hospital (Nondetox)","Rehab/Res, Hospital (Nondetox)","Rehab/Residential, Hospital (Non-Detox)","Rehab/Residential, Hospital (Non-Detox)","Rehab/Residential, Hospital (Non-Detox)","Rehab/Residential, Hospital (Non-Detox)","Rehab/Residential, Hospital (Non-Detox)","Rehab/Residential, Hospital (Non-Detox)"
+SERVICES_D,4,"Rehab/Res, Short Term (30 Days Or Fewer)","Rehab/Res, Short Term (30 Days Or Fewer)","Rehab/Res, Short Term (30 Days Or Fewer)","Rehab/Residential, Short Term (30 Days Or Fewer)","Rehab/Residential, Short Term (30 Days Or Fewer)","Rehab/Residential, Short Term (30 Days Or Fewer)","Rehab/Residential, Short Term (30 Days Or Fewer)","Rehab/Residential, Short Term (30 Days Or Fewer)","Rehab/Residential, Short Term (30 Days Or Fewer)"
+SERVICES_D,5,"Rehab/Res, Long Term (More Than 30 Days)","Rehab/Res, Long Term (More Than 30 Days)","Rehab/Res, Long Term (More Than 30 Days)","Rehab/Residential, Long Term (More Than 30 Days)","Rehab/Residential, Long Term (More Than 30 Days)","Rehab/Residential, Long Term (More Than 30 Days)","Rehab/Residential, Long Term (More Than 30 Days)","Rehab/Residential, Long Term (More Than 30 Days)","Rehab/Residential, Long Term (More Than 30 Days)"
+SERVICES_D,6,"Ambulatory, Intensive Outpatient","Ambulatory, Intensive Outpatient","Ambulatory, Intensive Outpatient","Ambulatory, Intensive Outpatient","Ambulatory, Intensive Outpatient","Ambulatory, Intensive Outpatient","Ambulatory, Intensive Outpatient","Ambulatory, Intensive Outpatient","Ambulatory, Intensive Outpatient"
+SERVICES_D,7,"Ambulatory, Non-Intensive Outpatient","Ambulatory, Nonintensive Outpatient","Ambulatory, Nonintensive Outpatient","Ambulatory, Non-Intensive Outpatient","Ambulatory, Non-Intensive Outpatient","Ambulatory, Non-Intensive Outpatient","Ambulatory, Non-Intensive Outpatient","Ambulatory, Non-Intensive Outpatient","Ambulatory, Non-Intensive Outpatient"
+SERVICES_D,8,"Ambulatory, Detoxification","Ambulatory, Detoxification","Ambulatory, Detoxification","Ambulatory, Detoxification","Ambulatory, Detoxification","Ambulatory, Detoxification","Ambulatory, Detoxification","Ambulatory, Detoxification","Ambulatory, Detoxification"
+SERVICES_D,,,,,,,,,,
+STFIPS,1,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama
+STFIPS,10,Delaware,Delaware,Delaware,Delaware,Delaware,Delaware,Delaware,,
+STFIPS,11,District Of Columbia,District Of Columbia,District Of Columbia,District Of Columbia,District Of Columbia,District Of Columbia,District Of Columbia,District Of Columbia,District Of Columbia
+STFIPS,12,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida
+STFIPS,13,Georgia,Georgia,,,,Georgia,Georgia,Georgia,Georgia
+STFIPS,15,Hawaii,Hawaii,Hawaii,Hawaii,Hawaii,Hawaii,Hawaii,Hawaii,Hawaii
+STFIPS,16,Idaho,Idaho,Idaho,Idaho,Idaho,Idaho,,,Idaho
+STFIPS,17,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois
+STFIPS,18,Indiana,Indiana,Indiana,Indiana,Indiana,Indiana,Indiana,Indiana,Indiana
+STFIPS,19,Iowa,Iowa,Iowa,Iowa,Iowa,Iowa,Iowa,Iowa,Iowa
+STFIPS,2,Alaska,Alaska,Alaska,Alaska,Alaska,Alaska,Alaska,Alaska,Alaska
+STFIPS,20,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas
+STFIPS,21,Kentucky,Kentucky,Kentucky,Kentucky,Kentucky,Kentucky,Kentucky,Kentucky,Kentucky
+STFIPS,22,Louisiana,Louisiana,Louisiana,Louisiana,Louisiana,Louisiana,Louisiana,Louisiana,Louisiana
+STFIPS,23,Maine,Maine,Maine,Maine,Maine,Maine,Maine,Maine,Maine
+STFIPS,24,Maryland,Maryland,Maryland,Maryland,Maryland,Maryland,,Maryland,Maryland
+STFIPS,25,Massachusetts,Massachusetts,Massachusetts,Massachusetts,Massachusetts,Massachusetts,Massachusetts,Massachusetts,Massachusetts
+STFIPS,26,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan
+STFIPS,27,Minnesota,Minnesota,Minnesota,Minnesota,Minnesota,Minnesota,Minnesota,Minnesota,Minnesota
+STFIPS,28,,Mississippi,Mississippi,Mississippi,Mississippi,Mississippi,Mississippi,Mississippi,Mississippi
+STFIPS,29,Missouri,Missouri,Missouri,Missouri,Missouri,Missouri,Missouri,Missouri,Missouri
+STFIPS,30,Montana,Montana,Montana,Montana,Montana,Montana,Montana,Montana,Montana
+STFIPS,31,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska
+STFIPS,32,Nevada,Nevada,Nevada,Nevada,Nevada,Nevada,Nevada,Nevada,Nevada
+STFIPS,33,New Hampshire,New Hampshire,New Hampshire,New Hampshire,New Hampshire,New Hampshire,New Hampshire,New Hampshire,New Hampshire
+STFIPS,34,New Jersey,New Jersey,New Jersey,New Jersey,New Jersey,New Jersey,New Jersey,New Jersey,New Jersey
+STFIPS,35,New Mexico,New Mexico,New Mexico,New Mexico,New Mexico,New Mexico,,New Mexico,New Mexico
+STFIPS,36,New York,New York,New York,New York,New York,New York,New York,New York,New York
+STFIPS,37,North Carolina,North Carolina,North Carolina,North Carolina,North Carolina,North Carolina,North Carolina,North Carolina,North Carolina
+STFIPS,38,North Dakota,North Dakota,North Dakota,North Dakota,North Dakota,North Dakota,North Dakota,North Dakota,North Dakota
+STFIPS,39,Ohio,Ohio,Ohio,Ohio,Ohio,Ohio,Ohio,Ohio,Ohio
+STFIPS,4,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona
+STFIPS,40,Oklahoma,Oklahoma,Oklahoma,Oklahoma,Oklahoma,Oklahoma,Oklahoma,Oklahoma,Oklahoma
+STFIPS,41,Oregon,,,,,,,,
+STFIPS,42,Pennsylvania,Pennsylvania,Pennsylvania,Pennsylvania,Pennsylvania,Pennsylvania,Pennsylvania,Pennsylvania,Pennsylvania
+STFIPS,44,Rhode Island,Rhode Island,Rhode Island,Rhode Island,Rhode Island,Rhode Island,Rhode Island,Rhode Island,Rhode Island
+STFIPS,45,South Carolina,,South Carolina,South Carolina,South Carolina,South Carolina,South Carolina,South Carolina,South Carolina
+STFIPS,46,South Dakota,South Dakota,South Dakota,South Dakota,South Dakota,South Dakota,South Dakota,South Dakota,South Dakota
+STFIPS,47,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee
+STFIPS,48,Texas,Texas,Texas,Texas,Texas,Texas,Texas,Texas,Texas
+STFIPS,49,Utah,Utah,Utah,Utah,Utah,Utah,,Utah,Utah
+STFIPS,5,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas
+STFIPS,50,Vermont,Vermont,Vermont,Vermont,Vermont,Vermont,Vermont,Vermont,Vermont
+STFIPS,51,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia
+STFIPS,53,Washington,Washington,Washington,Washington,,,Washington,Washington,Washington
+STFIPS,54,West Virginia,,,,,,,West Virginia,West Virginia
+STFIPS,55,Wisconsin,Wisconsin,Wisconsin,Wisconsin,Wisconsin,Wisconsin,Wisconsin,Wisconsin,Wisconsin
+STFIPS,56,Wyoming,Wyoming,Wyoming,Wyoming,Wyoming,Wyoming,Wyoming,Wyoming,Wyoming
+STFIPS,6,California,California,California,California,California,California,California,California,California
+STFIPS,72,Puerto Rico,Puerto Rico,Puerto Rico,Puerto Rico,Puerto Rico,Puerto Rico,Puerto Rico,Puerto Rico,Puerto Rico
+STFIPS,8,Colorado,Colorado,Colorado,Colorado,Colorado,Colorado,Colorado,Colorado,Colorado
+STFIPS,9,Connecticut,Connecticut,Connecticut,Connecticut,Connecticut,Connecticut,Connecticut,Connecticut,Connecticut
+STIMFLG,0,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported
+STIMFLG,1,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported
+SUB1,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+SUB1,1,None,None,None,,,,,,
+SUB1,10,Methamphetamine,Methamphetamine,Methamphetamine,Methamphetamine,Methamphetamine/Speed,Methamphetamine/Speed,Methamphetamine/Speed,Methamphetamine/Speed,Methamphetamine/Speed
+SUB1,11,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines
+SUB1,12,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants
+SUB1,13,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines
+SUB1,14,Other Non-Benzodiazepine Tranquilizers,Other Nonbenzodiazepine Tranquilizers,Other Nonbenzodiazepine Tranquilizers,Other Non-Benzodiazepine Tranquilizers,Other Tranquilizers,Other Tranquilizers,Other Tranquilizers,Other Tranquilizers,Other Tranquilizers
+SUB1,15,Barbiturates,Barbiturates,Barbiturates,Barbiturates,Barbiturates,Barbiturates,Barbiturates,Barbiturates,Barbiturates
+SUB1,16,Other Non-Barbiturate Sedatives Or Hypnotics,Other Nonbarbiturate Sedatives Or Hypnotics,Other Nonbarbiturate Sedatives Or Hypnotics,Other Non-Barbiturate Sedatives Or Hypnotics,Other Sedatives Or Hypnotics,Other Sedatives Or Hypnotics,Other Sedatives Or Hypnotics,Other Sedatives Or Hypnotics,Other Sedatives Or Hypnotics
+SUB1,17,Inhalants,Inhalants,Inhalants,Inhalants,Inhalants,Inhalants,Inhalants,Inhalants,Inhalants
+SUB1,18,Over-The-Counter Medications,Overthecounter Medications,Overthecounter Medications,Over-The-Counter Medications,Over-The-Counter Medications,Over-The-Counter Medications,Over-The-Counter Medications,Over-The-Counter Medications,Over-The-Counter Medications
+SUB1,19,,Other,Other,Other,Other Drugs,Other Drugs,Other Drugs,Other Drugs,Other Drugs
+SUB1,2,Alcohol,Alcohol,Alcohol,Alcohol,Alcohol,Alcohol,Alcohol,Alcohol,Alcohol
+SUB1,20,Other,,,,,,,,
+SUB1,3,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack
+SUB1,4,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish
+SUB1,5,Heroin,Heroin,Heroin,Heroin,Heroin,Heroin,Heroin,Heroin,Heroin
+SUB1,6,Non-Prescription Methadone,Nonprescription Methadone,Nonprescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone
+SUB1,7,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics
+SUB1,8,Pcp,Pcp,Pcp,Pcp,Pcp,Pcp,Pcp,Pcp,Pcp
+SUB1,9,Other Hallucinogens,Other Hallucinogens,Other Hallucinogens,Other Hallucinogens,Hallucinogens,Hallucinogens,Hallucinogens,Hallucinogens,Hallucinogens
+SUB1,,,,,,,,,,
+SUB1_D,-9,,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+SUB1_D,1,,None,None,,,,,,
+SUB1_D,10,,Methamphetamine,Methamphetamine,Methamphetamine,Methamphetamine/Speed,Methamphetamine/Speed,Methamphetamine/Speed,Methamphetamine/Speed,Methamphetamine/Speed
+SUB1_D,11,,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines
+SUB1_D,12,,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants
+SUB1_D,13,,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines
+SUB1_D,14,,Other Nonbenzodiazepine Tranquilizers,Other Nonbenzodiazepine Tranquilizers,Other Non-Benzodiazepine Tranquilizers,Other Tranquilizers,Other Tranquilizers,Other Tranquilizers,Other Tranquilizers,Other Tranquilizers
+SUB1_D,15,,Barbiturates,Barbiturates,Barbiturates,Barbiturates,Barbiturates,Barbiturates,Barbiturates,Barbiturates
+SUB1_D,16,,Other Nonbarbiturate Sedatives Or Hypnotics,Other Nonbarbiturate Sedatives Or Hypnotics,Other Non-Barbiturate Sedatives Or Hypnotics,Other Sedatives Or Hypnotics,Other Sedatives Or Hypnotics,Other Sedatives Or Hypnotics,Other Sedatives Or Hypnotics,Other Sedatives Or Hypnotics
+SUB1_D,17,,Inhalants,Inhalants,Inhalants,Inhalants,Inhalants,Inhalants,Inhalants,Inhalants
+SUB1_D,18,,Overthecounter Medications,Overthecounter Medications,Over-The-Counter Medications,Over-The-Counter Medications,Over-The-Counter Medications,Over-The-Counter Medications,Over-The-Counter Medications,Over-The-Counter Medications
+SUB1_D,19,,Other,Other,Other,Other Drugs,Other Drugs,Other Drugs,Other Drugs,Other Drugs
+SUB1_D,2,,Alcohol,Alcohol,Alcohol,Alcohol,Alcohol,Alcohol,Alcohol,Alcohol
+SUB1_D,3,,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack
+SUB1_D,4,,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish
+SUB1_D,5,,Heroin,Heroin,Heroin,Heroin,Heroin,Heroin,Heroin,Heroin
+SUB1_D,6,,Nonprescription Methadone,Nonprescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone
+SUB1_D,7,,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics
+SUB1_D,8,,Pcp,Pcp,Pcp,Pcp,Pcp,Pcp,Pcp,Pcp
+SUB1_D,9,,Other Hallucinogens,Other Hallucinogens,Other Hallucinogens,Hallucinogens,Hallucinogens,Hallucinogens,Hallucinogens,Hallucinogens
+SUB2,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+SUB2,1,None,None,None,,,,,,
+SUB2,10,Methamphetamine,Methamphetamine,Methamphetamine,Methamphetamine,Methamphetamine/Speed,Methamphetamine/Speed,Methamphetamine/Speed,Methamphetamine/Speed,Methamphetamine/Speed
+SUB2,11,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines
+SUB2,12,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants
+SUB2,13,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines
+SUB2,14,Other Non-Benzodiazepine Tranquilizers,Other Nonbenzodiazepine Tranquilizers,Other Nonbenzodiazepine Tranquilizers,Other Non-Benzodiazepine Tranquilizers,Other Tranquilizers,Other Tranquilizers,Other Tranquilizers,Other Tranquilizers,Other Tranquilizers
+SUB2,15,Barbiturates,Barbiturates,Barbiturates,Barbiturates,Barbiturates,Barbiturates,Barbiturates,Barbiturates,Barbiturates
+SUB2,16,Other Non-Barbiturate Sedatives Or Hypnotics,Other Nonbarbiturate Sedatives Or Hypnotics,Other Nonbarbiturate Sedatives Or Hypnotics,Other Non-Barbiturate Sedatives Or Hypnotics,Other Sedatives Or Hypnotics,Other Sedatives Or Hypnotics,Other Sedatives Or Hypnotics,Other Sedatives Or Hypnotics,Other Sedatives Or Hypnotics
+SUB2,17,Inhalants,Inhalants,Inhalants,Inhalants,Inhalants,Inhalants,Inhalants,Inhalants,Inhalants
+SUB2,18,Over-The-Counter Medications,Overthecounter Medications,Overthecounter Medications,Over-The-Counter Medications,Over-The-Counter Medications,Over-The-Counter Medications,Over-The-Counter Medications,Over-The-Counter Medications,Over-The-Counter Medications
+SUB2,19,,Other,Other,Other,Other Drugs,Other Drugs,Other Drugs,Other Drugs,Other Drugs
+SUB2,2,Alcohol,Alcohol,Alcohol,Alcohol,Alcohol,Alcohol,Alcohol,Alcohol,Alcohol
+SUB2,20,Other,,,,,,,,
+SUB2,3,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack
+SUB2,4,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish
+SUB2,5,Heroin,Heroin,Heroin,Heroin,Heroin,Heroin,Heroin,Heroin,Heroin
+SUB2,6,Non-Prescription Methadone,Nonprescription Methadone,Nonprescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone
+SUB2,7,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics
+SUB2,8,Pcp,Pcp,Pcp,Pcp,Pcp,Pcp,Pcp,Pcp,Pcp
+SUB2,9,Other Hallucinogens,Other Hallucinogens,Other Hallucinogens,Other Hallucinogens,Hallucinogens,Hallucinogens,Hallucinogens,Hallucinogens,Hallucinogens
+SUB2,,,,,,,,,,
+SUB2_D,-9,,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+SUB2_D,1,,None,None,,,,,,
+SUB2_D,10,,Methamphetamine,Methamphetamine,Methamphetamine,Methamphetamine/Speed,Methamphetamine/Speed,Methamphetamine/Speed,Methamphetamine/Speed,Methamphetamine/Speed
+SUB2_D,11,,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines
+SUB2_D,12,,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants
+SUB2_D,13,,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines
+SUB2_D,14,,Other Nonbenzodiazepine Tranquilizers,Other Nonbenzodiazepine Tranquilizers,Other Non-Benzodiazepine Tranquilizers,Other Tranquilizers,Other Tranquilizers,Other Tranquilizers,Other Tranquilizers,Other Tranquilizers
+SUB2_D,15,,Barbiturates,Barbiturates,Barbiturates,Barbiturates,Barbiturates,Barbiturates,Barbiturates,Barbiturates
+SUB2_D,16,,Other Nonbarbiturate Sedatives Or Hypnotics,Other Nonbarbiturate Sedatives Or Hypnotics,Other Non-Barbiturate Sedatives Or Hypnotics,Other Sedatives Or Hypnotics,Other Sedatives Or Hypnotics,Other Sedatives Or Hypnotics,Other Sedatives Or Hypnotics,Other Sedatives Or Hypnotics
+SUB2_D,17,,Inhalants,Inhalants,Inhalants,Inhalants,Inhalants,Inhalants,Inhalants,Inhalants
+SUB2_D,18,,Overthecounter Medications,Overthecounter Medications,Over-The-Counter Medications,Over-The-Counter Medications,Over-The-Counter Medications,Over-The-Counter Medications,Over-The-Counter Medications,Over-The-Counter Medications
+SUB2_D,19,,Other,Other,Other,Other Drugs,Other Drugs,Other Drugs,Other Drugs,Other Drugs
+SUB2_D,2,,Alcohol,Alcohol,Alcohol,Alcohol,Alcohol,Alcohol,Alcohol,Alcohol
+SUB2_D,3,,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack
+SUB2_D,4,,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish
+SUB2_D,5,,Heroin,Heroin,Heroin,Heroin,Heroin,Heroin,Heroin,Heroin
+SUB2_D,6,,Nonprescription Methadone,Nonprescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone
+SUB2_D,7,,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics
+SUB2_D,8,,Pcp,Pcp,Pcp,Pcp,Pcp,Pcp,Pcp,Pcp
+SUB2_D,9,,Other Hallucinogens,Other Hallucinogens,Other Hallucinogens,Hallucinogens,Hallucinogens,Hallucinogens,Hallucinogens,Hallucinogens
+SUB3,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+SUB3,1,None,None,None,,,,,,
+SUB3,10,Methamphetamine,Methamphetamine,Methamphetamine,Methamphetamine,Methamphetamine/Speed,Methamphetamine/Speed,Methamphetamine/Speed,Methamphetamine/Speed,Methamphetamine/Speed
+SUB3,11,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines
+SUB3,12,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants
+SUB3,13,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines
+SUB3,14,Other Non-Benzodiazepine Tranquilizers,Other Nonbenzodiazepine Tranquilizers,Other Nonbenzodiazepine Tranquilizers,Other Non-Benzodiazepine Tranquilizers,Other Tranquilizers,Other Tranquilizers,Other Tranquilizers,Other Tranquilizers,Other Tranquilizers
+SUB3,15,Barbiturates,Barbiturates,Barbiturates,Barbiturates,Barbiturates,Barbiturates,Barbiturates,Barbiturates,Barbiturates
+SUB3,16,Other Non-Barbiturate Sedatives Or Hypnotics,Other Nonbarbiturate Sedatives Or Hypnotics,Other Nonbarbiturate Sedatives Or Hypnotics,Other Non-Barbiturate Sedatives Or Hypnotics,Other Sedatives Or Hypnotics,Other Sedatives Or Hypnotics,Other Sedatives Or Hypnotics,Other Sedatives Or Hypnotics,Other Sedatives Or Hypnotics
+SUB3,17,Inhalants,Inhalants,Inhalants,Inhalants,Inhalants,Inhalants,Inhalants,Inhalants,Inhalants
+SUB3,18,Over-The-Counter Medications,Overthecounter Medications,Overthecounter Medications,Over-The-Counter Medications,Over-The-Counter Medications,Over-The-Counter Medications,Over-The-Counter Medications,Over-The-Counter Medications,Over-The-Counter Medications
+SUB3,19,,Other,Other,Other,Other Drugs,Other Drugs,Other Drugs,Other Drugs,Other Drugs
+SUB3,2,Alcohol,Alcohol,Alcohol,Alcohol,Alcohol,Alcohol,Alcohol,Alcohol,Alcohol
+SUB3,20,Other,,,,,,,,
+SUB3,3,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack
+SUB3,4,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish
+SUB3,5,Heroin,Heroin,Heroin,Heroin,Heroin,Heroin,Heroin,Heroin,Heroin
+SUB3,6,Non-Prescription Methadone,Nonprescription Methadone,Nonprescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone
+SUB3,7,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics
+SUB3,8,Pcp,Pcp,Pcp,Pcp,Pcp,Pcp,Pcp,Pcp,Pcp
+SUB3,9,Other Hallucinogens,Other Hallucinogens,Other Hallucinogens,Other Hallucinogens,Hallucinogens,Hallucinogens,Hallucinogens,Hallucinogens,Hallucinogens
+SUB3,,,,,,,,,,
+SUB3_D,-9,,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+SUB3_D,1,,None,None,,,,,,
+SUB3_D,10,,Methamphetamine,Methamphetamine,Methamphetamine,Methamphetamine/Speed,Methamphetamine/Speed,Methamphetamine/Speed,Methamphetamine/Speed,Methamphetamine/Speed
+SUB3_D,11,,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines,Other Amphetamines
+SUB3_D,12,,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants,Other Stimulants
+SUB3_D,13,,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines,Benzodiazepines
+SUB3_D,14,,Other Nonbenzodiazepine Tranquilizers,Other Nonbenzodiazepine Tranquilizers,Other Non-Benzodiazepine Tranquilizers,Other Tranquilizers,Other Tranquilizers,Other Tranquilizers,Other Tranquilizers,Other Tranquilizers
+SUB3_D,15,,Barbiturates,Barbiturates,Barbiturates,Barbiturates,Barbiturates,Barbiturates,Barbiturates,Barbiturates
+SUB3_D,16,,Other Nonbarbiturate Sedatives Or Hypnotics,Other Nonbarbiturate Sedatives Or Hypnotics,Other Non-Barbiturate Sedatives Or Hypnotics,Other Sedatives Or Hypnotics,Other Sedatives Or Hypnotics,Other Sedatives Or Hypnotics,Other Sedatives Or Hypnotics,Other Sedatives Or Hypnotics
+SUB3_D,17,,Inhalants,Inhalants,Inhalants,Inhalants,Inhalants,Inhalants,Inhalants,Inhalants
+SUB3_D,18,,Overthecounter Medications,Overthecounter Medications,Over-The-Counter Medications,Over-The-Counter Medications,Over-The-Counter Medications,Over-The-Counter Medications,Over-The-Counter Medications,Over-The-Counter Medications
+SUB3_D,19,,Other,Other,Other,Other Drugs,Other Drugs,Other Drugs,Other Drugs,Other Drugs
+SUB3_D,2,,Alcohol,Alcohol,Alcohol,Alcohol,Alcohol,Alcohol,Alcohol,Alcohol
+SUB3_D,3,,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack,Cocaine/Crack
+SUB3_D,4,,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish,Marijuana/Hashish
+SUB3_D,5,,Heroin,Heroin,Heroin,Heroin,Heroin,Heroin,Heroin,Heroin
+SUB3_D,6,,Nonprescription Methadone,Nonprescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone,Non-Prescription Methadone
+SUB3_D,7,,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics,Other Opiates And Synthetics
+SUB3_D,8,,Pcp,Pcp,Pcp,Pcp,Pcp,Pcp,Pcp,Pcp
+SUB3_D,9,,Other Hallucinogens,Other Hallucinogens,Other Hallucinogens,Hallucinogens,Hallucinogens,Hallucinogens,Hallucinogens,Hallucinogens
+TRNQFLG,0,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported,Substance Not Reported
+TRNQFLG,1,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported,Substance Reported
+VET,-9,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid,Missing/Unknown/Not Collected/Invalid
+VET,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+VET,2,No,No,No,No,No,No,No,No,No

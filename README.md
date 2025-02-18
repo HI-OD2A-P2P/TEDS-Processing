@@ -247,6 +247,9 @@ mssql still encoded because the text version gets mangled upon import.
 - update dbo.TEDS_D set SubstanceUsePrimary = 'Non-Prescription Methadone' where SubstanceUsePrimary = 'Nonprescription Methadone';  
 - update dbo.TEDS_D set SubstanceUseSecondary = 'Non-Prescription Methadone' where SubstanceUseSecondary = 'Nonprescription Methadone';  
 - update dbo.TEDS_D set SubstanceUseTertiary = 'Non-Prescription Methadone' where SubstanceUseTertiary = 'Nonprescription Methadone';    
+- update dbo.TEDS_D set SubstanceUsePrimary = 'Methamphetamine/Speed' where SubstanceUsePrimary = 'Methamphetamine';  
+- update dbo.TEDS_D set SubstanceUseSecondary = 'Methamphetamine/Speed' where SubstanceUseSecondary = 'Methamphetamine';  
+- update dbo.TEDS_D set SubstanceUseTertiary = 'Methamphetamine/Speed' where SubstanceUseTertiary = 'Methamphetamine';  
 
 
 12.) Mssql/DOH only: This is for UH PowerBI stuff only, doesn't pertain to anyone else who might happen to use this.
