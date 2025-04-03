@@ -89,12 +89,25 @@ def combine_csv_files():
             print(f"file: {file_name} already exists")
         else:
             file_path = os.path.join(dir, file)
-            #print(file_path)
+            print(file_path)
             # do NOT change file_path to full_file_path here as they refer to different files
             data = pd.read_csv(file_path)
-            
+            #data = pd.read_csv(file_path, dtype={'Year': 'str'})
+
+            # Rename 'YEAR' column to 'ADMYR' if it exists
+            if 'YEAR' in data.columns:
+                data.rename(columns={'YEAR': 'ADMYR'}, inplace=True)
+
+            # Ensure 'ADMYR' is treated as a string
+            if 'ADMYR' in data.columns:
+                data['ADMYR'] = data['ADMYR'].astype(str)
+                print(f"Year {data['ADMYR']}") 
+                
+
             # strip out Hawaii as the end result was just too big
             data_hawaii = data[data['STFIPS'] == 15]
+            #print(data_hawaii.head())
+
             combined_data = pd.concat([combined_data, data_hawaii])
 
             #combined_data = pd.concat([combined_data, data])
@@ -147,5 +160,5 @@ def convert_to_db():
         print("Error while connecting", e)
 
 # uncomment one or both of these to make something happen
-#combine_csv_files()
+combine_csv_files()
 #convert_to_db()

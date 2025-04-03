@@ -139,7 +139,7 @@ def combine_csv_files():
               or "2018" in file_path
               or "2019" in file_path
               or "2020" in file_path): 
-            print("2017, 2018, 2019, or 2020")
+            print("2017-2020")
             # this works for non-2021, but not 2021
             data = pd.read_csv(file_path, encoding='latin-1')
 
@@ -159,9 +159,16 @@ def combine_csv_files():
             data_hawaii = data_hawaii.rename(columns={"CBSA2020": "CBSA"})
             print("inserting rows: ", len(data_hawaii))
             combined_data = pd.concat([combined_data, data_hawaii], axis="rows").fillna("")         
-
-        elif ("2014" in file_path) :
-            print("2006_2014")
+        elif ("2006" in file_path
+              or "2007" in file_path
+              or "2008" in file_path
+              or "2009" in file_path
+              or "2010" in file_path
+              or "2011" in file_path
+              or "2012" in file_path
+              or "2013" in file_path
+              or "2014" in file_path): 
+            print("2006-2014")
             # this works for non-2021, but not 2021
             data = pd.read_csv(file_path, encoding='latin-1')
 

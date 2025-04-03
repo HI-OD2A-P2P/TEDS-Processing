@@ -2,6 +2,8 @@
 # code, value, and label columns and writes it out to a csv file.
 
 import PyPDF4
+import sys
+sys.path.append('/opt/anaconda3/lib/python3.11/site-packages')
 import numpy as np
 import re
 import pandas as pd
@@ -163,6 +165,12 @@ def read_page(page_num):
     return header_text.split(':'), df
 
 
-folder_path = "/Users/jgeis/Work/DOH/TEDS-Processing/TEDS-D/codebooks/"
-read_pdf(f"{folder_path}TEDS-D-2016-DS0001-info-codebook.pdf")
-read_pdf(f"{folder_path}TEDS-D-2015-DS0001-info-codebook.pdf")
+# TEDS-D
+#folder_path = "/Users/jgeis/Work/DOH/TEDS-Processing/TEDS-D/codebooks/"
+#read_pdf(f"{folder_path}TEDS-D-2016-DS0001-info-codebook.pdf")
+#read_pdf(f"{folder_path}TEDS-D-2015-DS0001-info-codebook.pdf")
+
+# TEDS-A
+folder_path = "/Users/jgeis/Work/DOH/TEDS-Processing/TEDS-A/codebooks/"
+read_pdf(f"{folder_path}TEDS-A-2015-DS0001-info-codebook_v4.pdf")
+read_pdf(f"{folder_path}TEDS-A-2016-DS0001-info-codebook_v4.pdf")
